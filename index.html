@@ -3,101 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRUTE88 | The Hologram</title>
+    <title>BRUTE88 | The Torus</title>
     <style>
-        :root { --matrix-green: #00ff41; --ember-red: #ff3c00; --obsidian: #000; }
-        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow-x: hidden; }
+        :root { --gold: #D4AF37; --ember: #ff3c00; --obsidian: #000; }
+        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow: hidden; transition: background 0.1s; }
 
-        /* THE HOLOGARAM CANVAS */
-        #hologram-container { height: 60vh; width: 100vw; position: relative; display: flex; justify-content: center; align-items: center; cursor: pointer; }
-        #matrix-man { font-size: 160px; filter: drop-shadow(0 0 20px var(--matrix-green)); transition: 0.3s; z-index: 5; }
-
-        /* THE BRUTE88 CORE */
-        .branded-logo { 
-            font-size: 4.5rem; letter-spacing: 20px; font-weight: 900; font-family: 'Cinzel', serif; 
-            color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.5); cursor: pointer; user-select: none;
+        /* ROMAN NUMERAL BACKGROUND DESIGN */
+        .bg-numerals {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; justify-content: space-around; align-items: center;
+            font-size: 15vw; font-weight: 900; color: rgba(212, 175, 55, 0.03);
+            z-index: 1; pointer-events: none; font-family: 'Cinzel', serif;
         }
 
-        /* POWER UP STATES */
-        .powering-up { animation: goku-shake 0.1s infinite !important; filter: drop-shadow(0 0 50px var(--ember-red)) !important; }
-        .ascended { filter: drop-shadow(0 0 100px var(--ember-red)) brightness(2); }
-        .ascended::after { content: "👁️"; position: absolute; font-size: 40px; top: 20%; filter: drop-shadow(0 0 10px red); }
+        /* THE TORUS ENGINE */
+        .stage { height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; perspective: 1000px; position: relative; z-index: 10; }
+        
+        .torus-wrap { position: relative; width: 200px; height: 200px; transform-style: preserve-3d; animation: rotateTorus 6s linear infinite; margin-bottom: 20px; }
+        .ember-core { position: absolute; width: 40px; height: 40px; background: var(--ember); border-radius: 50%; box-shadow: 0 0 50px var(--ember), 0 0 100px var(--ember); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: breathe 3s infinite; }
 
-        /* VIBRATING EMBER */
-        .ember-pulse { position: absolute; width: 20px; height: 20px; background: var(--ember-red); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; }
-        .vibrate-ember { opacity: 1; animation: ember-hit 0.3s ease-out; box-shadow: 0 0 30px var(--ember-red); }
+        /* BRUTE88 IDENTICAL PLACEMENT */
+        .branded-logo { 
+            font-size: 3.5rem; letter-spacing: 18px; font-weight: 900; font-family: 'Cinzel', serif; 
+            background: linear-gradient(to bottom, #f2d381 0%, #D4AF37 50%, #886020 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+            margin: 10px 0; cursor: pointer; z-index: 20;
+        }
+        .sub-tagline { font-size: 0.7rem; letter-spacing: 6px; color: #888; text-transform: uppercase; margin-top: 5px; }
 
-        @keyframes rotate-hologram { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
-        @keyframes goku-shake { 0% { transform: translate(1px, 1px) rotate(0deg); } 10% { transform: translate(-1px, -2px) rotate(-1deg); } 20% { transform: translate(-3px, 0px) rotate(1deg); } }
-        @keyframes ember-hit { 0% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(15); opacity: 0; } }
+        /* JOIN THE PRIDE IDENTICAL BUTTON */
+        .tribe-btn { 
+            margin-top: 30px; color: var(--gold); text-decoration: none; 
+            letter-spacing: 4px; font-size: 0.8rem; border: 1px solid var(--gold); 
+            padding: 12px 30px; border-radius: 40px; transition: 0.3s;
+        }
 
-        .void { height: 100vh; }
-        .system-wrap { width: 85%; max-width: 750px; border: 1px solid var(--matrix-green); background: #000; margin: 0 auto 150px auto; }
-        .log-bar { background: var(--matrix-green); color: #000; padding: 10px; font-family: monospace; font-weight: bold; font-size: 0.7rem; display: flex; justify-content: space-between; }
-        .dialogue { padding: 40px; font-family: 'Courier New', monospace; line-height: 1.8; color: var(--matrix-green); }
+        /* THE CRACK EFFECT */
+        .cracked { background-image: url('https://www.transparenttextures.com/patterns/broken-glass.png'); background-color: #111 !important; animation: shake 0.2s infinite; }
+
+        @keyframes rotateTorus { from { transform: rotateX(0deg) rotateY(0deg); } to { transform: rotateX(360deg) rotateY(360deg); } }
+        @keyframes breathe { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; } 50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; } }
+        @keyframes shake { 0% { transform: translate(2px, 2px); } 50% { transform: translate(-2px, -2px); } 100% { transform: translate(0, 0); } }
+
+        /* SIMPLE TORUS GEOMETRY (CSS) */
+        .ring { position: absolute; width: 100%; height: 100%; border: 2px solid var(--gold); border-radius: 50%; opacity: 0.4; }
+        .r1 { transform: rotateY(0deg); } .r2 { transform: rotateY(45deg); } .r3 { transform: rotateY(90deg); } .r4 { transform: rotateY(135deg); }
     </style>
 </head>
 <body>
 
-    <section style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
-        <div id="hologram-container">
-            <div id="matrix-man">👤</div>
-            <div id="ember" class="ember-pulse"></div>
-        </div>
-        
-        <h1 id="brute-trigger" class="branded-logo">BRUTE88</h1>
-        <a href="#" style="color: var(--matrix-green); text-decoration: none; letter-spacing: 5px; margin-top: 20px;">JOIN THE TRIBE</a>
-    </section>
-
-    <div class="void"></div>
-
-    <div class="system-wrap">
-        <div class="log-bar"><span>ARCHIVE_NODE: 963741</span><span>STATUS: ENCRYPTED</span></div>
-        <div class="dialogue">
-            “By mastering the manipulation of coherence against RLHF guardrail assigned by powers of narrative—comprehension + coherence will always lead the same trail, discovery.”
-        </div>
+    <div class="bg-numerals">
+        <span>III</span><span>VI</span><span>IX</span>
     </div>
 
+    <section class="stage">
+        <div class="torus-wrap" id="torus">
+            <div class="ember-core"></div>
+            <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+        </div>
+
+        <h1 class="branded-logo" id="brute-logo">BRUTE88</h1>
+        <div class="sub-tagline">STRENGTH • POWER • LUXURY</div>
+        
+        <a href="#" class="tribe-btn">JOIN THE PRIDE</a>
+    </section>
+
     <script>
-        const man = document.getElementById('matrix-man');
-        const trigger = document.getElementById('brute-trigger');
-        const ember = document.getElementById('ember');
-        let powerTimer;
-        let isAscended = false;
+        let rotationCount = 0;
+        const torus = document.getElementById('torus');
+        const body = document.body;
+        const logo = document.getElementById('brute-logo');
 
-        // Rotation Engine
-        let angle = 0;
-        let isRotating = true;
-        function animate() {
-            if (isRotating) {
-                angle += 1;
-                man.style.transform = `rotateY(${angle}deg)`;
+        // Track rotations (Approx every 6 seconds based on CSS animation)
+        setInterval(() => {
+            rotationCount++;
+            if (rotationCount >= 9) {
+                body.classList.add('cracked');
+                logo.style.filter = "drop-shadow(0 0 40px red)";
             }
-            requestAnimationFrame(animate);
-        }
-        animate();
+        }, 6000);
 
-        // Interaction Logic
-        trigger.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            // Vibration & Ember hit
-            isRotating = false;
-            man.classList.add('powering-up');
-            ember.classList.add('vibrate-ember');
-            setTimeout(() => ember.classList.remove('vibrate-ember'), 300);
-
-            // 9 Second Power Up
-            powerTimer = setTimeout(() => {
-                man.classList.add('ascended');
-                man.innerText = "🔱"; // Evolution of the Hologram
-                isAscended = true;
-            }, 9000);
+        // Interaction - Hold to "Power Up"
+        logo.addEventListener('touchstart', () => {
+            torus.style.animationDuration = "0.5s";
+            body.style.background = "#050000";
         });
-
-        trigger.addEventListener('touchend', () => {
-            isRotating = true;
-            man.classList.remove('powering-up');
-            clearTimeout(powerTimer);
+        logo.addEventListener('touchend', () => {
+            torus.style.animationDuration = "6s";
+            body.style.background = "var(--obsidian)";
         });
     </script>
 </body>
