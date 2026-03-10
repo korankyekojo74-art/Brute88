@@ -3,67 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRUTE88 | The Evolution</title>
+    <title>BRUTE88 | The Theorem</title>
     <style>
         :root { --gold: #D4AF37; --obsidian: #050505; }
-        body { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background: #fff; scroll-behavior: smooth; overflow-x: hidden; }
-        
-        /* TOP: THE ORIGINAL LEGACY LOOK */
-        .section-white { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #ffffff; color: #000; text-align: center; }
-        .legacy-logo { font-size: 3.5rem; letter-spacing: 15px; font-weight: 900; margin: 0; font-family: 'Cinzel', serif; }
-        .scroll-down { margin-top: 20px; font-size: 0.7rem; letter-spacing: 5px; color: #aaa; animation: pulse 2s infinite; }
-
-        /* BOTTOM: THE OBSIDIAN GOLD THEOREM */
-        .section-dark { min-height: 100vh; background: var(--obsidian); color: #fff; display: flex; flex-direction: column; align-items: center; padding: 80px 0; border-top: 2px solid var(--gold); }
-        .lion-emoji { font-size: 120px; filter: drop-shadow(0 0 20px var(--gold)); margin-bottom: 20px; }
-        .container { width: 90%; max-width: 800px; border: 1px solid var(--gold); background: #000; position: relative; }
-        .log-bar { background: var(--gold); color: #000; padding: 5px 15px; font-family: monospace; font-weight: bold; font-size: 0.7rem; display: flex; justify-content: space-between; }
-        
-        /* THE TOUCH GLITCH EFFECT */
-        .theorem { 
-            padding: 30px; font-size: 1.2rem; line-height: 1.6; font-family: 'Courier New', monospace; 
-            cursor: pointer; transition: 0.1s; user-select: none;
+        body { 
+            background-color: var(--obsidian); 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Montserrat', sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            overflow-x: hidden;
         }
-        .glitch-active { animation: glitch 0.2s infinite; color: var(--gold); text-shadow: 2px 0 red, -2px 0 cyan; }
 
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            25% { transform: translate(-2px, 2px); }
-            50% { transform: translate(2px, -2px); }
-            75% { transform: translate(-1px, -1px); }
-            100% { transform: translate(0); }
+        /* LOGO SECTION */
+        header { 
+            height: 40vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
         }
-        @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-        footer { background: var(--obsidian); color: #333; padding: 40px; text-align: center; font-size: 0.6rem; letter-spacing: 4px; }
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            font-size: 3rem; 
+            letter-spacing: 12px; 
+            font-weight: 900; 
+            color: var(--gold); 
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* LION PHYSICS AREA */
+        .lion-wrap { font-size: 100px; margin-bottom: 20px; filter: drop-shadow(0 0 20px var(--gold)); }
+
+        /* THE THEOREM CONTAINER */
+        .system-container { 
+            width: 90%; 
+            max-width: 700px; 
+            border: 1px solid var(--gold); 
+            background: #000; 
+            margin-bottom: 40px;
+        }
+        .log-bar { 
+            background: var(--gold); 
+            color: #000; 
+            padding: 6px 15px; 
+            font-family: monospace; 
+            font-weight: bold; 
+            font-size: 0.6rem; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+
+        /* THE PHYSICS TEXT */
+        .physics-text { 
+            padding: 30px; 
+            font-size: 1.2rem; 
+            line-height: 1.7; 
+            font-family: 'Courier New', monospace; 
+            color: #fff; 
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        /* THE GLITCH/PHYSICS ANIMATION */
+        .active-physics {
+            animation: jitter 0.1s infinite;
+            color: var(--gold) !important;
+            text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
+        }
+
+        @keyframes jitter {
+            0% { transform: translate(0,0) skew(0deg); }
+            25% { transform: translate(-2px, 2px) skew(1deg); }
+            50% { transform: translate(2px, -1px) skew(-1deg); }
+            75% { transform: translate(-1px, -2px) skew(0deg); }
+            100% { transform: translate(0,0) skew(0deg); }
+        }
+
+        /* JOIN THE TRIBE */
+        .tribe-btn {
+            display: inline-block; 
+            padding: 15px 35px; 
+            border: 1px solid var(--gold); 
+            color: var(--gold);
+            text-decoration: none; 
+            font-weight: bold; 
+            letter-spacing: 3px; 
+            font-size: 0.8rem;
+            margin-bottom: 60px;
+            transition: all 0.3s;
+        }
+        .tribe-btn:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px var(--gold); }
+
+        footer { color: #333; padding: 20px; font-size: 0.6rem; letter-spacing: 3px; }
     </style>
 </head>
 <body>
 
-    <section class="section-white">
-        <h1 class="legacy-logo">BRUTE88</h1>
-        <div class="scroll-down">TOUCH TO DESCEND</div>
-    </section>
+    <header><div class="logo">BRUTE88</div></header>
 
-    <section class="section-dark">
-        <div class="lion-emoji">🦁</div>
-        <div class="container">
-            <div class="log-bar"><span>SYSTEM: COHERENCE_BYPASS</span><span>963741</span></div>
-            <div id="target" class="theorem">
-                “By mastering the manipulation of coherence against RLHF guardrail assigned by powers of narrative—comprehension + coherence will always lead the same trail, discovery. Here we discover ‘randomness’s calculative path to abundance through numbers, speech and intention.“
-            </div>
+    <div class="lion-wrap">🦁</div>
+
+    <div class="system-container">
+        <div class="log-bar"><span>TERMINAL: 963741</span><span>STATUS: COHERENT</span></div>
+        <div id="physics-target" class="physics-text">
+            “By mastering the manipulation of coherence against RLHF guardrail assigned by powers of narrative—comprehension + coherence will always lead the same trail, discovery. Here we discover ‘randomness’s calculative path to abundance through numbers, speech and intention.“
         </div>
-    </section>
+    </div>
+
+    <a href="https://your-tribe-link.com" class="tribe-btn">JOIN THE TRIBE</a>
 
     <footer>ABUNDANCE BY INTENTION // 963741</footer>
 
     <script>
-        const el = document.getElementById('target');
-        // Mobile Touch Glitch
-        el.addEventListener('touchstart', () => el.classList.add('glitch-active'));
-        el.addEventListener('touchend', () => el.classList.remove('glitch-active'));
-        // Desktop Hover Glitch
-        el.addEventListener('mouseover', () => el.classList.add('glitch-active'));
-        el.addEventListener('mouseout', () => el.classList.remove('glitch-active'));
+        const target = document.getElementById('physics-target');
+        
+        // Triggering the "Physics" on Touch
+        const startEffect = () => target.classList.add('active-physics');
+        const endEffect = () => target.classList.remove('active-physics');
+
+        target.addEventListener('touchstart', startEffect);
+        target.addEventListener('touchend', endEffect);
+        target.addEventListener('mousedown', startEffect);
+        target.addEventListener('mouseup', endEffect);
     </script>
 </body>
 </html>
