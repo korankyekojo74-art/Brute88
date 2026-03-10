@@ -6,7 +6,7 @@
     <title>BRUTE88 | The Torus</title>
     <style>
         :root { --gold: #D4AF37; --ember: #ff3c00; --obsidian: #000; }
-        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow: hidden; transition: background 0.1s; }
+        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow-x: hidden; transition: background 0.1s; }
 
         /* ROMAN NUMERAL BACKGROUND DESIGN */
         .bg-numerals {
@@ -22,32 +22,32 @@
         .torus-wrap { position: relative; width: 200px; height: 200px; transform-style: preserve-3d; animation: rotateTorus 6s linear infinite; margin-bottom: 20px; }
         .ember-core { position: absolute; width: 40px; height: 40px; background: var(--ember); border-radius: 50%; box-shadow: 0 0 50px var(--ember), 0 0 100px var(--ember); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: breathe 3s infinite; }
 
-        /* BRUTE88 IDENTICAL PLACEMENT */
+        /* BRUTE88 BRANDING */
         .branded-logo { 
-            font-size: 3.5rem; letter-spacing: 18px; font-weight: 900; font-family: 'Cinzel', serif; 
+            font-size: 3.2rem; letter-spacing: 15px; font-weight: 900; font-family: 'Cinzel', serif; 
             background: linear-gradient(to bottom, #f2d381 0%, #D4AF37 50%, #886020 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
             margin: 10px 0; cursor: pointer; z-index: 20;
         }
-        .sub-tagline { font-size: 0.7rem; letter-spacing: 6px; color: #888; text-transform: uppercase; margin-top: 5px; }
+        .sub-tagline { font-size: 0.6rem; letter-spacing: 5px; color: #666; text-transform: uppercase; margin-top: 5px; }
 
-        /* JOIN THE PRIDE IDENTICAL BUTTON */
         .tribe-btn { 
-            margin-top: 30px; color: var(--gold); text-decoration: none; 
-            letter-spacing: 4px; font-size: 0.8rem; border: 1px solid var(--gold); 
-            padding: 12px 30px; border-radius: 40px; transition: 0.3s;
+            margin-top: 40px; color: var(--gold); text-decoration: none; 
+            letter-spacing: 4px; font-size: 0.7rem; border: 1px solid var(--gold); 
+            padding: 12px 35px; border-radius: 40px; transition: 0.3s;
         }
 
-        /* THE CRACK EFFECT */
-        .cracked { background-image: url('https://www.transparenttextures.com/patterns/broken-glass.png'); background-color: #111 !important; animation: shake 0.2s infinite; }
+        /* VORTEX FOOTER */
+        footer { margin-top: 150px; padding-bottom: 100px; }
+        .portal-link { color: #1a1a1a; text-decoration: none; letter-spacing: 4px; font-size: 0.55rem; transition: 0.5s; }
+        .portal-link:hover { color: var(--gold); }
 
         @keyframes rotateTorus { from { transform: rotateX(0deg) rotateY(0deg); } to { transform: rotateX(360deg) rotateY(360deg); } }
         @keyframes breathe { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; } 50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; } }
-        @keyframes shake { 0% { transform: translate(2px, 2px); } 50% { transform: translate(-2px, -2px); } 100% { transform: translate(0, 0); } }
 
-        /* SIMPLE TORUS GEOMETRY (CSS) */
-        .ring { position: absolute; width: 100%; height: 100%; border: 2px solid var(--gold); border-radius: 50%; opacity: 0.4; }
+        /* TORUS RINGS */
+        .ring { position: absolute; width: 100%; height: 100%; border: 1px solid var(--gold); border-radius: 50%; opacity: 0.3; }
         .r1 { transform: rotateY(0deg); } .r2 { transform: rotateY(45deg); } .r3 { transform: rotateY(90deg); } .r4 { transform: rotateY(135deg); }
     </style>
 </head>
@@ -69,37 +69,25 @@
         <a href="#" class="tribe-btn">JOIN THE PRIDE</a>
     </section>
 
-    <script>
-        let rotationCount = 0;
-        const torus = document.getElementById('torus');
-        const body = document.body;
-        const logo = document.getElementById('brute-logo');
-
-        // Track rotations (Approx every 6 seconds based on CSS animation)
-        setInterval(() => {
-            rotationCount++;
-            if (rotationCount >= 9) {
-                body.classList.add('cracked');
-                logo.style.filter = "drop-shadow(0 0 40px red)";
-            }
-        }, 6000);
-
-        // Interaction - Hold to "Power Up"
-        logo.addEventListener('touchstart', () => {
-            torus.style.animationDuration = "0.5s";
-            body.style.background = "#050000";
-        });
-        logo.addEventListener('touchend', () => {
-            torus.style.animationDuration = "6s";
-            body.style.background = "var(--obsidian)";
-        });
-        </script>
-
     <footer>
-        <a href="login.html" style="color: #222; text-decoration: none; letter-spacing: 4px; display: block; padding: 60px; font-size: 0.6rem; text-align: center;">
+        <a href="login.html" class="portal-link">
             ABUNDANCE BY INTENTION // 963741 // [ACCESS PORTAL]
         </a>
     </footer>
 
+    <script>
+        const torus = document.getElementById('torus');
+        const logo = document.getElementById('brute-logo');
+
+        // Interaction - Hold to "Power Up"
+        logo.addEventListener('touchstart', () => {
+            torus.style.animationDuration = "0.5s";
+            document.body.style.background = "#050000";
+        });
+        logo.addEventListener('touchend', () => {
+            torus.style.animationDuration = "6s";
+            document.body.style.background = "#000";
+        });
+    </script>
 </body>
 </html>
