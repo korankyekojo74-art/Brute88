@@ -3,91 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRUTE88 | The Torus</title>
+    <title>BRUTE88 | Authenticate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --ember: #ff3c00; --obsidian: #000; }
-        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow-x: hidden; transition: background 0.1s; }
-
-        /* ROMAN NUMERAL BACKGROUND DESIGN */
-        .bg-numerals {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            display: flex; justify-content: space-around; align-items: center;
-            font-size: 15vw; font-weight: 900; color: rgba(212, 175, 55, 0.03);
-            z-index: 1; pointer-events: none; font-family: 'Cinzel', serif;
+        :root { --gold: #D4AF37; --obsidian: #000; }
+        body { 
+            background: var(--obsidian); color: #fff; margin: 0; 
+            height: 100vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center;
+            font-family: 'Montserrat', sans-serif; overflow: hidden;
         }
 
-        /* THE TORUS ENGINE */
-        .stage { height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; perspective: 1000px; position: relative; z-index: 10; }
+        /* GLASS PORTAL FRAME */
+        .login-box {
+            width: 85%; max-width: 380px; padding: 60px 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(5, 5, 5, 0.95);
+            box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+            text-align: center; position: relative;
+        }
         
-        .torus-wrap { position: relative; width: 200px; height: 200px; transform-style: preserve-3d; animation: rotateTorus 6s linear infinite; margin-bottom: 20px; }
-        .ember-core { position: absolute; width: 40px; height: 40px; background: var(--ember); border-radius: 50%; box-shadow: 0 0 50px var(--ember), 0 0 100px var(--ember); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: breathe 3s infinite; }
-
-        /* BRUTE88 BRANDING */
-        .branded-logo { 
-            font-size: 3.2rem; letter-spacing: 15px; font-weight: 900; font-family: 'Cinzel', serif; 
-            background: linear-gradient(to bottom, #f2d381 0%, #D4AF37 50%, #886020 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
-            margin: 10px 0; cursor: pointer; z-index: 20;
-        }
-        .sub-tagline { font-size: 0.6rem; letter-spacing: 5px; color: #666; text-transform: uppercase; margin-top: 5px; }
-
-        .tribe-btn { 
-            margin-top: 40px; color: var(--gold); text-decoration: none; 
-            letter-spacing: 4px; font-size: 0.7rem; border: 1px solid var(--gold); 
-            padding: 12px 35px; border-radius: 40px; transition: 0.3s;
+        .portal-header { 
+            font-family: 'Cinzel', serif; color: var(--gold); 
+            letter-spacing: 6px; margin-bottom: 40px; font-size: 1.1rem;
         }
 
-        /* VORTEX FOOTER */
-        footer { margin-top: 150px; padding-bottom: 100px; }
-        .portal-link { color: #1a1a1a; text-decoration: none; letter-spacing: 4px; font-size: 0.55rem; transition: 0.5s; }
-        .portal-link:hover { color: var(--gold); }
+        /* ENCRYPTED INPUTS */
+        input {
+            width: 100%; padding: 18px; margin-bottom: 25px;
+            background: transparent; border: none; border-bottom: 1px solid #222; 
+            color: var(--gold); font-family: monospace; outline: none; 
+            box-sizing: border-box; text-align: center; transition: 0.4s;
+            font-size: 1rem;
+        }
+        input:focus { border-bottom: 1px solid var(--gold); color: #fff; }
 
-        @keyframes rotateTorus { from { transform: rotateX(0deg) rotateY(0deg); } to { transform: rotateX(360deg) rotateY(360deg); } }
-        @keyframes breathe { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; } 50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; } }
+        /* AUTHORIZE BUTTON */
+        .access-btn {
+            width: 80%; margin-top: 20px; padding: 15px; background: transparent;
+            border: 1px solid var(--gold); color: var(--gold);
+            font-weight: bold; letter-spacing: 6px; cursor: pointer;
+            transition: 0.5s; font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+        .access-btn:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px var(--gold); }
 
-        /* TORUS RINGS */
-        .ring { position: absolute; width: 100%; height: 100%; border: 1px solid var(--gold); border-radius: 50%; opacity: 0.3; }
-        .r1 { transform: rotateY(0deg); } .r2 { transform: rotateY(45deg); } .r3 { transform: rotateY(90deg); } .r4 { transform: rotateY(135deg); }
+        .hint { margin-top: 50px; font-size: 0.6rem; color: #222; letter-spacing: 5px; font-weight: 900; }
     </style>
 </head>
 <body>
 
-    <div class="bg-numerals">
-        <span>III</span><span>VI</span><span>IX</span>
-    </div>
-
-    <section class="stage">
-        <div class="torus-wrap" id="torus">
-            <div class="ember-core"></div>
-            <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
-        </div>
-
-        <h1 class="branded-logo" id="brute-logo">BRUTE88</h1>
-        <div class="sub-tagline">STRENGTH • POWER • LUXURY</div>
+    <div class="login-box">
+        <div class="portal-header">IDENTITY VERIFICATION</div>
         
-        <a href="#" class="tribe-btn">JOIN THE PRIDE</a>
-    </section>
-
-   
-    <script>
-        const torus = document.getElementById('torus');
-        const logo = document.getElementById('brute-logo');
-
-        // Interaction - Hold to "Power Up"
-        logo.addEventListener('touchstart', () => {
-            torus.style.animationDuration = "0.5s";
-            document.body.style.background = "#050000";
-        });
-        logo.addEventListener('touchend', () => {
-            torus.style.animationDuration = "6s";
-            document.body.style.background = "#000";
-        });
-    </script> <footer>
-        <a href="login.html" class="portal-link">
-            ABUNDANCE BY INTENTION // 963741 // [ACCESS PORTAL]
-        </a>
-    </footer>
+        <input type="text" placeholder="NODE_ID" spellcheck="false" autocomplete="off">
+        <input type="password" placeholder="KEY_CODE" autocomplete="off">
+        
+        <button class="access-btn" onclick="window.location.href='manifesto.html'">AUTHORIZE</button>
+        
+        <div class="hint">III • VI • IX</div>
+    </div>
 
 </body>
 </html>
