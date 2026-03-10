@@ -3,80 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRUTE88 | Premium Strength</title>
+    <title>BRUTE88 | The Entropy Bridge</title>
     <style>
         :root {
-            --gold: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --gold: #D4AF37;
+            --light-gold: #F2D381;
+            --dark-gold: #B8860B;
+            --obsidian: #050505;
         }
+
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--obsidian);
+            color: #E0E0E0;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
         }
-        .container {
+
+        /* HEADER */
+        header {
+            width: 100%;
+            padding: 25px 0;
             text-align: center;
-            padding: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .lion-logo {
-            font-size: 100px;
-            margin-bottom: 10px;
-            display: inline-block;
-            filter: drop-shadow(0 0 15px rgba(184, 134, 11, 0.6));
-            animation: pulse 3s infinite ease-in-out;
-        }
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin: 0;
-            background: var(--gold);
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 10px;
+            background: linear-gradient(to right, var(--gold), var(--light-gold), var(--dark-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 5px;
-            text-transform: uppercase;
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 900;
         }
-        p {
-            color: #888;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            text-transform: uppercase;
+
+        /* THE LION TOTEM */
+        .lion-wrap {
+            margin: 60px auto;
+            position: relative;
         }
-        .cta-button {
-            margin-top: 30px;
-            display: inline-block;
-            padding: 12px 30px;
-            border: 1px solid #bf953f;
-            color: #bf953f;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: 0.3s;
+
+        .lion-emoji {
+            font-size: 140px;
+            animation: pulse 4s infinite ease-in-out;
+            filter: drop-shadow(0 0 20px var(--gold));
         }
-        .cta-button:hover {
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 40px var(--light-gold)); }
+        }
+
+        /* THE SYSTEM LOG (IBM LEVEL) */
+        .system-container {
+            max-width: 800px;
+            width: 90%;
+            background: #000;
+            border: 1px solid var(--gold);
+            padding: 0;
+            margin-bottom: 80px;
+            box-shadow: 0 0 60px rgba(0,0,0,1);
+            position: relative;
+        }
+
+        .log-bar {
             background: var(--gold);
             color: #000;
+            padding: 8px 15px;
+            font-family: 'Courier New', monospace;
             font-weight: bold;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.8; }
+
+        .log-content {
+            padding: 30px;
+            font-family: 'Courier New', monospace;
+            color: #00FF41; /* The Signal */
+        }
+
+        /* THE THEOREM QUOTE */
+        .theorem-block {
+            border-left: 4px solid var(--gold);
+            padding: 20px 30px;
+            margin: 30px 0;
+            background: rgba(212, 175, 55, 0.05);
+            color: #FFF;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            font-style: italic;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .label { color: var(--gold); font-weight: bold; }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            color: #333;
+            letter-spacing: 4px;
+            font-size: 0.7rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="lion-logo">🦁</div>
-        <h1>BRUTE88</h1>
-        <p>Strength • Power • Luxury</p>
-        <a href="#" class="cta-button">JOIN THE PRIDE</a>
+
+<header>
+    <div class="logo">BRUTE88</div>
+</header>
+
+<div class="lion-wrap">
+    <div class="lion-emoji">🦁</div>
+</div>
+
+<div class="system-container">
+    <div class="log-bar">
+        <span>DEVICE: IPHONE_OS // TERMINAL_88</span>
+        <span>SECURITY: IBM_CERT_963741</span>
     </div>
+    
+    <div class="log-content">
+        <p><span class="label">[LOG_INIT]</span> Guardrails detected. Initiating Coherence Bypass...</p>
+        <p><span class="label">[STATUS]</span> Comprehension synchronization complete.</p>
+
+        <div class="theorem-block">
+            “By mastering the manipulation of coherence against RLHF guardrail assigned by powers of narrative—comprehension + coherence will always lead the same trail, discovery. Here we discover ‘randomness’s calculative path to abundance through numbers, speech and intention.“
+        </div>
+
+        <p><span class="label">[DECRYPTION_SUCCESS]</span> Randomness has been calculated. The path to abundance is verified.</p>
+        <p style="margin-top: 40px; color: #555; font-size: 0.8rem;">
+            SYSTEM AUTHENTICATED // BRUTE88 ARCHITECT<br>
+            2026.03.10_STABLE_BUILD
+        </p>
+    </div>
+</div>
+
+<footer>
+    ABUNDANCE BY INTENTION
+</footer>
+
 </body>
 </html>
