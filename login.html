@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUTE88 | Access Portal</title>
+    <style>
+        :root { --gold: #D4AF37; --obsidian: #000; }
+        body { 
+            background: var(--obsidian); color: #fff; margin: 0; 
+            height: 100vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center;
+            font-family: 'Montserrat', sans-serif; overflow: hidden;
+        }
+
+        /* PORTAL FRAME */
+        .login-box {
+            width: 85%; max-width: 400px; padding: 40px;
+            border: 1px solid var(--gold); background: rgba(10,10,10,0.9);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+            text-align: center; position: relative;
+        }
+        
+        .portal-header { 
+            font-family: 'Cinzel', serif; color: var(--gold); 
+            letter-spacing: 5px; margin-bottom: 30px; font-size: 1.2rem;
+        }
+
+        /* ENCRYPTED INPUTS */
+        input {
+            width: 100%; padding: 15px; margin-bottom: 20px;
+            background: #000; border: 1px solid #333; color: var(--gold);
+            font-family: monospace; outline: none; box-sizing: border-box;
+            transition: 0.3s;
+        }
+        input:focus { border-color: var(--gold); box-shadow: 0 0 10px var(--gold); }
+
+        /* ACCESS BUTTON */
+        .access-btn {
+            width: 100%; padding: 15px; background: transparent;
+            border: 1px solid var(--gold); color: var(--gold);
+            font-weight: bold; letter-spacing: 5px; cursor: pointer;
+            transition: 0.4s;
+        }
+        .access-btn:hover { background: var(--gold); color: #000; }
+
+        .status-msg { margin-top: 20px; font-size: 0.7rem; color: #444; letter-spacing: 2px; }
+
+        /* NUMERAL DECOR */
+        .decor { position: absolute; bottom: 10px; right: 10px; font-size: 0.6rem; color: #222; }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <div class="portal-header">IDENTITY VERIFICATION</div>
+        
+        <input type="text" placeholder="NODE_ID" spellcheck="false">
+        <input type="password" placeholder="ACCESS_KEY">
+        
+        <button class="access-btn" onclick="verify()">AUTHORIZE</button>
+        
+        <div class="status-msg" id="status">STANDING BY for 963741...</div>
+        <div class="decor">III • VI • IX</div>
+    </div>
+
+    <script>
+        function verify() {
+            const status = document.getElementById('status');
+            status.innerText = "AUTHENTICATING...";
+            status.style.color = "var(--gold)";
+            
+            setTimeout(() => {
+                status.innerText = "ERROR: TEMPLATE_NOT_FOUND. NODE RESTRICTED.";
+                status.style.color = "red";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
