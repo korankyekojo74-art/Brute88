@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUTE88 | Access Portal</title>
+    <style>
+        :root { --gold: #D4AF37; --obsidian: #000; }
+        body { 
+            background: var(--obsidian); color: #fff; margin: 0; 
+            height: 100vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center;
+            font-family: 'Montserrat', sans-serif; overflow: hidden;
+        }
+        .portal-frame {
+            width: 80%; max-width: 350px; padding: 50px 30px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-align: center; background: rgba(5,5,5,0.8);
+            box-shadow: 0 0 40px rgba(0,0,0,1);
+        }
+        h2 { font-family: 'Cinzel', serif; color: var(--gold); letter-spacing: 8px; font-size: 1rem; margin-bottom: 40px; }
+        input {
+            width: 100%; padding: 15px; margin-bottom: 20px;
+            background: transparent; border: none; border-bottom: 1px solid #333;
+            color: var(--gold); font-family: monospace; text-align: center;
+            outline: none; transition: 0.4s;
+        }
+        input:focus { border-bottom: 1px solid var(--gold); }
+        .enter-btn {
+            margin-top: 30px; background: transparent; border: 1px solid var(--gold);
+            color: var(--gold); padding: 10px 40px; cursor: pointer;
+            letter-spacing: 5px; font-weight: bold; transition: 0.4s;
+        }
+        .enter-btn:hover { background: var(--gold); color: #000; }
+        .hint { margin-top: 40px; font-size: 0.5rem; color: #222; letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+    <div class="portal-frame">
+        <h2>AUTHENTICATE</h2>
+        <input type="text" placeholder="NODE_ID" spellcheck="false">
+        <input type="password" placeholder="KEY">
+        <button class="enter-btn" onclick="alert('ENCRYPTION ACTIVE: Access Restricted to Sovereign Tier.')">ENTER</button>
+        <div class="hint">III • VI • IX</div>
+    </div>
+</body>
+</html>
