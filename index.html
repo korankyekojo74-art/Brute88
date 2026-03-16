@@ -2,65 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRUTE88</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --ember: #ff3c00; --obsidian: #000; }
-        body { background: var(--obsidian); color: #fff; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; text-align: center; overflow: hidden; height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-
-        /* TORUS CORE */
-        .torus-wrap { position: relative; width: 200px; height: 200px; transform-style: preserve-3d; animation: rotateTorus 8s linear infinite; pointer-events: none; }
-        .ember-core { position: absolute; width: 40px; height: 40px; background: var(--ember); border-radius: 50%; box-shadow: 0 0 50px var(--ember); top: 50%; left: 50%; transform: translate(-50%, -50%); }
-        .ring { position: absolute; width: 100%; height: 100%; border: 1.5px solid var(--gold); border-radius: 50%; opacity: 0.3; }
-        .r1 { transform: rotateY(0deg); } .r2 { transform: rotateY(45deg); } .r3 { transform: rotateY(90deg); } .r4 { transform: rotateY(135deg); }
-
-        .branded-logo { font-family: 'Cinzel', serif; font-size: 3.2rem; letter-spacing: 12px; color: var(--gold); margin: 20px 0; pointer-events: none; }
-
-        /* THE GATEWAY - FORCED OVERLAY */
-        .portal-gate {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px; /* Huge tap area */
-            z-index: 99999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .portal-link {
-            color: #111; /* Invisible stealth link */
-            text-decoration: none;
-            letter-spacing: 5px;
-            font-size: 0.6rem;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        @keyframes rotateTorus { from { transform: rotateX(0deg) rotateY(0deg); } to { transform: rotateX(360deg) rotateY(360deg); } }
+        body { background: #000; color: #fff; margin: 0; font-family: sans-serif; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .logo { font-size: 3rem; letter-spacing: 15px; color: #D4AF37; z-index: 1; }
+        .gate-container { position: fixed; bottom: 0; width: 100%; height: 20vh; z-index: 999; display: flex; justify-content: center; align-items: center; }
+        .portal-link { color: #111; text-decoration: none; font-size: 0.6rem; letter-spacing: 4px; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
     </style>
 </head>
 <body>
-
-    <div class="torus-wrap">
-        <div class="ember-core"></div>
-        <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+    <h1 class="logo">BRUTE88</h1>
+    <div class="gate-container">
+        <a href="login.html" class="portal-link">ACCESS PORTAL // 963741</a>
     </div>
-    
-    <h1 class="branded-logo">BRUTE88</h1>
-
-    <div class="portal-gate">
-        <a href="https://brute88.com/login.html" class="portal-link">
-            ABUNDANCE BY INTENTION // 963741 // [ACCESS PORTAL]
-        </a>
-    </div>
-
 </body>
 </html>
