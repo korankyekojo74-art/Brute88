@@ -4,77 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRUTE88 | NODE INITIALIZATION</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; --red: #ff3c00; --dark: #070707; }
         body { background: #000; color: #fff; font-family: 'Montserrat', sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        
-        .form-container { width: 100%; max-width: 450px; background: var(--dark); border: 1px solid #1a1a1a; padding: 40px; box-sizing: border-box; position: relative; }
-        .form-container::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-        
-        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; letter-spacing: 4px; margin-bottom: 30px; }
-        
-        .input-group { margin-bottom: 20px; }
-        label { display: block; font-size: 0.6rem; color: #555; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
-        input, textarea, select { width: 100%; background: #000; border: 1px solid #222; padding: 12px; color: #fff; font-family: inherit; outline: none; box-sizing: border-box; }
-        input:focus, textarea:focus { border-color: var(--gold); }
-        
-        .disclaimer { font-size: 0.6rem; color: #444; margin-top: 20px; line-height: 1.4; text-align: center; }
-        .disclaimer b { color: var(--red); }
-
-        .submit-btn { width: 100%; padding: 18px; background: var(--gold); color: #000; border: none; font-family: 'Cinzel', serif; font-weight: 900; cursor: pointer; letter-spacing: 2px; margin-top: 20px; transition: 0.3s; }
-        .submit-btn:hover { background: #fff; box-shadow: 0 0 15px rgba(255,255,255,0.2); }
+        .form-container { width: 100%; max-width: 450px; background: var(--dark); border: 1px solid #1a1a1a; padding: 40px; box-sizing: border-box; }
+        h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; letter-spacing: 4px; }
+        label { display: block; font-size: 0.6rem; color: #555; text-transform: uppercase; margin-bottom: 8px; margin-top: 15px; }
+        input, textarea, select { width: 100%; background: #000; border: 1px solid #222; padding: 12px; color: #fff; box-sizing: border-box; outline: none; }
+        input:focus { border-color: var(--gold); }
+        .submit-btn { width: 100%; padding: 18px; background: var(--gold); color: #000; border: none; font-family: 'Cinzel', serif; font-weight: 900; cursor: pointer; letter-spacing: 2px; margin-top: 25px; }
     </style>
 </head>
 <body>
 
 <div class="form-container">
     <h2>NODE REGISTRY</h2>
-    
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="signupForm">
-        
-        <div class="input-group">
-            <label>Node ID (Username)</label>
-            <input type="text" name="username" placeholder="ALPHA_NODE_88" required>
-        </div>
+    <form action="https://formspree.io/f/mpqyooqz" method="POST">
+        <label>Node ID (Username)</label>
+        <input type="text" name="username" placeholder="ALPHA_NODE" required>
 
-        <div class="input-group">
-            <label>Profile Music (YouTube/SoundCloud Link)</label>
-            <input type="text" name="audio_relay" placeholder="https://...">
-        </div>
+        <label>Bio / Personal Manifesto</label>
+        <textarea name="bio" rows="2" placeholder="State your mission..."></textarea>
 
-        <div class="input-group">
-            <label>Bio / Personal Manifesto</label>
-            <textarea name="bio" rows="3" placeholder="Define your sovereignty..."></textarea>
-        </div>
+        <label>Access Tier</label>
+        <select name="tier">
+            <option value="free">FREE NODE (Social Only)</option>
+            <option value="initiate">INITIATE ($1)</option>
+            <option value="architect">ARCHITECT ($2)</option>
+            <option value="co-creator">CO-CREATOR ($3)</option>
+            <option value="propagator">PROPAGATOR ($4)</option>
+            <option value="sovereign">SOVEREIGN ($5)</option>
+        </select>
 
-        <div class="input-group">
-            <label>Top 8 Propagators (Names/IDs)</label>
-            <input type="text" name="top_8" placeholder="List your inner circle...">
-        </div>
+        <label>Verification (CashApp Tag or TxID)</label>
+        <input type="text" name="payment_ref" placeholder="Enter 'FREE' or Transaction Code">
 
-        <div class="input-group">
-            <label>Transaction Hash / CashApp Tag</label>
-            <input type="text" name="payment_verify" placeholder="Verification code..." required>
-        </div>
-
-        <button type="submit" class="submit-btn">INITIALIZE ACCOUNT</button>
-
-        <p class="disclaimer">
-            <b>WARNING:</b> Account activation requires manual verification of the <b>$1</b> or <b>$5</b> transfer to <b>$dthree80</b> or the Solana address.
-        </p>
+        <button type="submit" class="submit-btn">INITIALIZE NODE</button>
     </form>
 </div>
-
-<script>
-    // This script ensures that after they submit, they are taken to the profile preview
-    const form = document.getElementById('signupForm');
-    form.onsubmit = function() {
-        setTimeout(() => {
-            window.location.href = 'profile.html';
-        }, 1000); 
-    };
-</script>
 
 </body>
 </html>
