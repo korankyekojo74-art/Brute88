@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUTE88 | JOIN THE RELAY</title>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; padding: 20px; }
+        .form-wrap { max-width: 500px; margin: 50px auto; background: #0a0a0a; border: 1px solid #222; padding: 30px; }
+        h2 { color: #D4AF37; font-family: serif; letter-spacing: 5px; text-align: center; }
+        label { display: block; margin-top: 15px; color: #666; font-size: 0.7rem; text-transform: uppercase; }
+        input, textarea, select { width: 100%; padding: 12px; background: #000; border: 1px solid #222; color: #fff; margin-top: 5px; box-sizing: border-box; }
+        .submit-btn { width: 100%; padding: 15px; background: #D4AF37; border: none; color: #000; font-weight: bold; margin-top: 30px; cursor: pointer; letter-spacing: 2px; }
+        .hint { font-size: 0.6rem; color: #444; margin-top: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="form-wrap">
+    <h2>NODE REGISTRATION</h2>
+    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+        <label>Username (Node Name)</label>
+        <input type="text" name="username" placeholder="e.g. Propagator_99" required>
+
+        <label>Profile Music Link (SoundCloud/YouTube)</label>
+        <input type="text" name="music_link" placeholder="Autoplay URL...">
+
+        <label>Personal Manifesto (Bio)</label>
+        <textarea name="bio" placeholder="State your mission..."></textarea>
+
+        <label>Top 8 Propagators (Friend IDs)</label>
+        <input type="text" name="top8" placeholder="List IDs separated by commas">
+
+        <label>Select Tier Access</label>
+        <select name="tier">
+            <option value="initiate">Initiate ($1)</option>
+            <option value="sovereign">Sovereign ($5)</option>
+            <option value="free">Free Node (View Only)</option>
+        </select>
+
+        <button type="submit" class="submit-btn">INITIALIZE PROFILE</button>
+        <div class="hint">By joining, you enter the Sovereign Interaction Relay.</div>
+    </form>
+</div>
+
+</body>
+</html>
