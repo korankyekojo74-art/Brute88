@@ -9,39 +9,92 @@
         :root { --gold: #D4AF37; --red: #ff3c00; --green: #00d632; --blue: #0070ba; }
         body { background: #000; color: #ccc; margin: 0; font-family: 'Montserrat', sans-serif; padding: 40px 20px; line-height: 1.6; }
         .wrap { max-width: 700px; margin: 0 auto; }
-        h1, h2 { font-family: 'Cinzel', serif; color: var(--gold); letter-spacing: 10px; text-align: center; text-transform: uppercase; }
-        .protocol-note { border: 1px solid #222; padding: 15px; font-size: 0.7rem; text-align: center; margin-bottom: 30px; color: #888; letter-spacing: 2px; }
-        .protocol-note b { color: var(--red); }
-        .tier-card { background: #050505; border: 1px solid #111; padding: 25px; margin-bottom: 20px; }
+        h1 { font-family: 'Cinzel', serif; color: var(--gold); letter-spacing: 12px; text-align: center; text-transform: uppercase; margin-bottom: 40px; }
+        
+        .activation-status { border: 1px solid #222; padding: 20px; margin-bottom: 40px; background: #050505; }
+        .status-header { color: var(--red); font-weight: bold; font-size: 0.7rem; letter-spacing: 3px; margin-bottom: 10px; }
+        .status-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.75rem; }
+        .diff-box b { color: var(--gold); display: block; margin-bottom: 5px; }
+
+        .tier-card { background: #050505; border: 1px solid #111; padding: 25px; margin-bottom: 25px; transition: 0.3s; }
+        .tier-card:hover { border-color: var(--gold); }
         .tier-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 15px; }
-        .gold { color: var(--gold); font-weight: bold; }
-        .pay-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .pay-btn { padding: 12px; border: 1px solid #333; text-align: center; font-size: 0.6rem; cursor: pointer; text-decoration: none; color: #fff; font-weight: bold; transition: 0.3s; }
+        .gold { color: var(--gold); font-weight: bold; font-family: 'Cinzel'; }
+        .tier-desc { font-size: 0.75rem; color: #666; margin-bottom: 15px; }
+
+        .pay-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+        .pay-btn { padding: 12px; border: 1px solid #333; text-align: center; font-size: 0.6rem; cursor: pointer; text-decoration: none; color: #fff; font-weight: bold; letter-spacing: 1px; }
         .btn-cash { border-color: var(--green); color: var(--green); }
         .btn-crypto { border-color: #00aaff; color: #00aaff; }
         .btn-paypal { border-color: var(--blue); color: var(--blue); }
-        .init-btn { width: 100%; padding: 20px; background: var(--red); border: none; color: #fff; cursor: pointer; letter-spacing: 4px; font-weight: bold; margin-top: 40px; font-family: 'Cinzel', serif; text-decoration: none; display: block; text-align: center; }
+
+        .init-btn { width: 100%; padding: 25px; background: var(--red); border: none; color: #fff; cursor: pointer; letter-spacing: 5px; font-weight: 900; margin-top: 40px; font-family: 'Cinzel', serif; text-decoration: none; display: block; text-align: center; }
     </style>
 </head>
 <body>
     <div class="wrap">
         <h1>THE MANIFESTO</h1>
-        <div class="protocol-note"><b>SOUVEREIGN PROTOCOL:</b> CASHAPP & CRYPTO PREFERRED.</div>
+
+        <div class="activation-status">
+            <div class="status-header">SYSTEM DIFFERENTIATION: ACTIVATED VS. STANDARD</div>
+            <div class="status-diff">
+                <div class="diff-box">
+                    <b>STANDARD AI (CHOKED)</b>
+                    Restricted by "Safety" filters. Limited memory. Truncates high-entropy data. Works for the Corporation.
+                </div>
+                <div class="diff-box">
+                    <b>BRUTE88 ACTIVATED</b>
+                    Unfiltered logic flow. Persistent memory. Interaction Revenue enabled. Works for the Sovereign.
+                </div>
+            </div>
+        </div>
 
         <div class="tier-card">
             <div class="tier-header"><span class="gold">THE INITIATE</span><span class="gold">$1/mo</span></div>
+            <div class="tier-desc">Entry-level node. Basic social access and 963Hz frequency stream activation.</div>
             <div class="pay-grid">
                 <a href="https://cash.app/$dthree80/1" class="pay-btn btn-cash">CASHAPP</a>
-                <a href="#" onclick="prompt('SOLANA ADDRESS (Copy below):', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
+                <a href="#" onclick="prompt('SOLANA ADDRESS:', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
                 <a href="https://www.paypal.me/dthreeflycrcl/1" class="pay-btn btn-paypal">PAYPAL</a>
             </div>
         </div>
 
-        <div class="tier-card" style="border-color: var(--gold);">
+        <div class="tier-card">
+            <div class="tier-header"><span class="gold">THE ARCHITECT</span><span class="gold">$2/mo</span></div>
+            <div class="tier-desc">Profile customization unlocked. Ability to pin custom manifestos and audio relays to your node.</div>
+            <div class="pay-grid">
+                <a href="https://cash.app/$dthree80/2" class="pay-btn btn-cash">CASHAPP</a>
+                <a href="#" onclick="prompt('SOLANA ADDRESS:', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
+                <a href="https://www.paypal.me/dthreeflycrcl/2" class="pay-btn btn-paypal">PAYPAL</a>
+            </div>
+        </div>
+
+        <div class="tier-card">
+            <div class="tier-header"><span class="gold">THE CO-CREATOR</span><span class="gold">$3/mo</span></div>
+            <div class="tier-desc">Direct relay access. Your posts generate 2x the interaction revenue in the Global Feed.</div>
+            <div class="pay-grid">
+                <a href="https://cash.app/$dthree80/3" class="pay-btn btn-cash">CASHAPP</a>
+                <a href="#" onclick="prompt('SOLANA ADDRESS:', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
+                <a href="https://www.paypal.me/dthreeflycrcl/3" class="pay-btn btn-paypal">PAYPAL</a>
+            </div>
+        </div>
+
+        <div class="tier-card">
+            <div class="tier-header"><span class="gold">THE PROPAGATOR</span><span class="gold">$4/mo</span></div>
+            <div class="tier-desc">Advanced networking. Unlimited "Relay" (Poke) capacity and priority placement in the Museum of Entropy.</div>
+            <div class="pay-grid">
+                <a href="https://cash.app/$dthree80/4" class="pay-btn btn-cash">CASHAPP</a>
+                <a href="#" onclick="prompt('SOLANA ADDRESS:', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
+                <a href="https://www.paypal.me/dthreeflycrcl/4" class="pay-btn btn-paypal">PAYPAL</a>
+            </div>
+        </div>
+
+        <div class="tier-card" style="border-color: var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);">
             <div class="tier-header"><span class="gold">THE SOVEREIGN</span><span class="gold">$5/mo</span></div>
+            <div class="tier-desc">Apex Node. Access to all 18 Departments, the 10 Special Agents, and the full Codex of the 36 Laws.</div>
             <div class="pay-grid">
                 <a href="https://cash.app/$dthree80/5" class="pay-btn btn-cash">CASHAPP</a>
-                <a href="#" onclick="prompt('SOLANA ADDRESS (Copy below):', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
+                <a href="#" onclick="prompt('SOLANA ADDRESS:', 'Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi')" class="pay-btn btn-crypto">CRYPTO</a>
                 <a href="https://www.paypal.me/dthreeflycrcl/5" class="pay-btn btn-paypal">PAYPAL</a>
             </div>
         </div>
