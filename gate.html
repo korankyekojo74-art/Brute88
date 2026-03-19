@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUTE88 | HOME</title>
+    <style>
+        body { background: #000; color: #fff; margin: 0; font-family: sans-serif; display: grid; grid-template-columns: 280px 1fr 300px; height: 100vh; }
+        
+        /* LEFT NAV (Identity) */
+        .nav-left { border-right: 1px solid #111; padding: 20px; }
+        .nav-item { padding: 12px; margin-bottom: 5px; border-radius: 8px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
+        .nav-item:hover { background: #111; color: #D4AF37; }
+
+        /* CENTER FEED (The Relay) */
+        .feed-center { overflow-y: scroll; padding: 20px; background: #050505; }
+        .post-card { background: #000; border: 1px solid #1a1a1a; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .pfp-mini { width: 40px; height: 40px; background: #222; border-radius: 50%; border: 1px solid #D4AF37; }
+
+        /* RIGHT PANEL (Stats) */
+        .stats-right { border-left: 1px solid #111; padding: 20px; }
+        .stat-box { background: #080808; border: 1px solid #111; padding: 15px; margin-bottom: 15px; }
+
+        @media (max-width: 900px) {
+            body { grid-template-columns: 1fr; }
+            .nav-left, .stats-right { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-left">
+        <h2 style="color:#D4AF37; font-family:serif;">BRUTE88</h2>
+        <div class="nav-item"><b>[ MY NODE ]</b></div>
+        <div class="nav-item"><b>[ MUSEUM ]</b></div>
+        <div class="nav-item"><b>[ CODEX ]</b></div>
+        <div class="nav-item"><b>[ SETTINGS ]</b></div>
+    </div>
+
+    <div class="feed-center">
+        <div class="post-card">
+            <div class="post-header">
+                <div class="pfp-mini"></div>
+                <div><b>Sovereign_01</b><br><small style="color:#444;">2 HOURS AGO</small></div>
+            </div>
+            <p>Initializing the 1,462 Evidence points. The transition is inevitable.</p>
+            <div style="color:#D4AF37; font-size:0.8rem;">[ RELAY ] [ COMMENT ]</div>
+        </div>
+    </div>
+
+    <div class="stats-right">
+        <div class="stat-box">
+            <small style="color:#444;">REVENUE RELAY</small>
+            <div style="font-size: 1.5rem; color:#00d632;">$0.00 SOL</div>
+        </div>
+        <div class="stat-box">
+            <small style="color:#444;">ACTIVE DEPARTMENTS</small>
+            <div style="font-size: 1.2rem;">18/18</div>
+        </div>
+    </div>
+
+</body>
+</html>
