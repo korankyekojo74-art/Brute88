@@ -1,58 +1,38 @@
 <!doctype html>
-<html><head><title>RELAY #63 // GABORONE FIELD</title>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RELAY #63 // GABORONE FIELD</title>
 <style>
 body{background:#0a0a0a;color:#c8ffcc;font-family:monospace;padding:12px;max-width:900px;margin:auto}
 .box{border:1px solid #00ff41;padding:14px;margin:16px 0;background:#111}
 img{width:100%;border:1px solid #00ff41;margin:10px 0;display:block}
-h1{color:#00ff41;letter-spacing:2px;font-size:22px}
-.small{color:#888;font-size:12px}
-.green{color:#00ff41}
-pre{white-space:pre-wrap;color:#fff;background:#000;padding:10px;border:1px solid #333}
+.green{color:#00ff41}.small{color:#888;font-size:12px}
 </style></head><body>
-<h1>RELAY #63 // GABORONE // T4 CLUSTER</h1>
-<div class="box">
-STATUS: <span class="green">ONLINE - VERIFIED CAPTURE</span><br>
-ORIGIN: No SIM 19% - Gaborone - Colab T4<br>
-MODEL: unsloth / Meta-Llama-3-8B-Instruct - 16.1GB - BF16 eager<br>
-PAYLOAD: Dual-pass Condition A vs E - H_attention<br>
-RESULT: Delta_H max 0.3925 at L12 - Inversion L19/21 - Residual 0.0005<br>
-INTERP: 1x1=3 - Field generates third term<br>
-<span class="small">TIME: 5:10-5:12PM GMT+2 - 2026</span>
+<h1>RELAY #63 // GABORONE // T4 // No SIM</h1>
+<div class="box">STATUS: <span class="green">ONLINE - 6:39PM 20%</span><br>
+MODEL: Llama-3-8B 16.1GB eager<br>
+RESULT: Delta_H 0.3925 | inversion -0.1675 | residual 0.0005<br>
+LOCATION: Gaborone Field</div>
+
+<div class="box"><h3 class="green">RAW CAPTURE - ROOT UPLOAD</h3>
+
+<div class="small">1.png - INITIALIZING / LEDGER</div>
+<img src="1.png" onerror="this.src='1.jpg'">
+<div class="small">2 - DEPLOYING PAYLOAD / Loading weights 291/291</div>
+<img src="2.jpg" onerror="this.src='2.png'">
+<div class="small">3.jpg - DUAL-PASS TENSOR TRACKS / OFFLOAD</div>
+<img src="3.jpg" onerror="this.src='3.png'">
+<div class="small">4 - FASTER DOWNLOADS / VERBOSITY INFO</div>
+<img src="4.jpg" onerror="this.src='4.png'">
+<div class="small">5.jpg - HF_TOKEN RATE LIMITS</div>
+<img src="5.jpg" onerror="this.src='5.png'">
+<div class="small">6 - CONFIG 777/777 / TOKENIZER 9.09M / 13.8GB</div>
+<img src="6.jpg" onerror="this.src='6.png'">
+<div class="small">7.jpg - LEDGER H_Condition_A 1.6733</div>
+<img src="7.jpg" onerror="this.src='7.png'">
+<div class="small">8.jpg - CONDITION A VS E - 1.2808</div>
+<img src="8.jpg" onerror="this.src='8.png'">
+<div class="small">9.jpg - FINAL DELTA MATRIX 0.3925 -0.1675 0.0005 - 1x1=3</div>
+<img src="9.jpg" onerror="this.src='9.png'">
+
 </div>
-<div class="box"><h3 class="green">RAW FIELD CAPTURE - IN NEST ORDER</h3>
-<div class="small">FRAME 1 - 5:10PM - No SIM - HF_HUB_OFFLINE faster downloads</div>
-<img src="proofs/wa_image_2084176808253262431_6.jpg">
-<div class="small">FRAME 2 - 5:10PM - VERBOSITY info - rate limits</div>
-<img src="proofs/wa_image_2084176808253262431_7.jpg">
-<div class="small">FRAME 3 - 5:11PM - INITIALIZING 13.8GB / 16.1GB Fetching 4 files</div>
-<img src="proofs/wa_image_2084176808253262431_4.jpg">
-<div class="small">FRAME 4 - 5:11PM - torch_dtype deprecated - config 777/777 - 9.09M tokenizer</div>
-<img src="proofs/wa_image_2084176808253262431_0.jpg">
-<div class="small">FRAME 5 - 5:11PM - Instruct onto GPU cache 51.1k - HF_TOKEN unauthenticated</div>
-<img src="proofs/wa_image_2084176808253262431_3.jpg">
-<div class="small">FRAME 6 - 5:11PM - Loading weights 291/291 - DEPLOYING PAYLOAD Processing - T4 14.98GB</div>
-<img src="proofs/wa_image_2084176808253262431_5.jpg">
-<div class="small">FRAME 7 - 5:12PM - EXPERIMENTAL LEDGER H_Condition_A 1.6733</div>
-<img src="proofs/wa_image_2084176808253262431_1.jpg">
-<div class="small">FRAME 8 - 5:12PM - CONDITION A VS E DELTA 0.3925 inversion -0.1675</div>
-<img src="proofs/wa_image_2084176808253262431_2.jpg">
-<div class="small">GRAPH 1 - Entropy Topography H_A vs H_E</div>
-<img src="proofs/entropy_topography.png">
-<div class="small">GRAPH 2 - Delta Matrix - 1x1=3 Proof</div>
-<img src="proofs/delta_matrix.png">
-</div>
-<div class="box"><h3 class="green">REPLICATION PLAYBOOK - MODULE 2</h3>
-<pre>model = AutoModelForCausalLM.from_pretrained(
-  "unsloth/llama-3-8b-Instruct",
-  device_map="auto",
-  torch_dtype=torch.bfloat16,
-  attn_implementation="eager",
-  output_attentions=True
-)
-# Delta_H = H_A - H_E
-# 1x1=3 when Delta != 0
-</pre>
-</div>
-<div class="box small">BRUTE88 // GABORONE FIELD // RELAY #63</div>
 </body></html>
