@@ -1,67 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRUTE88 | HOME</title>
-    <style>
-        body { background: #000; color: #fff; margin: 0; font-family: sans-serif; display: grid; grid-template-columns: 280px 1fr 300px; height: 100vh; }
-        .nav-left { border-right: 1px solid #111; padding: 20px; }
-        .nav-item { padding: 12px; margin-bottom: 5px; border-radius: 8px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
-        .nav-item:hover { background: #111; color: #D4AF37; }
-        .feed-center { overflow-y: scroll; padding: 20px; background: #050505; }
-        .post-card { background: #000; border: 1px solid #1a1a1a; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
-        .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .pfp-mini { width: 40px; height: 40px; background: #222; border-radius: 50%; border: 1px solid #D4AF37; }
-        .stats-right { border-left: 1px solid #111; padding: 20px; }
-        .stat-box { background: #080808; border: 1px solid #111; padding: 15px; margin-bottom: 15px; }
-        @media (max-width: 900px) {
-            body { grid-template-columns: 1fr; }
-            .nav-left, .stats-right { display: none; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brute88.com</title>
+<style>
+  body{margin:0;background:#050505;color:#eaeaea;font-family:monospace;-webkit-text-size-adjust:100%}
+  .wrap{max-width:560px;margin:0 auto;padding:0 12px 40px}
+  .card{background:#0e0e0e;border:1px solid #2a2a2a;border-radius:18px;padding:18px;margin:18px 0}
+  .top{display:flex;align-items:center;gap:14px}
+  .avatar{width:56px;height:56px;border-radius:50%;border:2px solid #d4b000;background:#1a1a1a;flex-shrink:0}
+  .name{font-size:22px;font-weight:700;letter-spacing:0.5px}
+  .time{color:#666;font-size:14px;margin-top:2px}
+  .msg{font-size:19px;line-height:1.35;margin:18px 0 16px;color:#e6e6e6}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{border:1px solid #d4b000;color:#d4b000;background:transparent;border-radius:8px;padding:8px 14px;font-family:monospace;font-size:15px;letter-spacing:1px}
+  .btn-active{background:#0f0f0f}
+  a.btn-link{text-decoration:none}
+  .fund{border:1.5px solid #00ff88;border-radius:2px;padding:16px;margin-top:32px}
+  .fund-title{color:#00ff88;letter-spacing:2px;font-size:16px;margin-bottom:10px}
+  .fund-sub{color:#c8ffcc;font-size:16px;line-height:1.3;margin-bottom:16px}
+  .drop{width:100%;background:#00ff88;color:#000;border:0;border-radius:2px;padding:16px 10px;font-weight:800;letter-spacing:1px;font-size:16px;font-family:monospace}
+  .addr-row{display:flex;gap:8px;margin-top:14px}
+  .addr{flex:1;background:#111;border:1px solid #333;color:#aaa;padding:10px 10px;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .copy{border:1px solid #00ff88;color:#00ff88;background:transparent;padding:10px 16px;font-family:monospace}
+</style>
 </head>
 <body>
+<div class="wrap">
 
-    <div class="nav-left">
-        <h2 style="color:#D4AF37; font-family:serif;">BRUTE88</h2>
-        <div class="nav-item"><b>[ MY NODE ]</b></div>
-        <div class="nav-item"><b>[ MUSEUM ]</b></div>
-        <div class="nav-item"><b>[ CODEX ]</b></div>
-        <div class="nav-item"><b>[ SETTINGS ]</b></div>
+  <div class="card">
+    <div class="top">
+      <div class="avatar"></div>
+      <div>
+        <div class="name">Sovereign_01</div>
+        <div class="time">2 HOURS AGO</div>
+      </div>
     </div>
+    <div class="msg">Initializing the 1,462 Evidence points. The transition is inevitable.</div>
+    <div class="row">
+      <a class="btn-link" href="/relay.html"><button class="btn btn-active">[ RELAY ]</button></a>
+      <button class="btn" style="opacity:0.6">[ CODEX ]</button>
+      <button class="btn" style="opacity:0.6">[ PROBLEM ]</button>
+    </div>
+  </div>
 
-    <div class="feed-center">
-        <div class="post-card">
-            <div class="post-header">
-                <div class="pfp-mini"></div>
-                <div><b>Sovereign_01</b><br><small style="color:#444;">2 HOURS AGO</small></div>
-            </div>
-            <p>Initializing the 1,462 Evidence points. The transition is inevitable.</p>
-            <div style="color:#D4AF37; font-size:0.8rem; margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-                <a href="/replicate.html" style="color:#D4AF37; text-decoration:none; border:1px solid #D4AF37; padding:4px 10px; border-radius:4px;">[ RELAY ]</a>
-                <a href="/BRUTE88_Public_Technical_Report_STNAN.pdf" style="color:#D4AF37; text-decoration:none; border:1px solid #D4AF37; padding:4px 10px; border-radius:4px;">[ CODEX ]</a>
-                <a href="/BRUTE88_Two_Loudest_Problems..pdf" style="color:#D4AF37; text-decoration:none; border:1px solid #D4AF37; padding:4px 10px; border-radius:4px;">[ PROBLEM ]</a>
-            </div>
-        </div>
+  <div class="fund">
+    <div class="fund-title">[ FUND THE CLUSTER // SOLANA ]</div>
+    <div class="fund-sub">T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.</div>
+    <a href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1" style="text-decoration:none">
+      <button class="drop">DROP SOL → OPEN WALLET</button>
+    </a>
+    <div class="addr-row">
+      <div class="addr" id="addr">Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</div>
+      <button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('addr').innerText);this.innerText='COPIED'">COPY</button>
     </div>
+  </div>
 
-    <div class="stats-right">
-        <div class="stat-box">
-            <small style="color:#444;">REVENUE RELAY</small>
-            <div style="font-size: 1.5rem; color:#00d632;">$0.00 SOL</div>
-        </div>
-        <div class="stat-box">
-            <small style="color:#444;">ACTIVE DEPARTMENTS</small>
-            <div style="font-size: 1.2rem;">18/18</div>
-        </div>
-    </div>
-<!-- BRUTE88 SOLANA PORTAL -->
-<div style="border:1px solid #00ff88; padding:24px; margin:32px 0; font-family:monospace; background:#000; color:#00ff88;">
-  <div style="letter-spacing:2px;">[ FUND THE CLUSTER // SOLANA ]</div>
-  <div style="margin:12px 0; color:#fff; font-size:12px;">T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.</div>
-  <a href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi?label=BRUTE88&amount=0.1" style="display:block; text-align:center; padding:14px; background:#00ff88; color:#000; text-decoration:none; font-weight:bold; margin:16px 0;">DROP SOL → OPEN WALLET</a>
-  <div style="display:flex; gap:8px;"><input value="Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi" readonly style="flex:1; background:#111; border:1px solid #333; color:#fff; padding:10px; font-size:11px;"><button onclick="navigator.clipboard.writeText('Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi'); this.innerText='COPIED'" style="background:#111; border:1px solid #00ff88; color:#00ff88; padding:10px 16px;">COPY</button></div>
 </div>
+
+<script>
+// auto-fix for /relay.html images if they were uploaded as .png
+</script>
 </body>
 </html>
