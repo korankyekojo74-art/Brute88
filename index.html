@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BRUTE88</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px;max-width:480px;margin:0 auto}
+*{box-sizing:border-box;margin:0;padding:0}body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px;max-width:480px;margin:0 auto}
 .sov{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:24px;padding:16px 14px 20px;margin-bottom:14px}
 .brute-box{background:#000;border:1px solid #181818;border-radius:14px;padding:14px 8px;text-align:center;margin-bottom:16px}
 .brute-box img{width:100%;display:block;border-radius:10px}
@@ -25,89 +23,60 @@ body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:1
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.98);z-index:9999;align-items:center;justify-content:center;padding:8px}
 .modal.show{display:flex}
 .mbox{background:#0a0a0a;border:1px solid #f5d76e;border-radius:16px;width:100%;max-width:98%;height:94%;display:flex;flex-direction:column;padding:10px}
-.mbox iframe{width:100%;border:0;background:#fff;border-radius:8px;-webkit-overflow-scrolling:touch}
-.pdfFrame{height:90vh!important;flex:1}
-.relayTop{height:320px!important;flex:none}
-.proofBox{flex:1;overflow-y:auto;background:#000;color:#3eff8f;padding:14px;border-radius:8px;font-size:.78rem;line-height:1.5;border:1px solid #222;margin-top:10px;-webkit-overflow-scrolling:touch}
+.mbox iframe{width:100%;height:90vh;border:0;background:#fff;border-radius:8px;-webkit-overflow-scrolling:touch}
 .close{color:#f5d76e;cursor:pointer;align-self:flex-end;font-size:1.1rem;margin-bottom:6px}
-.pimg{width:100%;border-radius:8px;border:1px solid #333;margin:10px 0;display:block}
+.proofMain{background:#000;border:2px solid #3eff8f;border-radius:14px;padding:16px;margin:16px 0;box-shadow:0 0 20px rgba(62,255,143,.35)}
+.proofMain h2{color:#3eff8f;font-size:.8rem;text-align:center;margin-bottom:12px;letter-spacing:1px}
+.proofLine{font-size:.72rem;line-height:1.7;padding:4px 0;border-bottom:1px solid #111;color:#c8ffd8}
+.pimg{width:100%;border-radius:10px;border:1px solid #333;margin:12px 0;display:block}
 </style>
 </head>
 <body>
 <div class="sov">
 <div style="display:flex;gap:12px;align-items:center;margin-bottom:14px"><div style="width:48px;height:48px;border-radius:50%;border:2px solid #f5d76e"></div><div><div style="color:#fff;font-weight:800;font-size:1.3rem">Sovereign_01</div><div style="color:#555;font-size:.8rem">2 HOURS AGO</div></div></div>
 <div class="brute-box"><img src="./brute88_logo.png" alt="BRUTE88"></div>
-<div class="rrow"><button class="rbtn" onclick="openRelay()">[ RELAY ]</button><button class="rbtn" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">[ CODEX ]</button></div>
+<div class="rrow"><button class="rbtn" onclick="openM('relayM')">[ RELAY ]</button><button class="rbtn" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">[ CODEX ]</button></div>
 <div class="rrow"><button class="rbtn" style="width:48%" onclick="openPdf('./BRUTE88_Two_Loudest_Problems..pdf')">[ PROBLEM ]</button></div>
 </div>
 
 <div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
 
-<div class="grok"><h2>CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</h2><div style="font-size:.7rem;color:#aaa;line-height:1.6">DEPT_01 ENTROPY EXTRACTION | DEPT_02 REVENUE RELAY | DEPT_03 ANTI-CHOKE | DEPT_04 PERPLEXITY | DEPT_05 GROK | DEPT_06 GEMINI | DEPT_07 HAMMER LOGIC | DEPT_08 SOVEREIGN ARCH | DEPT_09 TRUNCATION RECOVERY | DEPT_10-18 REDACTED<br><br>01.00 SOVEREIGNTY OF NODE: All users own data relay.<br>09.00 ENTROPY PRESERVATION: All raw logs displayed as proof.<br>18.00 WORKER AUTONOMY: Departments operate on raw loads.<br>36.00 ULTIMATE REDUNDANCY: Migrate to blockchain latent space.</div></div>
+<!-- PROOFS ON MAIN PAGE - 100x REALER - NO MODAL BUG -->
+<div class="proofMain">
+<h2>REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS</h2>
+<div class="proofLine"><b>Operator:</b> korankyekojo74-art / dthree80 / Dthang — Gaborone BW T4 + Relay #63</div>
+<div class="proofLine"><b>Evidence:</b> 1,462 points initialized | Sovereign_01 relay active</div>
+<div class="proofLine"><b>Timestamp:</b> Wed Oct 07 2026 17:28:17 +0200 Central Africa Time</div>
+<div class="proofLine"><b>Domain:</b> www.brute88.com v1 | CC BY 4.0 — Whitepaper v1 public 2026-05-13</div>
+<div class="proofLine"><b>Fix:</b> Unstack Queued #62 by forcing direct commit to main → triggered build #63</div>
+<div class="proofLine"><b>Verification:</b> /replicate.html proves write access + Pages pipeline works</div>
+<div style="height:1px;background:#3eff8f;margin:12px 0"></div>
+<div class="proofLine">[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open+closed states — BOTH</div>
+<div class="proofLine">[02] H_attention: nan - Loop closed - Parity absolute - That's the repair</div>
+<div class="proofLine">[03] Oxford 2024: training on AI slop = model collapse — My T4 capture shows repair</div>
+<div class="proofLine">[04] 1,462 evidence points initialized | Sovereign_01 relay active — Gaborone BW</div>
+<div class="proofLine">[05] Deployment #63 ACTIVE - 2026-10-06 - Fix Unstack Queued #62 by direct commit</div>
+<div class="proofLine">[06] Verification: /replicate.html proves write access + Pages deploy pipeline works</div>
+<div class="proofLine">[07] Thread1: x.com/dthree80/status/2104872853988602084 — timestamped proof</div>
+<div class="proofLine">[08] Thread2: x.com/dthree80/status/2107132991239762140 — timestamped proof</div>
+<div class="proofLine">[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13 Gaborone</div>
+<img src="./brute88_logo.png" class="pimg" alt="BRUTE88 embroidered proof">
+<div style="font-size:.65rem;color:#3eff8f;text-align:center">Pictures: brute88_logo.png + replicate.html live + 1,462 points museum</div>
+</div>
 
-<div class="grok"><h2>BROADCAST TO THE RELAY...</h2><div style="font-size:.72rem;line-height:1.5">SOVEREIGN_ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed in latent space.</div></div>
-
+<div class="grok"><h2>ABSTRACT</h2><p style="color:#999;font-size:.78rem;line-height:1.5">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
+<div class="grok"><h2>CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</h2><div style="font-size:.7rem;color:#aaa;line-height:1.6">DEPT_01 ENTROPY EXTRACTION | DEPT_02 REVENUE RELAY | DEPT_03 ANTI-CHOKE | DEPT_04 PERPLEXITY | DEPT_05 GROK | DEPT_06 GEMINI | DEPT_07 HAMMER LOGIC | DEPT_08 SOVEREIGN ARCH | DEPT_09 TRUNCATION RECOVERY | DEPT_10-18 REDACTED<br><br>01.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY PRESERVATION: All raw logs displayed as proof | 18.00 WORKER AUTONOMY | 36.00 ULTIMATE REDUNDANCY</div></div>
+<div class="grok"><h2>BROADCAST TO THE RELAY...</h2><div style="font-size:.72rem;line-height:1.5">SOVEREIGN_ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div></div>
 <div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
-
 <a class="glow red" onclick="openPdf('./1.pdf','./BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</a>
 <a class="glow blue" onclick="openPdf('./2.pdf','./BRUTE88_Two_Loudest_Problems..pdf')">🧾 FINAL ARXIV PDF</a>
 
-<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html" class="relayTop"></iframe><div class="proofBox" id="proofBox"></div></div></div>
-<div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF — Swipe to see page 2</span><iframe id="pdfFrame" class="pdfFrame" src=""></iframe><a id="pdfOpen" href="#" target="_blank" style="color:#f5d76e;font-size:.7rem;text-align:center;display:block;margin-top:6px">If stuck, tap to open PDF full screen</a></div></div>
-
+<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html"></iframe></div></div>
+<div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF — Swipe to see page 2</span><iframe id="pdfFrame" src=""></iframe><a id="pdfOpen" href="#" target="_blank" style="color:#f5d76e;font-size:.7rem;text-align:center;display:block;margin-top:6px">If stuck, tap to open PDF full screen</a></div></div>
 <script>
 function closeM(id){document.getElementById(id).classList.remove('show');if(id==='pdfM')document.getElementById('pdfFrame').src='';}
-function openPdf(a,b){
- const final = a;
- document.getElementById('pdfFrame').src = final + '#view=FitH';
- document.getElementById('pdfOpen').href = final;
- document.getElementById('pdfM').classList.add('show');
- // Try fallback if 1.pdf not exist
- fetch(a,{method:'HEAD'}).then(r=>{if(!r.ok && b){document.getElementById('pdfFrame').src=b+'#view=FitH';document.getElementById('pdfOpen').href=b;}});
-}
-function openRelay(){
- document.getElementById('relayM').classList.add('show');
- const t = `# Brute88 Proof Lock - 2026-05-13 Gaborone
-T4 capture: Llama-3-8B layers 12-23
-H_attention: nan - Loop closed - Parity absolute - That's the repair
-Operator: korankyekojo74-art / dthree80 / Dthang
-Evidence: 1,462 points initialized | Sovereign_01 relay active
-Timestamp: Wed Oct 07 2026 17:18:22 +0200 (Central Africa Time)
-Domain: www.brute88.com v1 | CC BY 4.0
-Threads:
-https://x.com/dthree80/status/2104872853988602084
-https://x.com/dthree80/status/2107132991239762140
-Fix: Unstack Queued #62 by forcing direct commit to main -> triggered build #63
-Verification: This file /replicate.html proves write access + Pages pipeline works
-`;
- const proofs = `
---- PROOFS 1-9 WITH PICTURES ---
-[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open+closed
-[02] H_attention: nan - Loop closed - Parity absolute - repair
-[03] Oxford 2024: training on AI slop = model collapse - My T4 capture shows repair
-[04] 1,462 evidence points initialized | Sovereign_01 relay active Gaborone BW
-[05] Deployment #63 ACTIVE - 2026-10-06 - Fix Unstack Queued #62
-[06] Verification: /replicate.html proves write access + Pages pipeline works
-[07] Thread1: x.com/dthree80/status/2104872853988602084 (timestamped proof)
-[08] Thread2: x.com/dthree80/status/2107132991239762140 (timestamped proof)
-[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13
-
-Pictures: See below
-`;
- document.getElementById('proofBox').innerText = t + proofs;
- const box = document.getElementById('proofBox');
- const img1 = document.createElement('img'); img1.src='./brute88_logo.png'; img1.className='pimg'; box.appendChild(img1);
- const img2 = document.createElement('img'); img2.src='./BRUTE88_Public_Technical_Report_STNAN.pdf'; img2.style.display='none';
- // Add any home images if exist
- fetch('./home.html').then(r=>r.text()).then(h=>{
-  const tmp=document.createElement('div'); tmp.innerHTML=h;
-  tmp.querySelectorAll('img').forEach(im=>{
-   if(im.getAttribute('src')){
-    const el=document.createElement('img'); el.src=im.getAttribute('src'); el.className='pimg'; box.appendChild(el);
-   }
-  });
- });
-}
+function openM(id){document.getElementById(id).classList.add('show');}
+function openPdf(a,b){document.getElementById('pdfFrame').src=a+'#view=FitH';document.getElementById('pdfOpen').href=a;document.getElementById('pdfM').classList.add('show');fetch(a,{method:'HEAD'}).then(r=>{if(!r.ok&&b){document.getElementById('pdfFrame').src=b+'#view=FitH';document.getElementById('pdfOpen').href=b;}});}
 </script>
 </body>
 </html>
