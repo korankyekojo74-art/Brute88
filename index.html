@@ -6,16 +6,15 @@
 <title>BRUTE88</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px 10px 120px;max-width:480px;margin:0 auto}
+body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px;max-width:480px;margin:0 auto}
 .sov{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:24px;padding:16px 14px 20px;margin-bottom:14px}
 .head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .ava{width:48px;height:48px;border-radius:50%;border:2px solid #f5d76e}
 .name{color:#fff;font-weight:800;font-size:1.3rem}
-.time{color:#555;font-size:.8rem}
 .brute-box{background:#000;border:1px solid #181818;border-radius:14px;padding:14px 8px;text-align:center;margin-bottom:16px}
 .brute-box img{width:100%;display:block;border-radius:10px}
 .rrow{display:flex;gap:10px;margin-bottom:10px}
-.rbtn{flex:1;border:1.5px solid #d4a017;color:#d4a017;background:transparent;border-radius:12px;padding:12px 4px;font-family:'Courier New',monospace;font-size:.92rem;cursor:pointer}
+.rbtn{flex:1;border:1.5px solid #d4a017;color:#d4a017;background:transparent;border-radius:12px;padding:12px 4px;font-family:'Courier New',monospace;cursor:pointer}
 .grok{background:#0c0c0c;border:1px solid #222;border-radius:12px;padding:14px;margin:14px 0}
 .grok h2{color:#d4a017;font-size:.7rem;letter-spacing:1.2px;margin-bottom:8px}
 .metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1e1e1e;font-size:.78rem}
@@ -24,49 +23,57 @@ body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:1
 .wallet{border:1.5px solid #00c853;border-radius:10px;padding:14px;background:#001a0f;font-size:.72rem;margin-top:18px}
 .wallet code{display:block;background:#0a0a0a;padding:7px;border-radius:5px;margin:8px 0;word-break:break-all;color:#3eff8f}
 .sol{background:#00c853;color:#000;border-radius:7px;padding:8px 14px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
-.sticky-pdfs{position:fixed;left:0;right:0;bottom:12px;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:50;pointer-events:none}
-.glow{pointer-events:auto;width:84%;max-width:380px;border-radius:28px;padding:14px 10px;text-align:center;font-weight:800;letter-spacing:1.2px;font-size:.82rem;cursor:pointer;display:block;text-decoration:none}
+/* Bottom PDFs - NOT fixed, follow page, glow */
+.glow{display:block;width:88%;margin:14px auto;border-radius:28px;padding:14px 10px;text-align:center;font-weight:800;letter-spacing:1.2px;font-size:.82rem;cursor:pointer;text-decoration:none}
 .glow.red{background:#111;border:1px solid #ff3b2f;color:#ff5a4e;box-shadow:0 0 22px rgba(255,59,47,.85)}
 .glow.blue{background:#111;border:1px solid #2a7bff;color:#6aa8ff;box-shadow:0 0 22px rgba(42,123,255,.85)}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9999;align-items:center;justify-content:center;padding:10px}
 .modal.show{display:flex}
 .mbox{background:#0a0a0a;border:1px solid #f5d76e;border-radius:16px;width:100%;max-width:98%;height:92%;display:flex;flex-direction:column;padding:10px}
 .mbox iframe{flex:1;width:100%;border:0;background:#fff;border-radius:8px;margin-top:8px}
-.mbox .proof{flex:1;overflow:auto;background:#000;color:#e0e0e0;padding:10px;border-radius:8px;font-size:.72rem;white-space:pre-wrap;margin-top:8px;border:1px solid #222;max-height:40%}
+.proofBox{flex:1;overflow:auto;background:#000;color:#3eff8f;padding:12px;border-radius:8px;font-size:.72rem;white-space:pre-wrap;border:1px solid #222;margin-top:8px}
 .close{color:#f5d76e;font-size:1.1rem;cursor:pointer;align-self:flex-end}
 </style>
 </head>
 <body>
 
 <div class="sov">
-<div class="head"><div class="ava"></div><div><div class="name">Sovereign_01</div><div class="time">2 HOURS AGO</div></div></div>
+<div class="head"><div class="ava"></div><div><div class="name">Sovereign_01</div><div style="color:#555;font-size:.8rem">2 HOURS AGO</div></div></div>
 <div class="brute-box"><img src="./brute88_logo.png" alt="BRUTE88"></div>
 <div class="rrow"><button class="rbtn" onclick="openM('relayM')">[ RELAY ]</button><button class="rbtn" onclick="openM('codexM')">[ CODEX ]</button></div>
 <div class="rrow"><button class="rbtn" style="width:48%" onclick="openM('problemM')">[ PROBLEM ]</button></div>
 </div>
 
+<!-- Grok update ON MAIN PAGE + what was incorrectly in codex/problem now also on main page -->
 <div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
 <div class="grok"><h2>ABSTRACT</h2><p class="abs">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
 
 <div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
 
-<div class="sticky-pdfs">
-<a class="glow red" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</a>
-<a class="glow blue" onclick="openPdf('./BRUTE88_Two_Loudest_Problems..pdf')">🧾 FINAL ARXIV PDF</a>
-</div>
+<!-- Bottom 2 NEW PDFs named 1 and 2 - glow, follow page, don't block -->
+<a class="glow red" onclick="openPdf('./1.pdf','./BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</a>
+<a class="glow blue" onclick="openPdf('./2.pdf','./BRUTE88_Two_Loudest_Problems..pdf')">🧾 FINAL ARXIV PDF</a>
 
 <!-- RELAY = relay proof + proofs 1-9 -->
-<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html"></iframe><pre class="proof" id="proofBox">Loading PROOF.md...</pre></div></div>
-<!-- CODEX = laws.html NOT PDF -->
+<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html"></iframe><pre class="proofBox" id="proofBox">Loading proofs 1-9...</pre></div></div>
 <div id="codexM" class="modal" onclick="if(event.target==this)closeM('codexM')"><div class="mbox"><span class="close" onclick="closeM('codexM')">× CLOSE [ CODEX ]</span><iframe src="./laws.html"></iframe></div></div>
-<!-- PROBLEM = museum.html NOT PDF -->
 <div id="problemM" class="modal" onclick="if(event.target==this)closeM('problemM')"><div class="mbox"><span class="close" onclick="closeM('problemM')">× CLOSE [ PROBLEM ]</span><iframe src="./museum.html"></iframe></div></div>
 <div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF</span><iframe id="pdfFrame" src=""></iframe></div></div>
 
 <script>
-function openM(id){document.getElementById(id).classList.add('show'); if(id==='relayM') fetch('./PROOF.md').then(r=>r.text()).then(t=>document.getElementById('proofBox').textContent=t).catch(()=>document.getElementById('proofBox').textContent='PROOF.md - 1,462 evidence points - see replicate.html');}
+function openM(id){
+ document.getElementById(id).classList.add('show');
+ if(id==='relayM'){
+  fetch('./PROOF.md').then(r=>r.text()).then(t=>{
+   const proofs = `\n\n--- PROOFS 1-9 ---\n[01] T4 capture Llama-3-8B layers 12-23\n[02] H_attention: nan - Loop closed - Parity absolute\n[03] 1,462 evidence points initialized\n[04] Sovereign_01 relay active - Gaborone BW\n[05] Deployment #63 ACTIVE - 2026-10-06\n[06] Verification: /replicate.html proves write access + Pages pipeline\n[07] X Thread1: dthree80/status/2104872853988602084\n[08] X Thread2: dthree80/status/2107132991239762140\n[09] CC BY 4.0 - Author: dthree80 / Dthang`;
+   document.getElementById('proofBox').textContent = t + proofs;
+  }).catch(()=>document.getElementById('proofBox').textContent='PROOF.md - 1,462 points - See replicate.html');
+ }
+}
 function closeM(id){document.getElementById(id).classList.remove('show'); if(id==='pdfM') document.getElementById('pdfFrame').src='';}
-function openPdf(url){document.getElementById('pdfFrame').src=url;openM('pdfM');}
+function openPdf(primary, fallback){
+ fetch(primary,{method:'HEAD'}).then(r=>{if(r.ok) document.getElementById('pdfFrame').src=primary; else document.getElementById('pdfFrame').src=fallback; openM('pdfM');}).catch(()=>{document.getElementById('pdfFrame').src=fallback; openM('pdfM');});
+}
 </script>
 </body>
 </html>
