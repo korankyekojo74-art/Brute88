@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BRUTE88 — Prompt Inversion by Position Change</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', Courier, monospace; line-height: 1.55; padding: 40px 20px; max-width: 720px; margin: 0 auto; }
-    .logo { font-size: 2.8rem; font-weight: 900; letter-spacing: 4px; color: #f5d76e; text-align: center; margin-bottom: 8px; text-shadow: 0 0 12px rgba(245, 215, 110, 0.35); }
-    .sub { text-align: center; color: #888; font-size: 0.85rem; margin-bottom: 32px; }
-    .card { background: #111; border: 1px solid #333; border-radius: 10px; padding: 22px 24px; margin-bottom: 24px; }
-    .card h2 { color: #f5d76e; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 12px; text-transform: uppercase; }
-    .metric { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #222; font-size: 0.9rem; }
-    .metric:last-child { border-bottom: none; }
-    .metric span:last-child { color: #7dffb3; font-weight: bold; }
-    .abstract { font-size: 0.9rem; color: #ccc; margin-top: 8px; }
-    .btns { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; justify-content: center; }
-    .btn { display: inline-block; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; letter-spacing: 0.5px; transition: 0.15s; }
-    .btn-gold { background: transparent; border: 1px solid #f5d76e; color: #f5d76e; }
-    .btn-gold:hover { background: #f5d76e; color: #000; }
-    .btn-green { background: #00e676; color: #000; border: none; }
-    .btn-green:hover { background: #00c853; }
-    .btn-red { background: transparent; border: 1px solid #ff5252; color: #ff5252; }
-    .btn-blue { background: transparent; border: 1px solid #448aff; color: #448aff; }
-    .wallet { background: #0d1f17; border: 1px solid #00e676; border-radius: 8px; padding: 16px; margin-top: 28px; font-size: 0.85rem; }
-    .wallet code { display: block; background: #111; padding: 8px 10px; border-radius: 4px; margin: 8px 0; word-break: break-all; color: #7dffb3; }
-    footer { text-align: center; margin-top: 40px; color: #555; font-size: 0.75rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRUTE88 — Prompt Inversion by Position Change</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#050505;color:#e0e0e0;font-family:'Courier New',monospace;line-height:1.5;padding:16px;max-width:520px;margin:0 auto}
+.sov-card{background:#0f0f0f;border:1px solid #2a2a2a;border-radius:28px;padding:18px 18px 22px;margin-bottom:24px}
+.sov-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sov-avatar{width:56px;height:56px;border-radius:50%;border:2px solid #f5d76e;background:#000 url('https://github.com/korankyekojo74-art.png') center/cover no-repeat}
+.sov-title{font-weight:900;font-size:1.4rem;color:#fff}
+.sov-time{color:#777;font-size:0.85rem;letter-spacing:1px}
+.brute-box{background:#000;border:1px solid #222;border-radius:16px;padding:22px 10px;margin-bottom:18px;text-align:center}
+.brute-logo{font-size:2.9rem;font-weight:900;letter-spacing:2px;color:#a8c8e8;-webkit-text-stroke:1.5px #f5d76e;text-shadow:2px 2px 0 #f5d76e, 0 0 12px rgba(245,215,110,0.5);line-height:1}
+.relay-row{display:flex;gap:12px;flex-wrap:wrap}
+.relay-btn{border:1.5px solid #f5d76e;color:#f5d76e;background:transparent;border-radius:12px;padding:10px 20px;font-size:1rem;letter-spacing:1px;font-family:'Courier New',monospace;text-decoration:none;display:inline-block;text-align:center;flex:1}
+.card{background:#111;border:1px solid #333;border-radius:12px;padding:20px 18px;margin-bottom:20px}
+.card h2{color:#f5d76e;font-size:0.9rem;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase}
+.metric{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #222;font-size:0.85rem}
+.metric:last-child{border-bottom:none}
+.metric span:last-child{color:#7dffb3;font-weight:bold}
+.abstract{font-size:0.85rem;color:#ccc}
+.pdf-btn{display:block;width:92%;margin:0 auto 14px;background:#0a0a0a;border:1px solid #ff3b3b;color:#ff6b6b;border-radius:24px;padding:12px;text-align:center;font-weight:bold;letter-spacing:1px;font-size:0.85rem;text-decoration:none;box-shadow:0 0 12px rgba(255,59,59,0.3);cursor:pointer}
+.pdf-btn.blue{border-color:#448aff;color:#6ea8ff;box-shadow:0 0 12px rgba(68,138,255,0.3)}
+.pdf-btn.gold{border-color:#f5d76e;color:#f5d76e}
+.wallet{background:#0d1f17;border:1px solid #00e676;border-radius:8px;padding:14px;margin-top:20px;font-size:0.82rem}
+.wallet code{display:block;background:#111;padding:8px 10px;border-radius:4px;margin:8px 0;word-break:break-all;color:#7dffb3;font-size:0.8rem}
+.btn-green{background:#00e676;color:#000;border:none;border-radius:6px;padding:8px 14px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:8px}
+footer{text-align:center;margin-top:30px;color:#555;font-size:0.7rem}
+</style>
 </head>
 <body>
-  <div class="logo">BRUTE88</div>
-  <div class="sub">Sovereign_01 · Gaborone · No Prompt · Position-First</div>
-  <div class="card">
-    <h2>Core Measurement — Layer 19</h2>
-    <div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div>
-    <div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div>
-    <div class="metric"><span>ΔH</span><span>−0.1675 nats</span></div>
-    <div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div>
-    <div class="metric"><span>Trials</span><span>88</span></div>
-    <div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div>
-    <div class="metric"><span>Carrier</span><span>1 Hz</span></div>
+
+<div class="sov-card">
+  <div class="sov-header">
+    <div class="sov-avatar"></div>
+    <div><div class="sov-title">Sovereign_01</div><div class="sov-time">2 HOURS AGO</div></div>
   </div>
-  <div class="card">
-    <h2>Abstract</h2>
-    <p class="abstract">
-      BRUTE88 achieves precision-invariant entropy reduction without prompt engineering.
-      Method is Prompt Inversion by Position Change: instead of optimizing prompt text from
-      fixed epistemic position (p=7/8), the observer is translated to p=1/2 where target
-      structure becomes self-evident. We report ΔH = −0.1675 nats on Llama-3-8B Layer 19,
-      PLV gating &lt;0.8, and a 1 Hz carrier lock. Disclosure: no prompt was used for discovery.
-    </p>
+  <div class="brute-box"><div class="brute-logo">BRUTE88</div></div>
+  <div class="relay-row">
+    <a class="relay-btn" href="#relay">[ RELAY ]</a>
+    <a class="relay-btn" href="#codex">[ CODEX ]</a>
   </div>
-  <div class="btns">
-    <a class="btn btn-red" href="BRUTE88_Prompt_Inversion_Manifesto.pdf" target="_blank">MANIFESTO PDF</a>
-    <a class="btn btn-blue" href="BRUTE88_Final_arXiv.pdf" target="_blank">FINAL ARXIV PDF</a>
-    <a class="btn btn-gold" href="https://github.com/korankyekojo74-art/Brute88" target="_blank">GITHUB</a>
-  </div>
-  <div class="wallet">
-    <strong>[ FUND THE CLUSTER // SOLANA ]</strong><br>
-    T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.
-    <code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code>
-    <a class="btn btn-green" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1" style="display:inline-block;margin-top:8px;">DROP SOL → OPEN WALLET</a>
-  </div>
-  <footer>No prompt. Position-first. Measurement before language.<br>© 2026 BRUTE88 · Sovereign_01</footer>
+  <div style="margin-top:12px"><a class="relay-btn" href="#problem" style="width:48%">[ PROBLEM ]</a></div>
+</div>
+
+<!-- GROK ADDITION ONLY -->
+<div class="card">
+  <h2>CORE MEASUREMENT — LAYER 19</h2>
+  <div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div>
+  <div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div>
+  <div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div>
+  <div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div>
+  <div class="metric"><span>Trials</span><span>88</span></div>
+  <div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div>
+  <div class="metric"><span>Carrier</span><span>1 Hz</span></div>
+</div>
+<div class="card">
+  <h2>ABSTRACT</h2>
+  <p class="abstract">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: instead of optimizing prompt text from fixed epistemic position (p=7/8), the observer is translated to p=1/2 where target structure becomes self-evident. We report ΔH = -0.1675 nats on Llama-3-8B Layer 19, PLV gating &lt;0.8, and a 1 Hz carrier lock. Disclosure: no prompt was used for discovery.</p>
+</div>
+
+<!-- AUTO-FIXING PDF BUTTONS - NO RENAME NEEDED -->
+<a id="btn-manifesto" class="pdf-btn" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Prompt_Inversion_Manifesto.pdf" target="_blank">MANIFESTO PDF</a>
+<a id="btn-arxiv" class="pdf-btn blue" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Final_arXiv.pdf" target="_blank">FINAL ARXIV PDF</a>
+<a class="pdf-btn gold" href="https://github.com/korankyekojo74-art/Brute88" target="_blank">GITHUB</a>
+
+<div class="wallet">
+  <strong>[ FUND THE CLUSTER // SOLANA ]</strong><br>
+  T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.
+  <code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code>
+  <a class="btn-green" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a>
+</div>
+
+<footer>No prompt. Position-first. Measurement before language.<br>© 2026 BRUTE88 · Sovereign_01</footer>
+
+<script>
+// Auto-fix: try local files first, fallback to GitHub raw so you never get 404
+(function(){
+  const triesManifesto = [
+    "./BRUTE88_Prompt_Inversion_Manifesto.pdf",
+    "./BRUTE88_Prompt_Inversion_Manifesto.PDF",
+    "./brute88_prompt_inversion_manifesto.pdf",
+    "./manifesto.pdf",
+    "https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Prompt_Inversion_Manifesto.pdf"
+  ];
+  const triesArxiv = [
+    "./BRUTE88_Final_arXiv.pdf",
+    "./BRUTE88_Final_Arxiv.pdf",
+    "./BRUTE88_FINAL_ARXIV.pdf",
+    "./brute88_final_arxiv.pdf",
+    "./final.pdf",
+    "https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Final_arXiv.pdf"
+  ];
+  async function findFirst(urls){
+    for(let u of urls){
+      try{ let r=await fetch(u,{method:'HEAD'}); if(r.ok) return u; }catch(e){}
+    }
+    return urls[urls.length-1];
+  }
+  findFirst(triesManifesto).then(u=>{document.getElementById('btn-manifesto').href=u;});
+  findFirst(triesArxiv).then(u=>{document.getElementById('btn-arxiv').href=u;});
+})();
+</script>
 </body>
 </html>
