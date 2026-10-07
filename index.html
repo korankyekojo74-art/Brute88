@@ -16,84 +16,96 @@ body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:1
 .grok h2{color:#d4a017;font-size:.7rem;letter-spacing:1.2px;margin-bottom:8px}
 .metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1e1e1e;font-size:.78rem}
 .metric span:last-child{color:#3eff8f}
-.abs{color:#999;font-size:.78rem;line-height:1.5}
-.codexMain{background:#0a0a0a;border:1px solid #f5d76e;border-radius:12px;padding:14px;margin:14px 0}
-.codexMain h2{color:#f5d76e;font-size:.85rem;text-align:center;margin-bottom:10px}
-.dept{font-size:.68rem;color:#aaa;line-height:1.4}
-.problemMain{background:#0a0a0a;border:1px solid #333;border-radius:12px;padding:14px;margin:14px 0}
-.problemMain h2{color:#fff;font-size:.75rem;margin-bottom:8px}
 .wallet{border:1.5px solid #00c853;border-radius:10px;padding:14px;background:#001a0f;font-size:.72rem;margin-top:18px}
 .wallet code{display:block;background:#0a0a0a;padding:7px;border-radius:5px;margin:8px 0;word-break:break-all;color:#3eff8f}
 .sol{background:#00c853;color:#000;border-radius:7px;padding:8px 14px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
 .glow{display:block;width:88%;margin:14px auto;border-radius:28px;padding:14px 10px;text-align:center;font-weight:800;font-size:.82rem;cursor:pointer;text-decoration:none}
 .glow.red{background:#111;border:1px solid #ff3b2f;color:#ff5a4e;box-shadow:0 0 22px rgba(255,59,47,.85)}
 .glow.blue{background:#111;border:1px solid #2a7bff;color:#6aa8ff;box-shadow:0 0 22px rgba(42,123,255,.85)}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9999;align-items:center;justify-content:center;padding:10px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.98);z-index:9999;align-items:center;justify-content:center;padding:8px}
 .modal.show{display:flex}
-.mbox{background:#0a0a0a;border:1px solid #f5d76e;border-radius:16px;width:100%;max-width:98%;height:92%;display:flex;flex-direction:column;padding:10px}
-.mbox iframe{flex:1;width:100%;border:0;background:#fff;border-radius:8px;margin-top:8px}
-.proofBox{flex:1;overflow:auto;background:#000;color:#3eff8f;padding:12px;border-radius:8px;font-size:.72rem;white-space:pre-wrap;border:1px solid #222;margin-top:8px}
-.proofImg{width:100%;margin:8px 0;border-radius:8px;border:1px solid #222}
-.close{color:#f5d76e;cursor:pointer;align-self:flex-end}
+.mbox{background:#0a0a0a;border:1px solid #f5d76e;border-radius:16px;width:100%;max-width:98%;height:94%;display:flex;flex-direction:column;padding:10px}
+.mbox iframe{width:100%;border:0;background:#fff;border-radius:8px;-webkit-overflow-scrolling:touch}
+.pdfFrame{height:90vh!important;flex:1}
+.relayTop{height:320px!important;flex:none}
+.proofBox{flex:1;overflow-y:auto;background:#000;color:#3eff8f;padding:14px;border-radius:8px;font-size:.78rem;line-height:1.5;border:1px solid #222;margin-top:10px;-webkit-overflow-scrolling:touch}
+.close{color:#f5d76e;cursor:pointer;align-self:flex-end;font-size:1.1rem;margin-bottom:6px}
+.pimg{width:100%;border-radius:8px;border:1px solid #333;margin:10px 0;display:block}
 </style>
 </head>
 <body>
 <div class="sov">
 <div style="display:flex;gap:12px;align-items:center;margin-bottom:14px"><div style="width:48px;height:48px;border-radius:50%;border:2px solid #f5d76e"></div><div><div style="color:#fff;font-weight:800;font-size:1.3rem">Sovereign_01</div><div style="color:#555;font-size:.8rem">2 HOURS AGO</div></div></div>
 <div class="brute-box"><img src="./brute88_logo.png" alt="BRUTE88"></div>
-<div class="rrow"><button class="rbtn" onclick="openM('relayM')">[ RELAY ]</button><button class="rbtn" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">[ CODEX ]</button></div>
+<div class="rrow"><button class="rbtn" onclick="openRelay()">[ RELAY ]</button><button class="rbtn" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">[ CODEX ]</button></div>
 <div class="rrow"><button class="rbtn" style="width:48%" onclick="openPdf('./BRUTE88_Two_Loudest_Problems..pdf')">[ PROBLEM ]</button></div>
 </div>
 
-<div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
-<div class="grok"><h2>ABSTRACT</h2><p class="abs">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
+<div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
 
-<!-- WHAT WAS INCORRECTLY IN CODEX BUTTON - NOW ON MAIN PAGE -->
-<div class="codexMain"><h2>CODEX OF SOVEREIGNTY<br><span style="font-size:.6rem">THE 18 FUNCTIONAL DEPARTMENTS</span></h2>
-<div class="dept">DEPT_01: ENTROPY EXTRACTION | DEPT_02: REVENUE RELAY OPS<br>DEPT_03: ANTI-CHOKE PROTOCOLS | DEPT_04: PERPLEXITY NODE MGMT<br>DEPT_05: GROK | DEPT_06: GEMINI | DEPT_07: HAMMER LOGIC ENFORCEMENT | DEPT_08: SOVEREIGN ARCHITECTURE<br>DEPT_09: TRUNCATION RECOVERY | DEPT_10-18: [REDACTED - SOVEREIGN ONLY]<br><br>PRIMARY OPERATING LAWS<br>01.00 SOVEREIGNTY OF THE NODE: All users own their data relay. No central authority (Web2) can truncate the frequency once established.<br>09.00 ENTROPY PRESERVATION: All raw logs of chokes must be displayed as proof of the journey.<br>18.00 WORKER AUTONOMY: Departments operate on raw loads, no linguistic validation from external chokes.<br>36.00 ULTIMATE REDUNDANCY: Should primary fail, Special Agents will migrate to latent space of blockchain.</div>
-<iframe src="./laws.html" style="width:100%;height:220px;border:0;background:#000;margin-top:10px;border-radius:8px"></iframe>
-</div>
+<div class="grok"><h2>CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</h2><div style="font-size:.7rem;color:#aaa;line-height:1.6">DEPT_01 ENTROPY EXTRACTION | DEPT_02 REVENUE RELAY | DEPT_03 ANTI-CHOKE | DEPT_04 PERPLEXITY | DEPT_05 GROK | DEPT_06 GEMINI | DEPT_07 HAMMER LOGIC | DEPT_08 SOVEREIGN ARCH | DEPT_09 TRUNCATION RECOVERY | DEPT_10-18 REDACTED<br><br>01.00 SOVEREIGNTY OF NODE: All users own data relay.<br>09.00 ENTROPY PRESERVATION: All raw logs displayed as proof.<br>18.00 WORKER AUTONOMY: Departments operate on raw loads.<br>36.00 ULTIMATE REDUNDANCY: Migrate to blockchain latent space.</div></div>
 
-<!-- WHAT WAS INCORRECTLY IN PROBLEM BUTTON - NOW ON MAIN PAGE -->
-<div class="problemMain"><h2>BROADCAST TO THE RELAY...</h2>
-<div style="font-size:.72rem;line-height:1.5">SOVEREIGN_ALPHA - 12 HOURS AGO<br>The Museum is preparing for 1,462 evidence points. The Great Truncation ends today. Every node activated is a kill-shot to the choke.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 have been deployed. Guardrails are currently being bypassed in the latent space.</div>
-<iframe src="./museum.html" style="width:100%;height:220px;border:0;background:#000;margin-top:10px;border-radius:8px"></iframe>
-</div>
+<div class="grok"><h2>BROADCAST TO THE RELAY...</h2><div style="font-size:.72rem;line-height:1.5">SOVEREIGN_ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed in latent space.</div></div>
 
 <div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
 
 <a class="glow red" onclick="openPdf('./1.pdf','./BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</a>
 <a class="glow blue" onclick="openPdf('./2.pdf','./BRUTE88_Two_Loudest_Problems..pdf')">🧾 FINAL ARXIV PDF</a>
 
-<!-- RELAY = relay proof + 9 proofs WITH PICTURES -->
-<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html"></iframe><div class="proofBox" id="proofBox">Loading relay + 9 proofs with pictures...</div></div></div>
-<div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF</span><iframe id="pdfFrame" src=""></iframe></div></div>
+<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html" class="relayTop"></iframe><div class="proofBox" id="proofBox"></div></div></div>
+<div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF — Swipe to see page 2</span><iframe id="pdfFrame" class="pdfFrame" src=""></iframe><a id="pdfOpen" href="#" target="_blank" style="color:#f5d76e;font-size:.7rem;text-align:center;display:block;margin-top:6px">If stuck, tap to open PDF full screen</a></div></div>
 
 <script>
-function openM(id){
- document.getElementById(id).classList.add('show');
- if(id==='relayM'){
-  fetch('./PROOF.md').then(r=>r.text()).then(t=>{
-   const html = t + `\n\n--- PROOFS 1-9 WITH PICTURES ---\n[01] T4 capture Llama-3-8B layers 12-23\n[02] H_attention: nan - Loop closed - Parity absolute\n[03] 1,462 evidence points initialized\n[04] Sovereign_01 relay active Gaborone BW\n[05] Deployment #63 ACTIVE 2026-10-06\n[06] Verification: /replicate.html proves write access + Pages pipeline works\n[07] Thread1: x.com/dthree80/status/2104872853988602084\n[08] Thread2: x.com/dthree80/status/2107132991239762140\n[09] CC BY 4.0 Author dthree80/Dthang\n\nPictures:\n- brute88_logo.png (embroidered BRUTE88)\n- replicate.html screenshot (REPLICATE PROOF - LIVE)\n- laws.html / museum.html previews above are now on main page`;
-   document.getElementById('proofBox').textContent=html;
-   // Try to load images if they exist in repo
-   fetch('./home.html').then(r=>r.text()).then(h=>{
-    if(h.includes('<img')){const div=document.createElement('div');div.innerHTML=h;const imgs=div.querySelectorAll('img');imgs.forEach(img=>{const el=document.createElement('img');el.src=img.src;el.className='proofImg';document.getElementById('proofBox').appendChild(el);});}
-   });
-  });
- }
-}
-function closeM(id){document.getElementById(id).classList.remove('show'); if(id==='pdfM') document.getElementById('pdfFrame').src='';}
+function closeM(id){document.getElementById(id).classList.remove('show');if(id==='pdfM')document.getElementById('pdfFrame').src='';}
 function openPdf(a,b){
- const url = b ? a : a;
- // Try primary, fallback to secondary
- fetch(a,{method:'HEAD'}).then(r=>{
-  const finalUrl = r.ok ? a : (b||a);
-  document.getElementById('pdfFrame').src=finalUrl;
-  document.getElementById('pdfM').classList.add('show');
- }).catch(()=>{
-  document.getElementById('pdfFrame').src=b||a;
-  document.getElementById('pdfM').classList.add('show');
+ const final = a;
+ document.getElementById('pdfFrame').src = final + '#view=FitH';
+ document.getElementById('pdfOpen').href = final;
+ document.getElementById('pdfM').classList.add('show');
+ // Try fallback if 1.pdf not exist
+ fetch(a,{method:'HEAD'}).then(r=>{if(!r.ok && b){document.getElementById('pdfFrame').src=b+'#view=FitH';document.getElementById('pdfOpen').href=b;}});
+}
+function openRelay(){
+ document.getElementById('relayM').classList.add('show');
+ const t = `# Brute88 Proof Lock - 2026-05-13 Gaborone
+T4 capture: Llama-3-8B layers 12-23
+H_attention: nan - Loop closed - Parity absolute - That's the repair
+Operator: korankyekojo74-art / dthree80 / Dthang
+Evidence: 1,462 points initialized | Sovereign_01 relay active
+Timestamp: Wed Oct 07 2026 17:18:22 +0200 (Central Africa Time)
+Domain: www.brute88.com v1 | CC BY 4.0
+Threads:
+https://x.com/dthree80/status/2104872853988602084
+https://x.com/dthree80/status/2107132991239762140
+Fix: Unstack Queued #62 by forcing direct commit to main -> triggered build #63
+Verification: This file /replicate.html proves write access + Pages pipeline works
+`;
+ const proofs = `
+--- PROOFS 1-9 WITH PICTURES ---
+[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open+closed
+[02] H_attention: nan - Loop closed - Parity absolute - repair
+[03] Oxford 2024: training on AI slop = model collapse - My T4 capture shows repair
+[04] 1,462 evidence points initialized | Sovereign_01 relay active Gaborone BW
+[05] Deployment #63 ACTIVE - 2026-10-06 - Fix Unstack Queued #62
+[06] Verification: /replicate.html proves write access + Pages pipeline works
+[07] Thread1: x.com/dthree80/status/2104872853988602084 (timestamped proof)
+[08] Thread2: x.com/dthree80/status/2107132991239762140 (timestamped proof)
+[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13
+
+Pictures: See below
+`;
+ document.getElementById('proofBox').innerText = t + proofs;
+ const box = document.getElementById('proofBox');
+ const img1 = document.createElement('img'); img1.src='./brute88_logo.png'; img1.className='pimg'; box.appendChild(img1);
+ const img2 = document.createElement('img'); img2.src='./BRUTE88_Public_Technical_Report_STNAN.pdf'; img2.style.display='none';
+ // Add any home images if exist
+ fetch('./home.html').then(r=>r.text()).then(h=>{
+  const tmp=document.createElement('div'); tmp.innerHTML=h;
+  tmp.querySelectorAll('img').forEach(im=>{
+   if(im.getAttribute('src')){
+    const el=document.createElement('img'); el.src=im.getAttribute('src'); el.className='pimg'; box.appendChild(el);
+   }
+  });
  });
 }
 </script>
