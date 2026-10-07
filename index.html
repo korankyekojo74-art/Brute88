@@ -6,50 +6,58 @@
 <title>BRUTE88</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:12px;max-width:480px;margin:0 auto}
-.sov{background:#0f0f0f;border:1px solid #222;border-radius:22px;padding:16px;margin-bottom:16px}
+body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px;max-width:480px;margin:0 auto}
+.sov{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:24px;padding:16px 14px 20px;margin-bottom:0}
 .head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.ava{width:44px;height:44px;border-radius:50%;border:2px solid #f5d76e;background:#111}
-.box{background:#000;border:1px solid #1a1a1a;border-radius:14px;padding:18px 6px;text-align:center;margin-bottom:14px}
-.logo{font-size:2.9rem;font-weight:900;color:#a8c8ff;-webkit-text-stroke:1.7px #f5d76e;text-shadow:0 0 10px rgba(245,215,110,.7);letter-spacing:2px}
-.rrow{display:flex;gap:8px;margin-bottom:8px}
-.rbtn{flex:1;border:1.5px solid #c99a1a;color:#c99a1a;background:transparent;border-radius:10px;padding:10px 4px;font-family:'Courier New',monospace;cursor:pointer}
-.card{background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:16px;margin-bottom:12px}
-.card h2{color:#f5d76e;font-size:.75rem;margin-bottom:8px;letter-spacing:1px}
-.metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1f1f1f;font-size:.78rem}
-.metric span:last-child{color:#5cff8f}
-.abs{color:#aaa;font-size:.8rem;line-height:1.4}
-.hidden{display:none}.hidden.show{display:block}
-.glow{display:block;width:90%;margin:0 auto 12px;border-radius:24px;padding:12px;text-align:center;font-weight:700;text-decoration:none;font-size:.8rem}
-.glow.red{border:1px solid #ff3b2f;color:#ff5a4e;background:#0d0d0d;box-shadow:0 0 16px rgba(255,59,47,.5)}
-.glow.blue{border:1px solid #2a7bff;color:#5a9bff;background:#0d0d0d;box-shadow:0 0 16px rgba(42,123,255,.5)}
-.wallet{border:1px solid #00c853;border-radius:8px;padding:12px;background:#001a0f;font-size:.72rem;margin-top:12px}
-.wallet code{display:block;background:#0a0a0a;padding:6px;border-radius:4px;margin:6px 0;word-break:break-all;color:#5cff8f}
-.sol{background:#00c853;color:#000;border-radius:6px;padding:8px 12px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
+.ava{width:48px;height:48px;border-radius:50%;border:2px solid #f5d76e;background:transparent;flex-shrink:0}
+.name{color:#fff;font-weight:800;font-size:1.3rem}
+.time{color:#555;font-size:.8rem;letter-spacing:1px;margin-top:2px}
+.brute-box{background:#000;border:1px solid #181818;border-radius:14px;padding:14px 8px;text-align:center;margin-bottom:16px}
+.brute-box img{width:100%;height:auto;display:block}
+.rrow{display:flex;gap:10px;margin-bottom:10px}
+.rbtn{flex:1;border:1.5px solid #d4a017;color:#d4a017;background:transparent;border-radius:12px;padding:12px 4px;font-family:'Courier New',monospace;font-size:.92rem;cursor:pointer;letter-spacing:.5px}
+.rbtn.full{width:48%;flex:0 0 48%}
+.grok{background:#0c0c0c;border:1px solid #222;border-radius:12px;padding:14px;margin:14px 0}
+.grok h2{color:#d4a017;font-size:.7rem;letter-spacing:1.2px;margin-bottom:8px}
+.metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1e1e1e;font-size:.78rem}
+.metric span:last-child{color:#3eff8f}
+.abs{color:#999;font-size:.78rem;line-height:1.5}
+.glow-wrap{position:relative;margin-top:8px}
+.glow{display:block;width:84%;margin:0 auto 14px;border-radius:28px;padding:14px 10px;text-align:center;font-weight:800;letter-spacing:1.2px;text-decoration:none;font-size:.82rem;position:relative;z-index:2}
+.glow.red{background:#111;border:1px solid #ff3b2f;color:#ff5a4e;box-shadow:0 0 20px rgba(255,59,47,.7), inset 0 0 10px rgba(255,59,47,.15)}
+.glow.blue{background:#111;border:1px solid #2a7bff;color:#6aa8ff;box-shadow:0 0 20px rgba(42,123,255,.7), inset 0 0 10px rgba(42,123,255,.15)}
+.wallet{border:1.5px solid #00c853;border-radius:10px;padding:14px;background:#001a0f;font-size:.72rem;margin-top:-28px;padding-top:36px;position:relative;z-index:1}
+.wallet code{display:block;background:#0a0a0a;padding:7px;border-radius:5px;margin:8px 0;word-break:break-all;color:#3eff8f}
+.sol{background:#00c853;color:#000;border-radius:7px;padding:8px 14px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.mbox{background:#111;border:1px solid #f5d76e;border-radius:16px;padding:22px;max-width:400px;width:100%}
+.close{float:right;color:#f5d76e;font-size:1.5rem;cursor:pointer}
 </style>
 </head>
 <body>
 
 <div class="sov">
-<div class="head"><div class="ava"></div><div><div style="font-weight:800;color:#fff">Sovereign_01</div><div style="color:#666;font-size:.75rem">2 HOURS AGO</div></div></div>
-<div class="box"><div class="logo">BRUTE88</div></div>
-<div class="rrow"><button class="rbtn" onclick="tog('relay')">[ RELAY ]</button><button class="rbtn" onclick="tog('codex')">[ CODEX ]</button></div>
-<div class="rrow"><button class="rbtn" style="width:48%" onclick="tog('problem')">[ PROBLEM ]</button></div>
+<div class="head"><div class="ava"></div><div><div class="name">Sovereign_01</div><div class="time">2 HOURS AGO</div></div></div>
+<div class="brute-box"><img src="./brute88_logo.png" alt="BRUTE88"></div>
+<div class="rrow"><button class="rbtn" onclick="openM('relayM')">[ RELAY ]</button><button class="rbtn" onclick="openM('codexM')">[ CODEX ]</button></div>
+<div class="rrow"><button class="rbtn full" onclick="openM('problemM')">[ PROBLEM ]</button></div>
 </div>
 
-<div class="card"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
+<div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
 
-<div id="relay" class="card hidden"><h2>[ RELAY ]</h2><p class="abs">T4 + Relay #63 Gaborone — Live 1 Hz carrier, PLV gating <0.8, 88 trials. Position-first sync. Status: ONLINE.</p></div>
-<div id="codex" class="card hidden"><h2>[ CODEX ]</h2><p class="abs">H(E)=0.9531 → H(A)=0.7856 = ΔH -0.1675 nats. Llama-3-8B L19, precision invariant. No prompt engineering.</p></div>
-<div id="problem" class="card hidden"><h2>[ PROBLEM ]</h2><p class="abs">Problem: optimizing prompts from p=7/8. Solution: invert position to p=1/2 where structure is self-evident. No prompt used for discovery.</p></div>
+<div class="grok"><h2>ABSTRACT</h2><p class="abs">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
 
-<div class="card"><h2>ABSTRACT</h2><p class="abs">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
-
-<a class="glow red" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">📄 MANIFESTO PDF</a>
-<a class="glow blue" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Two_Loudest_Problems..pdf" target="_blank">🧾 FINAL ARXIV PDF</a>
-
+<div class="glow-wrap">
+<a class="glow red" href="https://github.com/korankyekojo74-art/Brute88/blob/main/BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">📄 MANIFESTO PDF</a>
+<a class="glow blue" href="https://github.com/korankyekojo74-art/Brute88/blob/main/BRUTE88_Two_Loudest_Problems..pdf" target="_blank">🧾 FINAL ARXIV PDF</a>
 <div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
+</div>
 
-<script>function tog(id){document.getElementById(id).classList.toggle('show')}</script>
+<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">×</span><h2 style="color:#f5d76e">[ RELAY ]</h2><br><p class="abs">T4 + Relay #63 Gaborone — Live 1 Hz carrier, PLV gating <0.8, 88 trials. Position-first sync. Status: ONLINE.</p></div></div>
+<div id="codexM" class="modal" onclick="if(event.target==this)closeM('codexM')"><div class="mbox"><span class="close" onclick="closeM('codexM')">×</span><h2 style="color:#f5d76e">[ CODEX ]</h2><br><p class="abs">H(E)=0.9531 → H(A)=0.7856 = ΔH -0.1675 nats. Llama-3-8B L19, precision invariant. No prompt engineering.</p></div></div>
+<div id="problemM" class="modal" onclick="if(event.target==this)closeM('problemM')"><div class="mbox"><span class="close" onclick="closeM('problemM')">×</span><h2 style="color:#f5d76e">[ PROBLEM ]</h2><br><p class="abs">Problem: optimizing prompts from p=7/8. Solution: invert position to p=1/2 where structure is self-evident. No prompt used for discovery.</p></div></div>
+
+<script>function openM(id){document.getElementById(id).classList.add('show')}function closeM(id){document.getElementById(id).classList.remove('show')}</script>
 </body>
 </html>
