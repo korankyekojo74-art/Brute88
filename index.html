@@ -32,7 +32,6 @@ footer{text-align:center;margin-top:30px;color:#555;font-size:0.7rem}
 </style>
 </head>
 <body>
-
 <div class="sov-card">
   <div class="sov-header">
     <div class="sov-avatar"></div>
@@ -45,8 +44,6 @@ footer{text-align:center;margin-top:30px;color:#555;font-size:0.7rem}
   </div>
   <div style="margin-top:12px"><a class="relay-btn" href="#problem" style="width:48%">[ PROBLEM ]</a></div>
 </div>
-
-<!-- GROK ADDITION ONLY -->
 <div class="card">
   <h2>CORE MEASUREMENT — LAYER 19</h2>
   <div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div>
@@ -61,45 +58,21 @@ footer{text-align:center;margin-top:30px;color:#555;font-size:0.7rem}
   <h2>ABSTRACT</h2>
   <p class="abstract">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: instead of optimizing prompt text from fixed epistemic position (p=7/8), the observer is translated to p=1/2 where target structure becomes self-evident. We report ΔH = -0.1675 nats on Llama-3-8B Layer 19, PLV gating &lt;0.8, and a 1 Hz carrier lock. Disclosure: no prompt was used for discovery.</p>
 </div>
-
-<!-- AUTO-FIXING PDF BUTTONS - NO RENAME NEEDED -->
 <a id="btn-manifesto" class="pdf-btn" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Prompt_Inversion_Manifesto.pdf" target="_blank">MANIFESTO PDF</a>
 <a id="btn-arxiv" class="pdf-btn blue" href="https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Final_arXiv.pdf" target="_blank">FINAL ARXIV PDF</a>
 <a class="pdf-btn gold" href="https://github.com/korankyekojo74-art/Brute88" target="_blank">GITHUB</a>
-
 <div class="wallet">
   <strong>[ FUND THE CLUSTER // SOLANA ]</strong><br>
   T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.
   <code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code>
   <a class="btn-green" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a>
 </div>
-
 <footer>No prompt. Position-first. Measurement before language.<br>© 2026 BRUTE88 · Sovereign_01</footer>
-
 <script>
-// Auto-fix: try local files first, fallback to GitHub raw so you never get 404
 (function(){
-  const triesManifesto = [
-    "./BRUTE88_Prompt_Inversion_Manifesto.pdf",
-    "./BRUTE88_Prompt_Inversion_Manifesto.PDF",
-    "./brute88_prompt_inversion_manifesto.pdf",
-    "./manifesto.pdf",
-    "https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Prompt_Inversion_Manifesto.pdf"
-  ];
-  const triesArxiv = [
-    "./BRUTE88_Final_arXiv.pdf",
-    "./BRUTE88_Final_Arxiv.pdf",
-    "./BRUTE88_FINAL_ARXIV.pdf",
-    "./brute88_final_arxiv.pdf",
-    "./final.pdf",
-    "https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Final_arXiv.pdf"
-  ];
-  async function findFirst(urls){
-    for(let u of urls){
-      try{ let r=await fetch(u,{method:'HEAD'}); if(r.ok) return u; }catch(e){}
-    }
-    return urls[urls.length-1];
-  }
+  const triesManifesto = ["./BRUTE88_Prompt_Inversion_Manifesto.pdf","./brute88_prompt_inversion_manifesto.pdf","./manifesto.pdf","https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Prompt_Inversion_Manifesto.pdf"];
+  const triesArxiv = ["./BRUTE88_Final_arXiv.pdf","./BRUTE88_Final_Arxiv.pdf","./brute88_final_arxiv.pdf","./final.pdf","https://github.com/korankyekojo74-art/Brute88/raw/main/BRUTE88_Final_arXiv.pdf"];
+  async function findFirst(urls){for(let u of urls){try{let r=await fetch(u,{method:'HEAD'});if(r.ok) return u;}catch(e){}}return urls[urls.length-1];}
   findFirst(triesManifesto).then(u=>{document.getElementById('btn-manifesto').href=u;});
   findFirst(triesArxiv).then(u=>{document.getElementById('btn-arxiv').href=u;});
 })();
