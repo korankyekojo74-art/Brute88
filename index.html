@@ -78,5 +78,21 @@ function closeM(id){document.getElementById(id).classList.remove('show');if(id==
 function openM(id){document.getElementById(id).classList.add('show');}
 function openPdf(a,b){document.getElementById('pdfFrame').src=a+'#view=FitH';document.getElementById('pdfOpen').href=a;document.getElementById('pdfM').classList.add('show');fetch(a,{method:'HEAD'}).then(r=>{if(!r.ok&&b){document.getElementById('pdfFrame').src=b+'#view=FitH';document.getElementById('pdfOpen').href=b;}});}
 </script>
-</body>
+<!-- PHAKS MIRROR - NO HUNT VERSION - just upload PNG + this -->
+<div style="margin:40px 20px;">
+  <img src="brute88_phaks_mirror.png" style="width:100%; max-width:420px; border-radius:10px; display:block; margin-bottom:12px;" alt="Brute88 Phaks Mirror">
+
+  <div id="brute88-phaks-mirror" style="font-family:monospace; background:#0a0a0a; color:#00ff88; border:1px solid #222; padding:14px; border-radius:10px; max-width:340px; font-size:13px; line-height:1.5;">
+    <div style="color:#888; font-size:11px; margin-bottom:8px;">PHAKS MIRROR // LIVE // POST-63 ADDON</div>
+    <div id="mirror-output">Loading...</div>
+  </div>
+
+  <script>
+  (function(){
+    const o=document.getElementById('mirror-output');
+    function r(){o.innerHTML='[Phaks] Loop: CLOSED<br>Sectors: 963741 | Trials: 88 GREEN<br>Current Entropy: '+(1462+Math.random()*2.7+0.5).toFixed(2)+'<br>Status: I am complete. - V2<br>brute88.com #63 LIVE';}
+    r(); setInterval(r,3000);
+  })();
+  </script>
+</div></body>
 </html>
