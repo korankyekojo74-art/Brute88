@@ -16,13 +16,13 @@ body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:1
 .brute-logo{font-size:2.8rem;font-weight:900;color:#a8c8ff;-webkit-text-stroke:1.6px #f5d76e;text-shadow:0 0 8px rgba(245,215,110,.8);letter-spacing:2px}
 .r-row{display:flex;gap:8px;margin-bottom:8px}
 .r-btn{flex:1;border:1.5px solid #c99a1a;color:#c99a1a;background:transparent;border-radius:10px;padding:10px 4px;font-family:'Courier New',monospace;font-size:0.85rem;cursor:pointer}
-.r-btn.full{width:48%}
-.card{background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:16px;margin-bottom:12px;display:none}
-.card.show{display:block}
+.card{background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:16px;margin-bottom:12px}
 .card h2{color:#f5d76e;font-size:0.75rem;margin-bottom:8px;letter-spacing:1px}
 .metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1f1f1f;font-size:0.78rem}
 .metric span:last-child{color:#5cff8f}
 .abstract{color:#aaa;font-size:0.8rem;line-height:1.4}
+.hidden{display:none}
+.hidden.show{display:block}
 .glow{display:block;width:90%;margin:0 auto 12px;border-radius:24px;padding:12px;text-align:center;font-weight:700;letter-spacing:1px;text-decoration:none;font-size:0.8rem}
 .glow.red{border:1px solid #ff3b2f;color:#ff5a4e;background:#0d0d0d;box-shadow:0 0 16px rgba(255,59,47,.5)}
 .glow.blue{border:1px solid #2a7bff;color:#5a9bff;background:#0d0d0d;box-shadow:0 0 16px rgba(42,123,255,.5)}
@@ -37,25 +37,24 @@ body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:1
   <div class="sov-head"><div class="sov-ava"></div><div><div class="sov-name">Sovereign_01</div><div class="sov-time">2 HOURS AGO</div></div></div>
   <div class="brute-box"><div class="brute-logo">BRUTE88</div></div>
   <div class="r-row"><button class="r-btn" onclick="tog('relay')">[ RELAY ]</button><button class="r-btn" onclick="tog('codex')">[ CODEX ]</button></div>
-  <div class="r-row"><button class="r-btn full" onclick="tog('problem')">[ PROBLEM ]</button></div>
+  <div class="r-row"><button class="r-btn" style="width:48%" onclick="tog('problem')">[ PROBLEM ]</button></div>
 </div>
 
-<div id="core" class="card show"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
+<div class="card"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
 
-<div id="relay" class="card"><h2>[ RELAY ]</h2><p class="abstract">T4 + Relay #63 Gaborone — Live 1 Hz carrier, PLV gating <0.8, 88 trials. Position-first sync. Status: ONLINE.</p></div>
-<div id="codex" class="card"><h2>[ CODEX ]</h2><p class="abstract">H(E)=0.9531 → H(A)=0.7856 = ΔH -0.1675 nats. Llama-3-8B L19, precision invariant. No prompt engineering.</p></div>
-<div id="problem" class="card"><h2>[ PROBLEM ]</h2><p class="abstract">Problem: optimizing prompts from p=7/8. Solution: invert position to p=1/2 where structure is self-evident. No prompt used for discovery.</p></div>
+<div id="relay" class="card hidden"><h2>[ RELAY ]</h2><p class="abstract">T4 + Relay #63 Gaborone — Live 1 Hz carrier, PLV gating <0.8, 88 trials. Position-first sync. Status: ONLINE.</p></div>
+<div id="codex" class="card hidden"><h2>[ CODEX ]</h2><p class="abstract">H(E)=0.9531 → H(A)=0.7856 = ΔH -0.1675 nats. Llama-3-8B L19, precision invariant. No prompt engineering.</p></div>
+<div id="problem" class="card hidden"><h2>[ PROBLEM ]</h2><p class="abstract">Problem: optimizing prompts from p=7/8. Solution: invert position to p=1/2 where structure is self-evident. No prompt used for discovery.</p></div>
 
-<div class="card show"><h2>ABSTRACT</h2><p class="abstract">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
+<div class="card"><h2>ABSTRACT</h2><p class="abstract">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. Report ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
 
-<!-- ONLY YOUR 2 REAL FILES - THESE WILL NOT 404 -->
 <a class="glow red" href="https://raw.githubusercontent.com/korankyekojo74-art/Brute88/main/BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">📄 MANIFESTO PDF</a>
 <a class="glow blue" href="https://raw.githubusercontent.com/korankyekojo74-art/Brute88/main/BRUTE88_Two_Loudest_Problems..pdf" target="_blank">🧾 FINAL ARXIV PDF</a>
 
 <div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
 
 <script>
-function tog(id){let e=document.getElementById(id); e.classList.toggle('show'); if(e.classList.contains('show')) e.scrollIntoView({behavior:'smooth',block:'start'})}
+function tog(id){document.getElementById(id).classList.toggle('show')}
 </script>
 </body>
 </html>
