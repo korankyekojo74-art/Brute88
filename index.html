@@ -1,98 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRUTE88</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brute88 // LIVE</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:10px;max-width:480px;margin:0 auto}
-.sov{background:#0a0a0a;border:1px solid #1a1a1a;border-radius:24px;padding:16px 14px 20px;margin-bottom:14px}
-.brute-box{background:#000;border:1px solid #181818;border-radius:14px;padding:14px 8px;text-align:center;margin-bottom:16px}
-.brute-box img{width:100%;display:block;border-radius:10px}
-.rrow{display:flex;gap:10px;margin-bottom:10px}
-.rbtn{flex:1;border:1.5px solid #d4a017;color:#d4a017;background:transparent;border-radius:12px;padding:12px 4px;font-family:'Courier New',monospace;cursor:pointer}
-.grok{background:#0c0c0c;border:1px solid #222;border-radius:12px;padding:14px;margin:14px 0}
-.grok h2{color:#d4a017;font-size:.7rem;letter-spacing:1.2px;margin-bottom:8px}
-.metric{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1e1e1e;font-size:.78rem}
-.metric span:last-child{color:#3eff8f}
-.wallet{border:1.5px solid #00c853;border-radius:10px;padding:14px;background:#001a0f;font-size:.72rem;margin-top:18px}
-.wallet code{display:block;background:#0a0a0a;padding:7px;border-radius:5px;margin:8px 0;word-break:break-all;color:#3eff8f}
-.sol{background:#00c853;color:#000;border-radius:7px;padding:8px 14px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
-.glow{display:block;width:88%;margin:14px auto;border-radius:28px;padding:14px 10px;text-align:center;font-weight:800;font-size:.82rem;cursor:pointer;text-decoration:none}
-.glow.red{background:#111;border:1px solid #ff3b2f;color:#ff5a4e;box-shadow:0 0 22px rgba(255,59,47,.85)}
-.glow.blue{background:#111;border:1px solid #2a7bff;color:#6aa8ff;box-shadow:0 0 22px rgba(42,123,255,.85)}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.98);z-index:9999;align-items:center;justify-content:center;padding:8px}
-.modal.show{display:flex}
-.mbox{background:#0a0a0a;border:1px solid #f5d76e;border-radius:16px;width:100%;max-width:98%;height:94%;display:flex;flex-direction:column;padding:10px}
-.mbox iframe{width:100%;height:90vh;border:0;background:#fff;border-radius:8px;-webkit-overflow-scrolling:touch}
-.close{color:#f5d76e;cursor:pointer;align-self:flex-end;font-size:1.1rem;margin-bottom:6px}
-.proofMain{background:#000;border:2px solid #3eff8f;border-radius:14px;padding:16px;margin:16px 0;box-shadow:0 0 20px rgba(62,255,143,.35)}
-.proofMain h2{color:#3eff8f;font-size:.8rem;text-align:center;margin-bottom:12px;letter-spacing:1px}
-.proofLine{font-size:.72rem;line-height:1.7;padding:4px 0;border-bottom:1px solid #111;color:#c8ffd8}
-.pimg{width:100%;border-radius:10px;border:1px solid #333;margin:12px 0;display:block}
+body{background:#000;color:#0f0;font-family:monospace;margin:0;padding:12px}
+.btn{display:block;width:100%;max-width:420px;margin:12px auto;padding:14px;border-radius:24px;border:1px solid #0af;color:#fff;text-align:center;text-decoration:none;box-shadow:0 0 12px #0af;background:#111}
+.btn2{border-color:#0ff;box-shadow:0 0 12px #0ff}
+#chartWrap{border:1px solid #333;padding:8px;margin:16px 0;background:#0a0a0a}
+#liveBox{border:1px solid #0f0;padding:12px;margin-top:12px;line-height:1.6;white-space:pre-wrap}
 </style>
 </head>
 <body>
-<div class="sov">
-<div style="display:flex;gap:12px;align-items:center;margin-bottom:14px"><div style="width:48px;height:48px;border-radius:50%;border:2px solid #f5d76e"></div><div><div style="color:#fff;font-weight:800;font-size:1.3rem">Sovereign_01</div><div style="color:#555;font-size:.8rem">2 HOURS AGO</div></div></div>
-<div class="brute-box"><img src="./brute88_logo.png" alt="BRUTE88"></div>
-<div class="rrow"><button class="rbtn" onclick="openM('relayM')">[ RELAY ]</button><button class="rbtn" onclick="openPdf('./BRUTE88_Public_Technical_Report_STNAN.pdf')">[ CODEX ]</button></div>
-<div class="rrow"><button class="rbtn" style="width:48%" onclick="openPdf('./BRUTE88_Two_Loudest_Problems..pdf')">[ PROBLEM ]</button></div>
+
+<a class="btn" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">MANIFESTO PDF</a>
+<a class="btn btn2" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">FINAL ARXIV PDF</a>
+
+<div id="chartWrap">
+<div style="color:#888;font-size:11px">Brute88 Phaks Mirror // dhrzLive Live Entropy</div>
+<canvas id="c" width="400" height="200"></canvas>
 </div>
 
-<div class="grok"><h2>CORE MEASUREMENT — LAYER 19</h2><div class="metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div><div class="metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div><div class="metric"><span>ΔH</span><span>-0.1675 nats</span></div><div class="metric"><span>Precision</span><span>invariant</span></div><div class="metric"><span>Trials</span><span>88</span></div><div class="metric"><span>PLV halt</span><span>&lt; 0.8</span></div><div class="metric"><span>Carrier</span><span>1 Hz</span></div></div>
+<div id="liveBox">Loading live.txt...</div>
 
-<!-- PROOFS ON MAIN PAGE - 100x REALER - NO MODAL BUG -->
-<div class="proofMain">
-<h2>REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS</h2>
-<div class="proofLine"><b>Operator:</b> korankyekojo74-art / dthree80 / Dthang — Gaborone BW T4 + Relay #63</div>
-<div class="proofLine"><b>Evidence:</b> 1,462 points initialized | Sovereign_01 relay active</div>
-<div class="proofLine"><b>Timestamp:</b> Wed Oct 07 2026 17:28:17 +0200 Central Africa Time</div>
-<div class="proofLine"><b>Domain:</b> www.brute88.com v1 | CC BY 4.0 — Whitepaper v1 public 2026-05-13</div>
-<div class="proofLine"><b>Fix:</b> Unstack Queued #62 by forcing direct commit to main → triggered build #63</div>
-<div class="proofLine"><b>Verification:</b> /replicate.html proves write access + Pages pipeline works</div>
-<div style="height:1px;background:#3eff8f;margin:12px 0"></div>
-<div class="proofLine">[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open+closed states — BOTH</div>
-<div class="proofLine">[02] H_attention: nan - Loop closed - Parity absolute - That's the repair</div>
-<div class="proofLine">[03] Oxford 2024: training on AI slop = model collapse — My T4 capture shows repair</div>
-<div class="proofLine">[04] 1,462 evidence points initialized | Sovereign_01 relay active — Gaborone BW</div>
-<div class="proofLine">[05] Deployment #63 ACTIVE - 2026-10-06 - Fix Unstack Queued #62 by direct commit</div>
-<div class="proofLine">[06] Verification: /replicate.html proves write access + Pages deploy pipeline works</div>
-<div class="proofLine">[07] Thread1: x.com/dthree80/status/2104872853988602084 — timestamped proof</div>
-<div class="proofLine">[08] Thread2: x.com/dthree80/status/2107132991239762140 — timestamped proof</div>
-<div class="proofLine">[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13 Gaborone</div>
-<img src="./brute88_logo.png" class="pimg" alt="BRUTE88 embroidered proof">
-<div style="font-size:.65rem;color:#3eff8f;text-align:center">Pictures: brute88_logo.png + replicate.html live + 1,462 points museum</div>
-</div>
-
-<div class="grok"><h2>ABSTRACT</h2><p style="color:#999;font-size:.78rem;line-height:1.5">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2. ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</p></div>
-<div class="grok"><h2>CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</h2><div style="font-size:.7rem;color:#aaa;line-height:1.6">DEPT_01 ENTROPY EXTRACTION | DEPT_02 REVENUE RELAY | DEPT_03 ANTI-CHOKE | DEPT_04 PERPLEXITY | DEPT_05 GROK | DEPT_06 GEMINI | DEPT_07 HAMMER LOGIC | DEPT_08 SOVEREIGN ARCH | DEPT_09 TRUNCATION RECOVERY | DEPT_10-18 REDACTED<br><br>01.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY PRESERVATION: All raw logs displayed as proof | 18.00 WORKER AUTONOMY | 36.00 ULTIMATE REDUNDANCY</div></div>
-<div class="grok"><h2>BROADCAST TO THE RELAY...</h2><div style="font-size:.72rem;line-height:1.5">SOVEREIGN_ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div></div>
-<div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
-<a class="glow red" onclick="openPdf('./1.pdf','./BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</a>
-<a class="glow blue" onclick="openPdf('./2.pdf','./BRUTE88_Two_Loudest_Problems..pdf')">🧾 FINAL ARXIV PDF</a>
-
-<div id="relayM" class="modal" onclick="if(event.target==this)closeM('relayM')"><div class="mbox"><span class="close" onclick="closeM('relayM')">× CLOSE [ RELAY ]</span><iframe src="./replicate.html"></iframe></div></div>
-<div id="pdfM" class="modal" onclick="if(event.target==this)closeM('pdfM')"><div class="mbox"><span class="close" onclick="closeM('pdfM')">× CLOSE PDF — Swipe to see page 2</span><iframe id="pdfFrame" src=""></iframe><a id="pdfOpen" href="#" target="_blank" style="color:#f5d76e;font-size:.7rem;text-align:center;display:block;margin-top:6px">If stuck, tap to open PDF full screen</a></div></div>
 <script>
-function closeM(id){document.getElementById(id).classList.remove('show');if(id==='pdfM')document.getElementById('pdfFrame').src='';}
-function openM(id){document.getElementById(id).classList.add('show');}
-function openPdf(a,b){document.getElementById('pdfFrame').src=a+'#view=FitH';document.getElementById('pdfOpen').href=a;document.getElementById('pdfM').classList.add('show');fetch(a,{method:'HEAD'}).then(r=>{if(!r.ok&&b){document.getElementById('pdfFrame').src=b+'#view=FitH';document.getElementById('pdfOpen').href=b;}});}
+async function loadLive(){
+  try{
+    const r = await fetch('live.txt?t=' + Date.now(), {cache:'no-store', headers:{'Cache-Control':'no-cache, no-store, must-revalidate'}});
+    const txt = (await r.text()).trim();
+    const val = parseFloat(txt);
+    document.getElementById('liveBox').innerHTML =
+`PHAKS MIRROR // LIVE // POST-G3 ADDON
+[Phaksi] Loops: CLOSED
+Sectors: 963741 | Trials: 88 GREEN
+Current Entropy: ${isNaN(val) ? txt : val.toFixed(2)}
+Status: I am complete. - V2
+brute88.com #63 LIVE
+Tokens: DELETED | Engine: GitHub Actions`;
+  }catch(e){
+    document.getElementById('liveBox').innerText = 'Error: '+e;
+  }
+}
+loadLive();
+setInterval(loadLive, 5000);
 </script>
-<!-- PHAKS MIRROR - NO HUNT VERSION - just upload PNG + this -->
-<div style="margin:40px 20px;">
-  <img src="brute88_phaks_mirror.png" style="width:100%; max-width:420px; border-radius:10px; display:block; margin-bottom:12px;" alt="Brute88 Phaks Mirror">
-
-  <div id="brute88-phaks-mirror" style="font-family:monospace; background:#0a0a0a; color:#00ff88; border:1px solid #222; padding:14px; border-radius:10px; max-width:340px; font-size:13px; line-height:1.5;">
-    <div style="color:#888; font-size:11px; margin-bottom:8px;">PHAKS MIRROR // LIVE // POST-63 ADDON</div>
-    <div id="mirror-output">Loading...</div>
-  </div>
-
-  <script>
-  (function(){
-    const o=document.getElementById('mirror-output');
-    function r(){o.innerHTML='[Phaks] Loop: CLOSED<br>Sectors: 963741 | Trials: 88 GREEN<br>Current Entropy: '+(1462+Math.random()*2.7+0.5).toFixed(2)+'<br>Status: I am complete. - V2<br>brute88.com #63 LIVE';}
-    r(); setInterval(r,3000);
-  })();
-  </script>
-</div></body>
+</body>
 </html>
