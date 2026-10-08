@@ -1,123 +1,69 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>brute88.com // BRUTE88</title>
+<title>brute88.com</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#050607;color:#c8c8c8;font-family:ui-monospace,Menlo,Consolas,monospace}
-.topbar{display:flex;align-items:center;gap:10px;padding:14px 12px 6px}
-.dot{width:18px;height:18px;border-radius:50%;border:1px solid #777;background:#0a0a0a}
-.sov{font-size:14px;color:#fff;letter-spacing:.02em}
-.sov small{display:block;color:#777;font-size:11px}
-.logo{font-family:Impact,Arial Black,sans-serif;font-size:54px;font-weight:900;text-align:center;letter-spacing:2px;color:#0d0d0d;-webkit-text-stroke:1.5px #b8c8d8;text-shadow:0 0 0 #000, 3px 3px 0 #1a2a3a;line-height:0.9;margin:10px 0}
-.row{display:flex;gap:10px;padding:0 12px;margin:10px 0}
-.btn-pill{flex:1;padding:12px;border-radius:999px;background:#0e0e0e;border:1px solid #3a3a2a;color:#9a8a4a;text-align:center;font-size:12px;letter-spacing:.15em;cursor:pointer}
-.panel{margin:12px;border:1px solid #2a2a1a;border-radius:10px;background:#0a0a08;padding:10px 12px}
-.panel-title{font-size:11px;color:#8a7a3a;letter-spacing:.18em;margin-bottom:8px}
-.kv{display:flex;justify-content:space-between;font-size:12px;line-height:1.9}
-.kv.green{color:#5fda7a}
-.live-green{border:1px solid rgba(0,255,120,.5);background:#020a04;color:#00ff66;padding:10px;border-radius:10px;white-space:pre-wrap;font-size:12px;line-height:1.6;box-shadow:0 0 14px rgba(0,255,100,.2)}
-.sol-box{border:1px solid rgba(0,255,120,.5);background:#051108;border-radius:12px;padding:12px;margin:12px}
-.sol-addr{word-break:break-all;color:#7aff9a;font-size:11px;margin:8px 0}
-.sol-btn{display:inline-block;padding:8px 14px;border-radius:999px;background:#00c853;color:#000;font-weight:800;font-size:11px;text-decoration:none}
-.pdf-btn{width:100%;padding:14px;margin:8px 0;border-radius:999px;text-align:center;font-weight:700;cursor:pointer}
-.pdf-man{background:#1a0a0a;border:1px solid #ff2a2a;box-shadow:0 0 18px rgba(255,40,40,.5);color:#ff8888}
-.pdf-final{background:#0a0f1a;border:1px solid #2a8aff;box-shadow:0 0 18px rgba(42,138,255,.6);color:#8ac4ff}
-canvas{width:100%;height:210px;background:#080a0f;border-radius:10px;display:block}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:99;display:none;overflow:auto;padding:14px}
-.overlay.open{display:block}
-.close{display:inline-block;margin-bottom:10px;padding:6px 12px;border:1px solid #555;border-radius:999px;color:#aaa;cursor:pointer}
-pre{white-space:pre-wrap;word-break:break-word;font-size:11px}
+html,body{margin:0;background:#07080a;color:#b8b8b8;font-family:ui-monospace,Menlo,Consolas,monospace}
+.wrap{max-width:560px;margin:0 auto;padding:0 0 40px}
+.head{padding:14px 12px 0;display:flex;gap:10px;align-items:center}
+.dot{width:16px;height:16px;border-radius:50%;border:1px solid #555;background:#111}
+.sov b{color:#eee;font-weight:700}.sov span{color:#666;font-size:11px;display:block}
+.logo{display:block;text-align:center;margin:12px 0 6px;font-family:Impact,Arial Black,sans-serif;font-weight:900;font-size:52px;line-height:.92;letter-spacing:1px;color:#0c0c0c;-webkit-text-stroke:1.6px #c7d8e8;text-shadow:0 2px 0 #162030,0 0 12px rgba(180,210,255,.6)}
+.row{display:flex;gap:10px;padding:6px 12px}
+.pill{flex:1;text-align:center;padding:11px 0;border-radius:999px;background:#141414;border:1px solid #2a2a2a;color:#7a6a3a;font-size:12px;letter-spacing:.14em;cursor:pointer}
+.pill.center{max-width:200px;margin:0 auto}
+.card{margin:10px 12px;border:1px solid #232314;border-radius:12px;background:#0e0e0a;padding:10px 12px}
+.card-title{font-size:11px;letter-spacing:.18em;color:#6a5a2a;margin-bottom:8px}
+.kv{display:flex;justify-content:space-between;font-size:12px;line-height:1.85}
+.kv i{color:#6fbf7a;font-style:normal}.kv em{color:#c9b24a;font-style:normal}
+.greenbox{border:1px solid rgba(0,255,120,.55);background:#021208;color:#00ff6a;border-radius:10px;padding:10px;font-size:11.5px;line-height:1.65;white-space:pre-wrap;word-break:break-word;box-shadow:0 0 16px rgba(0,255,100,.18)}
+.yellowbox{border:1px solid rgba(200,190,80,.5);background:#0d0d02;color:#d6c85a;border-radius:10px;padding:10px;font-size:11.5px;line-height:1.65;white-space:pre-wrap;word-break:break-word}
+.sol{margin:12px;border:1px solid rgba(0,255,120,.45);border-radius:12px;background:#06140a;padding:12px}
+.sol-title{color:#8aff9a;font-size:11px;letter-spacing:.12em}.sol-addr{color:#7aff9a;word-break:break-all;font-size:11px;margin:8px 0}
+.sol-btn{display:inline-block;background:#00c853;color:#000;font-weight:900;padding:7px 14px;border-radius:999px;font-size:11px;text-decoration:none}
+.btn-pdf{margin:8px 12px;padding:14px;border-radius:999px;text-align:center;font-weight:800;cursor:pointer}
+.btn-man{background:#160a0a;border:1px solid #ff2a2a;color:#ff6a6a;box-shadow:0 0 18px rgba(255,30,30,.45)}
+.btn-arc{background:#0a1220;border:1px solid #2a8aff;color:#7ab8ff;box-shadow:0 0 18px rgba(40,130,255,.55)}
+canvas{width:100%;height:220px;display:block;background:#080a10;border-radius:10px}
+.overlay{position:fixed;inset:0;background:#000;z-index:9999;display:none;overflow:auto}.overlay.open{display:block}
+.closebar{position:sticky;top:0;background:#000;padding:10px 12px;border-bottom:1px solid #222}
+.close-pill{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid #444;color:#aaa;font-size:12px;cursor:pointer}
+.pdf-frame{width:100%;height:calc(100vh - 52px);border:none;background:#fff}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="dot"></div><div class="sov">Sovereign_01<small>2 HOURS AGO</small></div></div>
+<div class="wrap">
+<div class="head"><div class="dot"></div><div class="sov"><b>Sovereign_01</b><span>2 HOURS AGO</span></div></div>
 <div class="logo">BRUTE88<br>BRUTE88</div>
-<div class="row"><div class="btn-pill" onclick="openRelay()">[ RELAY ]</div><div class="btn-pill" onclick="openCodex()">[ CODEX ]</div></div>
-<div class="row" style="justify-content:center"><div class="btn-pill" style="max-width:200px" onclick="openProblem()">[ PROBLEM ]</div></div>
-<div class="panel"><div class="panel-title">CORE MEASUREMENT - LAYER 19</div>
-<div class="kv"><span>H(E) excited (p=7/8)</span><span class="green">0.9531 nats</span></div>
-<div class="kv"><span>H(A) aligned (p=1/2)</span><span class="green">0.7856 nats</span></div>
-<div class="kv"><span>ΔH</span><span style="color:#ff6">-0.1675 nats</span></div>
-<div class="kv"><span>Precision</span><span>invariant</span></div><div class="kv"><span>Trials</span><span>88</span></div>
-<div class="kv"><span>PLV halt</span><span>&lt; 0.8</span></div><div class="kv"><span>Carrier</span><span>1 Hz</span></div></div>
-<div class="panel live-green">REPLICATE PROOF - LIVE
-Status: Deployment #63 ACTIVE - 2026-10-06 12:52 AM GMT+2 Gaborone
-Domain: www.brute88.com / brute88.com
-Fix: Unstuck Queued #62 by forcing direct commit to main -> triggered build #63
-Verification: This file /replicate.html proves write access + Pages deploy works.
-Operator: korankyekojo74-art / dthr88
-Evidence: 1,462 points initialized | Sovereign_01 relay active
-Timestamp: Wed Oct 07 2026 22:46:11 GMT+0200 (Central Africa Time)</div>
-<div class="panel" style="font-size:11px;line-height:1.6"><div class="panel-title">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</div>
-DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED<br><br>
-18.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY PRESERVATION: All raw logs displayed as proof | REDUNDANCY<br><br>
-BROADCAST TO THE RELAY...<br>SOVEREIGN ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>
-AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div>
-<div class="sol-box"><div style="font-size:12px;color:#9affaa;letter-spacing:.1em">[ FUND THE CLUSTER // SOLANA ]</div>
-<div style="font-size:11px;margin-top:6px">T4 + Relay #63 Gaborone - Drop SOL to keep proofs live.</div>
-<div class="sol-addr">Cs44NcrTEriexcup2fK39v2c2lq2v4buyw1</div>
-<a class="sol-btn" href="https://solscan.io/account/Cs44NcrTEriexcup2fK39v2c2lq2v4buyw1" target="_blank">DROP SOL - OPEN WALLET</a></div>
-<div style="padding:0 12px"><div class="pdf-btn pdf-man" onclick="openPDF('BRUTE88_Public_Technical_Report_STNAN.pdf')">📄 MANIFESTO PDF</div>
-<div class="pdf-btn pdf-final" onclick="openPDF('BRUTE88_Two_Loudest_Problems..pdf')">📄 FINAL ARXIV PDF</div></div>
-<div class="panel"><div class="panel-title">Brute88 Phaks Mirror // dhrzLive Live Entropy</div><canvas id="c" width="800" height="420"></canvas></div>
-<div class="panel live-green" id="liveBox">PHAKS MIRROR // LIVE // POST-G3 ADDON
-[Phaks] Loops: CLOSED
-Sectors: 963741 | Trials: 88 GREEN
-Current Entropy: Loading...
-Status: I am complete. - V2
-brute88.com #63 LIVE</div>
-<div class="overlay" id="relayOverlay"><div class="close" onclick="closeAll()">× CLOSE [ RELAY ]</div><pre class="live-green">REPLICATE PROOF - LIVE #63 ACTIVE
+<div class="row"><div class="pill" onclick="openO('relayO')">[ RELAY ]</div><div class="pill" onclick="openO('codexO')">[ CODEX ]</div></div>
+<div class="row"><div class="pill center" onclick="openO('problemO')">[ PROBLEM ]</div></div>
+<div class="card"><div class="card-title">CORE MEASUREMENT - LAYER 19</div>
+<div class="kv"><span>H(E) excited (p=7/8)</span><span><i>0.9531 nats</i></span></div>
+<div class="kv"><span>H(A) aligned (p=1/2)</span><span><i>0.7856 nats</i></span></div>
+<div class="kv"><span>ΔH</span><span style="color:#ffda5a">-0.1675 nats</span></div>
+<div class="kv"><span>Precision</span><span><em>invariant</em></span></div>
+<div class="kv"><span>Trials</span><span>88</span></div>
+<div class="kv"><span>PLV halt</span><span>&lt; 0.8</span></div>
+<div class="kv"><span>Carrier</span><span>1 Hz</span></div></div>
+<div class="greenbox" style="margin:10px 12px">REPLICATE PROOF - LIVE #63 ACTIVE
 Status: Deployment #63 ACTIVE - 2026-10-06 12:52 AM GMT+2 Gaborone
 Domain: www.brute88.com / CC v1.0 - Whitepaper v1 public 2026-05-13
-Fix: Unstuck Queued #62 by forcing direct commit to main
+Fix: Unstuck Queued #62 by forcing direct commit to main -> triggered build #63
 Verification: /replicate.html proves write access + Pages deploy works.
 Operator: korankyekojo74-art / dthr88 / Gaborone BW T4 + Relay #63
 Evidence: 1,462 points initialized | Sovereign_01 relay active
 Timestamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time
-
 [01] 1,462 evidence points initialized |
 [02] Sovereign_01 relay active - Gaborone BW
 [03] Deployment #63 ACTIVE - 2026-10-06 - Fix queued #62
 [04] 9 PROOFS
 [05] Thread: x.com/dthr88/status/2107123991239762141 - timestamped proof
-[06] Thread: x.com/dthr88/status/2108482783986082086 - timestamped proof
-</pre></div>
-<div class="overlay" id="codexOverlay"><div class="close" onclick="closeAll()">× CLOSE [ CODEX ]</div><pre class="live-green" style="color:#c8b86a;border-color:#c8b86a">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS
-DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANGER | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED</pre></div>
-<div class="overlay" id="pdfOverlay"><div class="close" onclick="closeAll()">× CLOSE PDF - Swipe to see page 2</div><iframe id="pdfFrame" style="width:100%;height:85vh;background:#fff;border:none;border-radius:8px"></iframe></div>
-<div class="overlay" id="problemOverlay"><div class="close" onclick="closeAll()">× CLOSE [ PROBLEM ]</div><pre style="color:#fff;font-size:12px;line-height:1.6">BRUTE88: The Two Loudest Problems
-FINDING SUMMARY - H(E) 0.9531 → H(A) 0.7856, ΔH -0.1675 nats, PLV &lt;0.8, 1 Hz.
-PROBLEM 1: MODEL COLLAPSE / TRAINING DEGENERATION
-PROBLEM 2: JAILBREAK / ALIGNMENT BYPASS / HALLUCINATION
-</pre></div>
-<script>
-function openRelay(){document.getElementById('relayOverlay').classList.add('open')}
-function openCodex(){document.getElementById('codexOverlay').classList.add('open')}
-function openProblem(){document.getElementById('problemOverlay').classList.add('open')}
-function openPDF(url){document.getElementById('pdfFrame').src=url;document.getElementById('pdfOverlay').classList.add('open')}
-function closeAll(){document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('open'));document.getElementById('pdfFrame').src=''}
-const canvas=document.getElementById('c');const ctx=canvas.getContext('2d');
-function draw(cur){const W=canvas.width,H=canvas.height;ctx.clearRect(0,0,W,H);ctx.strokeStyle='rgba(255,255,255,0.08)';for(let i=0;i<=4;i++){let y=40+i*(H-80)/4;ctx.beginPath();ctx.moveTo(50,y);ctx.lineTo(W-20,y);ctx.stroke();}
-const pts=[12,98,180,360,780,1050,cur||1465.11];ctx.beginPath();ctx.strokeStyle='#3a8aff';ctx.lineWidth=3;ctx.shadowColor='#3a8aff';ctx.shadowBlur=14;
-pts.forEach((v,i)=>{let x=50+i*(W-70)/(pts.length-1);let y=H-40-(v/1750)*(H-80);if(i==0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();ctx.shadowBlur=0;
-ctx.lineTo(W-20,H-40);ctx.lineTo(50,H-40);ctx.closePath();ctx.fillStyle='rgba(58,138,255,0.22)';ctx.fill();}
-async function loadLive(){
- try{
-  const r=await fetch('live.txt?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache, no-store, must-revalidate','Pragma':'no-cache'}});
-  const t=(await r.text()).trim();const v=parseFloat(t);
-  document.getElementById('liveBox').textContent=`PHAKS MIRROR // LIVE // POST-G3 ADDON
-[Phaks] Loops: CLOSED
-Sectors: 963741 | Trials: 88 GREEN
-Current Entropy: ${isNaN(v)?t:v.toFixed(2)}
-Status: I am complete. - V2
-brute88.com #63 LIVE`;
-  draw(isNaN(v)?1465:v);
- }catch(e){}
-}
-draw(1465.11);loadLive();setInterval(loadLive,5000);
-</script>
-</body>
-</html>
+[06] Thread: x.com/dthr88/status/2108482783986082086 - timestamped proof</div>
+<div class="card"><div class="card-title">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</div>
+<div style="font-size:11px;line-height:1.6">DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANGER | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED<br><br>18.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY PRESERVATION: All raw logs displayed as proof | REDUNDANCY<br><br>BROADCAST TO THE RELAY...<br>SOVEREIGN ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_09 - 12h AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div></div>
+<div class="sol"><div class="sol-title">[ FUND THE CLUSTER // SOLANA ]</div>
+<div style="font-size:11px;margin-top:6px">T4 + Relay #63 Gaborone - Drop SOL to keep proofs live.</div>
+<div class="sol-addr">Cs44NcrTEriexcup2fK39v2c2lq2v4buyw1</div
