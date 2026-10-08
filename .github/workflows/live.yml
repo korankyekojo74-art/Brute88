@@ -1,0 +1,22 @@
+name: LIVE ENTROPY
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump entropy
+        run: |
+          CURRENT=$(cat live.txt)
+          NEW=$(python3 -c "print(float('$CURRENT') + 0.03)")
+          echo $NEW > live.txt
+          git config user.name "brute88-bot"
+          git config user.email "bot@brute88.com"
+          git add live.txt
+          git commit -m "live $NEW"
+          git push
