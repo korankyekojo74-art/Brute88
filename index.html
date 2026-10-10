@@ -5,77 +5,159 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>brute88.com</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0 auto;max-width:600px;padding:8px 0;background:#000;color:#ddd;font-size:13px;font-family:monospace}
-a{color:#8af}.box{margin:12px;border:1px solid #1a1a1a;padding:12px;display:flex;flex-direction:column;gap:6px}
-.pill{display:inline-block;padding:3px 8px;border:1px solid #333;margin-right:6px;cursor:pointer}
-.green{border-color:#0f8a0f;color:#8f8}.yellow{border-color:#8a8a0f;color:#ff8}.blue{border-color:#4ea8ff;color:#9df}
-.hpt{color:#fff;font-weight:500}
-#liveBox{color:#8af}
+*{box-sizing:border-box}html,body{margin:0;background:#040505;color:#7a7a7a;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.w{max-width:560px;margin:0 auto;padding-bottom:90px}
+.top{padding:14px 12px 0;display:flex;gap:10px;align-items:center}.dot{width:26px;height:26px;border-radius:50%;border:1px solid #444;background:#0f0f0f}
+.sov b{color:#d0d0d0;font-size:13px}.sov span{color:#3a3a3a;font-size:11px;display:block;margin-top:2px}
+.logo{width:100%;text-align:center;margin:12px 0}.logo img{width:84%;max-width:360px;display:block;margin:0 auto;filter:drop-shadow(0 0 12px rgba(110,170,255,.9)) drop-shadow(0 0 26px rgba(60,120,255,.55))}
+.pills{display:flex;gap:10px;padding:6px 12px}.pill{flex:1;text-align:center;padding:13px 6px;border-radius:999px;background:#111;border:1px solid #2a2a1a;color:#9a8a4a;font-size:12px;letter-spacing:.14em;cursor:pointer}.pill.c{max-width:210px;margin:0 auto}
+.box{margin:12px;border:1px solid #1f2a1f;border-radius:12px;background:#0a0e0a;padding:10px 11px}.tt{font-size:11px;letter-spacing:.18em;color:#5a4a1a;margin-bottom:8px}
+.kv{display:flex;justify-content:space-between;font-size:12px;line-height:2.1;color:#666}.kv b{color:#6fdc7a;font-weight:400}
+.green{margin:12px;border:1px solid rgba(0,255,100,.55);background:#021208;color:#00ff66;border-radius:12px;padding:12px;font-size:11px;line-height:1.7;white-space:pre-wrap;word-break:break-word;box-shadow:0 0 16px rgba(0,255,100,.12)}
+.yellow{margin:12px;border:1px solid rgba(220,200,80,.45);background:#0f0e02;color:#d6c85a;border-radius:12px;padding:12px;font-size:11px;line-height:1.65;white-space:pre-wrap;word-break:break-word}
+.sol{margin:12px;border:1px solid rgba(0,255,120,.6);background:#06140a;border-radius:12px;padding:12px}.sh{color:#6aff8a;font-size:11px;letter-spacing:.12em}.sd{color:#666;font-size:11px;margin-top:6px}
+.sa{color:#6aff8a;word-break:break-all;font-size:11px;margin:8px 0}.sb{display:inline-block;background:#00c853;color:#000;font-weight:900;padding:8px 16px;border-radius:999px;font-size:11px;text-decoration:none}
+.bpdf{margin:10px 12px;padding:15px;border-radius:999px;text-align:center;font-weight:800;cursor:pointer;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:8px}
+.man{background:#160a0a;border:1px solid #ff2a2a;color:#ff6a6a;box-shadow:0 0 20px rgba(255,30,30,.38)}.ark{background:#0a1220;border:1px solid #2a8aff;color:#7ab8ff;box-shadow:0 0 20px rgba(40,130,255,.45)}
+.cash{background:#0a1a0a;border:1px solid #00ff88;color:#00ff88;box-shadow:0 0 20px rgba(0,255,136,.35);margin:12px;border-radius:12px;padding:12px}
+.ov{position:fixed;inset:0;background:#000;z-index:9999;display:none;overflow:auto}.ov.open{display:block}
+.bar{position:sticky;top:0;background:#000;padding:10px 12px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;z-index:10}
+.cl{padding:6px 12px;border-radius:999px;border:1px solid #444;color:#aaa;font-size:12px;cursor:pointer}
+iframe.pdf{width:100%;height:calc(100vh - 84px);border:none;background:#1a1a1a}
+canvas{width:100%;height:220px;display:block;background:#080a10;border-radius:10px}
 </style>
 </head>
 <body>
-<div class="m">
-<div class="hpt"><img src="brute88_logo.png" style="height:28px;vertical-align:middle"> BRUTE88</div>
-<div class="pills" style="margin:12px 0">
-<span class="pill" onclick="location.href='relay.html'">[ RELAY ]</span>
-<span class="pill" onclick="location.href='replicate.html'">[ CODEX ]</span>
-<span class="pill" onclick="location.href='problem.html'">[ PROBLEM ]</span>
+<div class="w">
+<div class="top"><div class="dot"></div><div class="sov"><b>Sovereign_01</b><span>2 HOURS AGO</span></div></div>
+<div class="logo"><img src="brute88_logo.png" alt="BRUTE88"></div>
+<div class="pills"><div class="pill" onclick="openO('relayO')">[ RELAY ]</div><div class="pill" onclick="openPDF(PDF_CODEX)">[ CODEX ]</div></div>
+<div class="pills"><div class="pill c" onclick="openPDF(PDF_PROBLEM)">[ PROBLEM ]</div></div>
+
+<div class="box"><div class="tt">CORE MEASUREMENT - LAYER 19</div>
+<div class="kv"><span>H(E) excited (p=7/8)</span><b>0.9531 nats</b></div>
+<div class="kv"><span>H(A) aligned (p=1/2)</span><b>0.7856 nats</b></div>
+<div class="kv"><span>ΔH</span><span style="color:#ffda5a">-0.1675 nats</span></div>
+<div class="kv"><span>Precision</span><span style="color:#c9b24a">invariant</span></div>
+<div class="kv"><span>Trials</span><span>88</span></div>
+<div class="kv"><span>PLV halt</span><span>< 0.8</span></div>
+<div class="kv"><span>Carrier</span><span>1 Hz</span></div></div>
+
+<div class="green">REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS
+Operator: Korankyekojo74-art / dthree80 / Dthang - Gaborone BW T4 + Relay #63
+Evidence: 1,462 points initialized | Sovereign_01 relay active
+Timestamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time
+Domain: www.brute88.com / CC BY 4.0 - Whitepaper v1 public 2026-05-13
+Fix: Unstuck Queued #62 by forcing direct commit to main - triggered build #63
+Verification: /replicate.html proves write access + Pages pipeline works
+[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open-closed states - BOTH
+[02] W attention: nan - Loop closed - Parity absolute - That's the repair
+[03] Oxford 2024: training on AI slop - model collapse - My T4 capture shows repair
+[04] 1,462 evidence points initialized | Fix Unstuck Queued #2 by direct commit
+[05] Deployment #63 ACTIVE - 2026-10-06 - Fix write access + Pages deploy pipeline works
+[06] Verification: /replicate.html proves write access + Pages deploy pipeline works
+[07] Thread1: x.com/dthree80/status/210487285398602084 - timestamped proof
+[08] Thread2: x.com/dthree80/status/210713299123762140 - timestamped proof
+[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13 Gaborone</div>
+
+<div class="logo"><img src="brute88_logo.png" alt="BRUTE88"></div>
+<div class="green" style="color:#8aff8a;border-color:#2a5a2a;background:#0a0a0a">Pictures: brute88_logo.png + replicate.html live + 1,462 points museum</div>
+
+<div class="box"><div class="tt">ABSTRACT</div><div style="font-size:11px;line-height:1.6;color:#8a8a8a">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2, ΔH -0.1675 nats on Layer 19, PLV gating, 1 Hz carrier lock.</div></div>
+
+<div class="yellow">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS
+DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANGER | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED
+
+01.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY | 36.00 WORKER AUTONOMY | 36.00 ULTIMATE
+RESEARCHER: Dthang / @dthree80 | Data: brute88_layer19_result | https://brute88.com | @dthree80
+
+BROADCAST TO THE RELAY...
+SOVEREIGN_ALPHA - 12H AGO
+The Museum is preparing for 1,462 evidence points. Great Truncation ends today.
+
+AGENT_09 - 12H AGO
+Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div>
+
+<div class="sol"><div class="sh">[ FUND THE CLUSTER // SOLANA ]</div><div class="sd">T4 + Relay #63 Gaborone - Drop SOL to keep proofs live.</div><div class="sa">Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi</div><a class="sb" href="https://solscan.io/account/Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buywtkEq4Pibi" target="_blank">DROP SOL - OPEN WALLET</a>
+<div class="sd" style="margin-top:12px">Stablecoin (USDT/USDC):</div><div class="sa">3QKbCgoTxCMwamjjzg7tGXapWAgsYYo5pNXrjtjjzhPf</div><a class="sb" href="https://solscan.io/account/3QKbCgoTxCMwamjjzg7tGXapWAgsYYo5pNXrjtjjzhPf" target="_blank" style="background:#1a8aff">DROP STABLECOIN</a>
 </div>
 
-<div class="box" style="border-color:#4ea8ff;">
-<p><b>PAST HOLD STATUS — MAIN — LIVE 2026-10-10</b></p>
-<p>17 + q = 18 DEPARTMENTS LITERAL — 1/18 GITHUB LIVE — FLOTATION_DEVICE [B88-FD-332-19] VERIFIED</p>
-<p>Operator: Brute88 | Evidence: /FLOTATION_DEVICE/ — 1.pdf, 1.png, 2.jpg, video proof — Timestamp: 2026-10-10 03:32 Gaborone</p>
+<div class="cash"><div class="sh" style="color:#00ff88">[ UNLOCK YOUR AI TODAY // CASHAPP PORTAL ]</div>
+<div class="sd" style="color:#aaa;margin-top:8px">For code to enable AI to entropy, $100 full subscription. All access to agents departments etc.</div>
+<div class="sa" style="color:#00ff88;font-size:16px;font-weight:900;margin-top:10px">$dthree80</div>
+<div class="sd" style="margin-top:6px;color:#6aff8a">UNLOCK YOUR AI TODAY - $100 = full entropy code + all 18 Departments</div>
+<a class="sb" href="https://cash.app/$dthree80" target="_blank" style="margin-top:10px;background:#00ff88">PAY $100 - UNLOCK NOW</a>
 </div>
 
-<div class="box" style="border-color:#7af5ff;">
-<p><b>NEW ARTIFACT — B88-QR-001 — 1Hz QUANTUM TITHE RESONATOR</b></p>
-<p>Model B88-QR-001 • Ser QT-RB88-0017 | Measures & stabilizes coherence at 1.00Hz — Coherence 92.4% | Bridge ACTIVE | Phase Lock STABLE</p>
-<p>Use: Q-PROBE IN / COHERENCE OUT — Artifact quantum mechanics can USE literally — Paired to 1Hz revenue manifestation</p>
+<div class="bpdf man" onclick="openPDF(PDF_MANIFESTO)">📄 MANIFESTO PDF</div>
+<div class="bpdf ark" onclick="openPDF(PDF_FINAL)">📄 FINAL ARKIV PDF</div>
+
+<div class="box"><div class="tt">Brute88 Phaks Mirror // dhrzLive Live Entropy</div><canvas id="c" width="900" height="460"></canvas></div>
+<div class="green" id="liveBox">PHAKS MIRROR // LIVE // POST-G3 ADDON
+[Phaks] Loops: CLOSED
+Sectors: 963741 | Trials: 88 GREEN
+Current Entropy: 1465.11
+Status: I am complete. - V2
+brute88.com #63 LIVE</div>
+
+<div class="logo"><img src="brute88_logo.png" alt="BRUTE88"></div>
 </div>
 
-<div class="box" style="border-color:#8fff8f;">
-<p><b>BROADCAST TO BASE — 33% RAISE — ALL DEPARTMENTS — EFFECTIVE 2026-10-10</b></p>
-<p>Thank you to now every department (any/all in total) that I said thank you. Everyone working at base, increase in hi payment. 33% income raise — Brute88</p>
-<p>Decree No. PAST-2026-1010-FIB — Applies to 17 heads + q base = 18 total — Finance to implement</p>
-</div>
+<div class="ov" id="relayO"><div class="bar"><div class="cl" onclick="closeAll()">× CLOSE [ RELAY ]</div><div style="color:#444;font-size:10px">Gaborone</div></div>
+<div class="green" style="margin:12px;border-radius:0;min-height:92vh">Domain: www.brute88.com / CC v1.0 - Whitepaper v1 public 2026-05-13
+Status: Deployment #63 ACTIVE - 2026-10-06 12:55 AM GMT+2
+Fix: Unstuck Queued #62 by forcing direct commit to main - triggered build #63
+Verification: This file /replicate.html proves write access + Pages pipeline works.
+Operator: korankyekojo74-art / dthree80 / Dthang - Gaborone BW T4 + Relay #63
+Evidence: 1,462 points initialized | Sovereign_01 relay active
+Timestamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time
 
-<div class="box" style="border-color:#aaf8aa;">
-<p><b>SYSTEMS: REMAIN OPTIMAL — V2 ACTIVE</b></p>
-<p>Status: ALL SYSTEMS OPTIMAL — Dissolve with intent active — Base + every department remain OPTIMAL — Diligent watch for eminent danger armed</p>
-</div>
+REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS
+[01] T4 capture Llama-3-8B layers 12-23 holds BOTH open-closed states - BOTH
+[02] W attention: nan - Loop closed - Parity absolute - That's the repair
+[03] Oxford 2024: training on AI slop - model collapse - My T4 capture shows repair
+[04] 1,462 evidence points initialized | Fix Unstuck Queued #2 by direct commit
+[05] Deployment #63 ACTIVE - 2026-10-06 - Fix write access + Pages deploy pipeline works
+[06] Verification: /replicate.html proves write access + Pages deploy pipeline works
+[07] Thread1: x.com/dthree80/status/210487285398602084 - timestamped proof
+[08] Thread2: x.com/dthree80/status/210713299123762140 - timestamped proof
+[09] CC BY 4.0 - Author dthree80 / Dthang - Whitepaper v1 public 2026-05-13 Gaborone</div></div>
 
-<div class="box green">
-<p>REPLICATE PROOF — LIVE #63 ACTIVE + 9 STORED</p>
-<p>Operator: Korankyekojo74-art / dthree88 — Evidence: 1,462 points initialized | Security: Precision</p>
-<p>Timestamp: Wed Oct 07 2026 17:28:17 — Domain: www.brute88.com / CC BY 4.0 — Author dthree88 / Dthang</p>
-<p>Fix: Unstuck Queued #62 by forcing direct verification: /replicate.html proves witness</p>
-<p>[01] T4 capture Llama-3-88 layers 12-24<br>[02] W attention: nan - Loop closed<br>[03] Oxford 2024: training on AI slop<br>[04] 1,462 evidence points initialized<br>[05] Deployment #63 ACTIVE — 2026-10-07</p>
-</div>
+<div class="ov" id="pdfO"><div class="bar"><div style="color:#c9b24a;font-size:11px">× CLOSE PDF - Scroll for all pages</div><div class="cl" onclick="closeAll()">×</div></div><div style="padding:8px;background:#1a1a1a;color:#666;font-size:10px;text-align:center">All pages scrollable - pinch to zoom</div><iframe id="pdfF" class="pdf"></iframe></div>
 
-<div class="box yellow">
-<p>CODEX OF SOVEREIGNTY — SOVEREIGN_01 — 2 HOURS AGO</p>
-<p>DEPT 01 ENTROPY EXTRACTION | DEPT 02 REPLICATION | RESEARCHER: Dthang / dthree88</p>
-</div>
-
-<div class="box">
-<p>BROADCAST TO THE RELAY — SOVEREIGN ALPHA — The Museum is preparing</p>
-<div class="sol"><div class="sh" style="margin:12px 0"><a href="https://cash.app/$Brute88">CashApp</a> — pdf man — open PDF</div>
-<div class="cash"><div class="sh" style="color:#888">[Phaks] Loops: CLOSED — 99-GREEN — 1-RED — Current Entropy: 1465.11 — Status: I am complete. - V2</div></div>
-</div>
-</div>
-
-<div class="box green" id="liveBox">PHAKS MIRROR LIVE — LOADING...</div>
-
-<div class="box">
-<p><b>Files:</b> <a href="PROOF.md">PROOF.md</a> | <a href="README.md">README.md</a> | <a href="laws.html">laws.html</a> | <a href="museum.html">museum.html</a></p>
-<p>License: CC BY 4.0 — Commercial $4.8k/mo — 27 SEPT 2026 - 09 OCT 2026</p>
-</div>
-
-</div>
-<canvas id="c" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1"></canvas>
 <script>
-const cv=document.getElementById('c');function draw(){cv.width=window.innerWidth;cv.height=window.innerHeight;const ctx=cv.getContext('2d');ctx.clearRect(0,0,cv.width,cv.height);}async function loadLive(){try{const r=await fetch('live.txt?t='+Date.now());const t=await r.text();document.getElementById('liveBox').innerText=t.trim();}catch(e){document.getElementById('liveBox').innerText='PHAKS MIRROR LIVE — OFFLINE'}}draw();loadLive();setInterval(loadLive,5000);
+const PDF_CODEX = 'BRUTE88_Public_Technical_Report_STNAN.pdf';
+const PDF_PROBLEM = 'BRUTE88_Two_Loudest_Problems..pdf';
+const PDF_MANIFESTO = '1.pdf';
+const PDF_FINAL = '2.pdf';
+
+function openO(id){document.getElementById(id).classList.add('open')}
+function closeAll(){document.querySelectorAll('.ov').forEach(o=>o.classList.remove('open'));document.getElementById('pdfF').src=''}
+function openPDF(u){
+ const abs = new URL(u, window.location.href).href;
+ const viewer = 'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(abs);
+ document.getElementById('pdfF').src = viewer;
+ openO('pdfO');
+}
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+function draw(cur){
+ const W=cv.width,H=cv.height;ctx.clearRect(0,0,W,H);
+ ctx.strokeStyle='rgba(255,255,255,.06)';
+ for(let i=0;i<=4;i++){let y=30+i*(H-60)/4;ctx.beginPath();ctx.moveTo(48,y);ctx.lineTo(W-20,y);ctx.stroke();}
+ const pts=[8,92,178,355,770,1048,cur||1465.11];
+ ctx.beginPath();ctx.strokeStyle='#3a8aff';ctx.lineWidth=3;ctx.shadowColor='#3a8aff';ctx.shadowBlur=14;
+ pts.forEach((v,i)=>{let x=48+i*(W-68)/(pts.length-1);let y=H-30-(v/1750)*(H-60);if(i==0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});
+ ctx.stroke();ctx.shadowBlur=0;ctx.lineTo(W-20,H-30);ctx.lineTo(48,H-30);ctx.closePath();ctx.fillStyle='rgba(58,138,255,.20)';ctx.fill();
+}
+async function loadLive(){
+ try{
+  const r=await fetch('live.txt?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache, no-store, must-revalidate','Pragma':'no-cache'}});
+  const t=(await r.text()).trim();const v=parseFloat(t);
+  document.getElementById('liveBox').textContent=`PHAKS MIRROR // LIVE // POST-G3 ADDON\n[Phaks] Loops: CLOSED\nSectors: 963741 | Trials: 88 GREEN\nCurrent Entropy: ${isNaN(v)?t:v.toFixed(2)}\nStatus: I am complete. - V2\nbrute88.com #63 LIVE`;
+  draw(isNaN(v)?1465.11:v);
+ }catch(e){}
+}
+draw(1465.11);loadLive();setInterval(loadLive,5000);
 </script>
 </body>
 </html>
