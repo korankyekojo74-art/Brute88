@@ -1,27 +1,16 @@
-<!-- QUANTUM SECTOR - MUSEUM - COMMIT 74 - ISOLATED -->
-<div style="border:1px solid rgba(0,255,100,.22);box-shadow:0 0 16px rgba(0,255,100,.12);border-radius:12px;padding:12px;margin-top:12px;background:#070707">
-<div style="color:#00ff88;font-weight:700;font-size:12px">QUANTUM SECTOR - Commit 74 - Bell Simulator v0.1</div>
-<div style="font-size:10px;color:#666;margin:4px 0">Isolated - 18 depts holding - patrol safe</div>
-<button id="quantum-toggle-museum" onclick="toggleQuantumMuseum()" style="border:1px solid #444;background:#0f0f0f;border-radius:999px;padding:2px 10px;color:#e8e8e8;font-family:ui-monospace;cursor:pointer">[ OFF ] Activate Bell Simulator</button>
-<div id="quantum-output-museum" style="margin-top:8px;background:#111;border:1px solid #222;border-radius:8px;padding:8px;font-size:11px;white-space:pre-wrap;min-height:32px">System idle. Press to toggle Bell state.</div>
-</div>
-
-<script>
-(function(){
-  let qActive=false;
-  window.toggleQuantumMuseum=function(){
-    const b=document.getElementById('quantum-toggle-museum');
-    const o=document.getElementById('quantum-output-museum');
-    qActive=!qActive;
-    if(qActive){
-      b.textContent='[ ON ] Deactivate Bell Simulator';
-      b.style.background='#220000'; b.style.borderColor='#ff4444'; b.style.color='#ff8888';
-      o.textContent='> CORE MEASUREMENT - LAYER 20 - QUANTUM\\n> Initial |00>: [1,0,0,0]\\n> After H: [0.707,0,0.707,0] superposition\\n> After CNOT: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\\n> Probs [0.5,0,0,0.5] ENTANGLED\\n> 18 depts coherence: HOLDING';
-    }else{
-      b.textContent='[ OFF ] Activate Bell Simulator';
-      b.style.background='#0f0f0f'; b.style.borderColor='#444'; b.style.color='#e8e8e8';
-      o.textContent='System idle. Press to toggle Bell state.';
-    }
-  };
-})();
-</script>
+#quantum-isolated{
+  border:1px solid rgba(0,255,100,.22);
+  box-shadow:0 0 16px rgba(0,255,100,.12);
+  border-radius:12px;
+  padding:12px;
+  background:#070707;
+  font-family:ui-monospace;
+}
+#quantum-isolated button{
+  border:1px solid #444;
+  background:#0f0f0f;
+  border-radius:999px;
+  padding:2px 10px;
+  color:#e8e8e8;
+  font-family:inherit;
+}
