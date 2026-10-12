@@ -1,28 +1,119 @@
-<!-- COMMIT 74 QUANTUM TOGGLE - SAFE ISOLATED -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>brute88.com</title>
 <style>
-#quantum-isolated{border:1px solid rgba(0,255,136,.3);border-radius:12px;padding:12px;margin-top:10px;background:#0a0a0a}
-#quantum-isolated button{background:#00ff88;color:#000;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:700}
-#quantum-isolated #quantum-output{margin-top:8px;background:#111;border:1px solid #222;border-radius:8px;padding:8px;font-size:12px;white-space:pre-wrap}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#070707;color:#e8e8e8;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+body{max-width:560px;margin:0 auto;padding:14px 12px 90px;display:flex;flex-direction:column;gap:10px}
+.top{padding:10px 0 4px;display:flex;justify-content:space-between;align-items:center;z-index:10}
+.logo{width:86px}.logo img{width:100%}
+.bar{position:sticky;top:0;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:8px;z-index:9;display:flex;justify-content:space-between;align-items:center;font-size:11px}
+.liveBox{border:1px solid rgba(0,255,100,.22);box-shadow:0 0 16px rgba(0,255,100,.12);border-radius:12px;padding:12px;word-break:break-word;font-size:12px;line-height:1.4}
+.c{width:100%;height:460px;border:1px solid #333;border-radius:12px;background:#080808;display:block}
+.pdfs{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.pdfs div{border:1px solid #444;background:#0f0f0f;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:12px}
+#pdff{margin-top:10px}
+a{color:#8df;text-decoration:none}
+#quantum-isolated{border:1px solid rgba(0,255,136,.35);border-radius:12px;padding:12px;background:#0a0a0a;margin-top:12px}
+#quantum-isolated button{background:#00ff88;color:#000;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:700;font-family:inherit}
+#quantum-isolated #quantum-output{margin-top:8px;background:#111;border:1px solid #222;border-radius:8px;padding:8px;font-size:12px;white-space:pre-wrap;min-height:36px}
 </style>
-<div id="quantum-isolated">
-  <div style="color:#00ff88;font-weight:700">QUANTUM SECTOR - Commit 74</div>
-  <button id="quantum-toggle" onclick="toggleQuantum()">[ OFF ] Activate Bell Simulator</button>
-  <div id="quantum-output">System idle.</div>
+</head>
+<body>
+
+<div class="top"><div class="logo"><img src="brute88_logo.png" alt="BRUTE88"></div><div style="font-size:10px;color:#666">SOVEREIGN_01 relay active</div></div>
+
+<div class="bar"><span id="liveText">BRUTE88 LIVE #63 ACTIVE + 9 PROOFS</span><span style="color:#0f0">● 88 GREEN</span></div>
+
+<div class="liveBox" id="liveBox">Sectors: 968741 | Trials: 88 GREEN<br>Current Entropy: 1465.11<br>Status: I am complete. - V2<br>brute88.com #63 LIVE ;</div>
+
+<canvas id="c" width="908" height="460"></canvas>
+
+<div class="pdfs">
+<div onclick="openPDF('PDF_CODEX')">[PDF_CODEX]</div>
+<div onclick="openPDF('PDF_PROBLEM')">[PDF_PROBLEM]</div>
+<div onclick="openPDF('PDF_MANIFESTO')">MANIFESTO PDF</div>
+<div onclick="openPDF('PDF_FINAL')">FINAL ARKIV PDF</div>
 </div>
+
+<div id="pdff"></div>
+
+<div style="border:1px solid #222;border-radius:12px;padding:10px;font-size:11px;line-height:1.4;color:#aaa">
+<div>Domain: www.brute88.com / CC BY 4.0 - 36.00 ULTIMATE</div>
+<div>Fix: Unstuck Queued #63 by forcing direct commit</div>
+<div>Operator: Koranye points initialized | Sovereign_01 relay active</div>
+<div>TimeStamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time</div>
+<div><a href="https://cash.app/$dthree80" target="_blank">https://cash.app/$dthree80 | @dthree80</a></div>
+<div style="margin-top:8px"><a href="museum.html">museum.html live + 1,462 points</a> | <a href="replicate.html">replicate.html live</a></div>
+</div>
+
+<!-- QUANTUM SECTOR - COMMIT 74 - SAFE -->
+<div id="quantum-isolated">
+<div style="color:#00ff88;font-weight:700">QUANTUM SECTOR - Commit 74 - Bell Simulator v0.1</div>
+<div style="font-size:11px;color:#666;margin:4px 0">Isolated patrol - 18 depts holding coherence</div>
+<button id="quantum-toggle" onclick="toggleQuantum()">[ OFF ] Activate Bell Simulator</button>
+<div id="quantum-output">System idle. Press to toggle Bell state generation.</div>
+</div>
+
+<script>
+const PDF_CODEX='BRUTE88_Public_Technical_Report_STNAN.pdf';
+const PDF_PROBLEM='BRUTE88_Two_Loudest_Problems..pdf';
+const PDF_MANIFESTO='1.pdf';
+const PDF_FINAL='2.pdf';
+function openPDF(id){
+  let src=PDF_CODEX;
+  if(id==='PDF_PROBLEM')src=PDF_PROBLEM;
+  if(id==='PDF_MANIFESTO')src=PDF_MANIFESTO;
+  if(id==='PDF_FINAL')src=PDF_FINAL;
+  const abs=new URL(src,window.location.href).href;
+  const viewer='https://mozilla.github.io/pdf.js/web/viewer.html?file='+encodeURIComponent(abs);
+  document.getElementById('pdff').innerHTML='<div style="color:#9a9a9a;font-size:12px">CLOSE PDF - <span onclick="document.getElementById(\'pdff\').innerHTML=\'\'" style="cursor:pointer;color:#f88">[X]</span></div><iframe src="'+viewer+'" style="width:100%;height:80vh;border:none;background:#111"></iframe>';
+}
+function draw(cur){
+  const cv=document.getElementById('c'); if(!cv) return;
+  const ctx=cv.getContext('2d'); const W=cv.width,H=cv.height;
+  ctx.clearRect(0,0,W,H); ctx.fillStyle='#080808'; ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='rgba(0,255,136,.12)'; ctx.strokeRect(0,0,W,H);
+  let y=30; let h=H-60;
+  ctx.strokeStyle='rgba(255,255,255,.06)'; ctx.beginPath(); ctx.moveTo(48,y); ctx.lineTo(48,y+h); ctx.stroke();
+  ctx.fillStyle='#4a4a4a'; ctx.font='10px monospace'; ctx.fillText('1465.11',4,y+10);
+  const pts=[8,92,178,365,770,1048,1465.11];
+  ctx.strokeStyle='rgba(0,255,136,.55)'; ctx.lineWidth=1; ctx.beginPath();
+  pts.forEach((v,i)=>{ const x=68+i*120; const yy=y+h-(v/1465.11)*h; if(i===0)ctx.moveTo(x,yy); else ctx.lineTo(x,yy); });
+  ctx.stroke();
+  ctx.fillStyle='#00ff88'; ctx.fillText('LIVE '+cur.toFixed(2),70,18);
+}
+async function loadLive(){
+  try{
+    const t=await fetch('live.txt?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}}).then(r=>r.text());
+    const v=parseFloat(t.trim()); draw(isNaN(v)?1465.11:v);
+  }catch(e){ draw(1465.11); }
+}
+setInterval(loadLive,5000); loadLive();
+</script>
+
 <script>
 (function(){
   let quantumActive=false;
   window.toggleQuantum=function(){
-    const b=document.getElementById('quantum-toggle');
-    const o=document.getElementById('quantum-output');
+    const btn=document.getElementById('quantum-toggle');
+    const out=document.getElementById('quantum-output');
+    if(!btn||!out) return;
     quantumActive=!quantumActive;
     if(quantumActive){
-      b.textContent='[ ON ] Deactivate'; b.style.background='#ff4444';
-      o.textContent='> [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED';
+      btn.textContent='[ ON ] Deactivate Bell Simulator';
+      btn.style.background='#ff4444';
+      out.textContent='> Initial |00>: [1,0,0,0]\n> After H: [0.707,0,0.707,0] superposition\n> After CNOT: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED\n> Commit 74 ACTIVE';
     }else{
-      b.textContent='[ OFF ] Activate Bell Simulator'; b.style.background='#00ff88';
-      o.textContent='System idle.';
+      btn.textContent='[ OFF ] Activate Bell Simulator';
+      btn.style.background='#00ff88';
+      out.textContent='System idle. Press to toggle Bell state generation.';
     }
   };
 })();
 </script>
+
+</body>
+</html>
