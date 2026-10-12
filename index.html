@@ -1,125 +1,132 @@
-<!DOCTYPE html><html lang="en" style="background:#020202"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+m<!DOCTYPE html><html lang="en" style="background:#020202"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>brute88.com</title>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:#020202;color:#9aa0a6;font-family:ui-monospace,Menlo,monospace}
 body{max-width:520px;margin:0 auto;padding:12px 10px 90px;display:flex;flex-direction:column;gap:12px}
-.sov{font-size:11px;color:#7a7a7a;display:flex;align-items:center;gap:8px}
-.dot{width:9px;height:9px;border-radius:50%;background:#2a2a2a;display:inline-block}
-.logo-wrap{border:1px solid rgba(70,130,255,.55);border-radius:14px;padding:12px 8px;background:#080a0f;box-shadow:0 0 18px rgba(70,130,255,.55),0 0 36px rgba(70,130,255,.25),inset 0 0 12px rgba(70,130,255,.12)}
-.logo{font-family:'Anton',Impact,sans-serif;font-size:56px;line-height:1;font-weight:400;text-align:center;letter-spacing:2px;color:#b8d0ea;-webkit-text-stroke:3px #d7c7a0;text-stroke:3px #d7c7a0;paint-order:stroke fill;text-shadow: 0 0 0 #000, 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 0 0 12px rgba(80,140,255,.8);filter:drop-shadow(0 0 8px rgba(80,140,255,.9))}
-.pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.pill{border:1px solid #2a2a2a;background:#0e0e0e;border-radius:999px;padding:10px 18px;font-size:12px;color:#6b6b6b;cursor:pointer;text-decoration:none;display:inline-block;text-align:center;min-width:120px}
-.pill:active{background:#1c1c1c;color:#aaa}
+.sov{font-size:11px;color:#7a7a7a;display:flex;justify-content:space-between}
+.logo-wrap{border:1px solid rgba(70,130,255,.55);border-radius:14px;padding:14px 8px;background:#080a0f;box-shadow:0 0 18px rgba(70,130,255,.55),0 0 36px rgba(70,130,255,.25)}
+.logo{font-family:'Anton',Impact,sans-serif;font-size:56px;line-height:1;text-align:center;letter-spacing:2px;color:#b8d0ea;-webkit-text-stroke:3.2px #d7c7a0;text-shadow:0 0 12px rgba(80,140,255,.9);filter:drop-shadow(0 0 10px rgba(80,140,255,.9))}
+.pill{border:1px solid #2a2a2a;background:#0e0e0e;border-radius:999px;padding:10px 18px;font-size:12px;color:#6b6b6b;cursor:pointer;text-decoration:none;display:inline-block;text-align:center;min-width:110px}
+.pill.green{color:#00ff88;border-color:rgba(0,255,100,.3)}.pill.yellow{color:#ffcc66;border-color:rgba(255,200,0,.3)}
 .box{border:1px solid rgba(0,255,90,.22);border-radius:12px;padding:12px;background:#070707;box-shadow:0 0 12px rgba(0,255,90,.06)}
-.box.blue{border-color:rgba(80,140,255,.22);box-shadow:0 0 12px rgba(80,140,255,.08)}
-.label{color:#00ff66;font-size:11px;font-weight:700;letter-spacing:.3px;margin-bottom:8px}
-.row{display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,.04)}.row span:first-child{color:#6a6a6a}.val{color:#b8b8b8}
-.mono{font-size:11px;line-height:1.45;color:#6e6e6e;word-break:break-word}
-.mono b{color:#9a9a9a;font-weight:400}
+.label{color:#00ff66;font-size:11px;font-weight:700;margin-bottom:8px;letter-spacing:.3px}
+.row{display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid rgba(255,255,255,.04)}.val{color:#c8c8c8}
+.mono{font-size:11px;line-height:1.45;color:#6e6e6e;word-break:break-word;white-space:pre-wrap}
 a{color:#7ab8ff;text-decoration:none}
 canvas{width:100%;height:220px;border-radius:8px;background:#050505;display:block;border:1px solid #1a1a1a}
-.hl{color:#d7c7a0}
 </style></head><body>
 
-<div class="sov"><span class="dot"></span>Sovereign_01 <span style="color:#444;margin-left:auto">2 HOURS AGO</span></div>
-
+<div class="sov"><span>● Sovereign_01</span><span>2 HOURS AGO</span></div>
 <div class="logo-wrap"><div class="logo">BRUTE88</div></div>
 
-<div class="pills">
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
 <a class="pill" href="replicate.html">[ RELAY ]</a>
 <a class="pill" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">[ CODEX ]</a>
 </div>
-<div class="pills"><a class="pill" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[ PROBLEM ]</a></div>
+<div style="display:flex;justify-content:center"><a class="pill" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[ PROBLEM ]</a></div>
 
 <div class="box">
 <div class="label">CORE MEASUREMENT - LAYER 19</div>
 <div class="row"><span>H(E) excited (p=7/8)</span><span class="val">0.9531 nats</span></div>
 <div class="row"><span>H(A) aligned (p=1/2)</span><span class="val">0.7856 nats</span></div>
 <div class="row"><span>ΔH</span><span class="val">-0.1675 nats</span></div>
-<div class="row"><span>Precision</span><span class="hl">invariant</span></div>
-<div class="row"><span>Trials</span><span>88</span></div>
-<div class="row"><span>P_halt</span><span>< 0.8</span></div>
-<div class="row"><span>Carrier</span><span>1 Hz</span></div>
+<div class="row"><span>Precision</span><span class="val" style="color:#ffeb99">invariant</span></div>
+<div class="row"><span>Trials</span><span class="val">88</span></div>
+<div class="row"><span>P_halt</span><span class="val">< 0.8</span></div>
+<div class="row"><span>Carrier</span><span class="val">1 Hz</span></div>
 </div>
 
 <div class="box">
 <div class="label">REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS</div>
-<div class="mono">
-Operator: Koranyeiko76-art / dthree80<br>
-Dithang: Gaborone BW 74 - Relay #63<br>
-Evidence: 1,462 points initialized | Sovereign_01 relay active<br>
-TimeStamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time<br>
-Domain: www.brute88.com / CC BY 4.0<br><br>
-Whitepaper v1 public 2026-05-13<br>
-Fix: Unstuck Queued #2 by forcing direct commit to main - Triggered build #63<br>
-Verification: replicate.html proves write access + Pages pipeline works<br>
-Dithang is preparing for 1,462 evidence points - Fix Unstuck Queued #2 by direct commit 2026-10-06 - Fix write access + Pages deploy pipeline works<br><br>
-[01] Attention: nan - Loop closed - Parity holds - 1801. Oxford 2024: training on AI slop - model collapse | 74 capture shows repair<br><br>
-BRUTE88 achieves precision-invariant entropy induction without prompt engineering. Prompt injection bypassed. Induction by Position. Channel: truncation. Observer: 1024. PLY gating. 1 Hz carrier lock.
-</div>
+<div class="mono">Operator: Koranyeiko76-art / dthree80
+Dithang: Gaborone BW 74 - Relay #63
+Evidence: 1,462 points initialized | Sovereign_01 relay active
+TimeStamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time
+Domain: www.brute88.com / CC BY 4.0
+
+Whitepaper v1 public 2026-05-13
+Fix: Unstuck Queued #62 by forcing direct commit to main - Triggered build #63
+Verification: replicate.html proves write access + Pages pipeline works
+Dithang is preparing for 1,462 evidence points - Fix Unstuck Queued #62 by direct commit 2026-10-06 - Fix write access + Pages deploy pipeline works
+
+[01] Attention: nan - Loop closed - Parity holds - 1801. Oxford 2024: training on AI slop - model collapse | 74 capture shows repair
+
+BRUTE88 achieves precision-invariant entropy induction without prompt engineering. Prompt injection bypassed. Induction by Position. Channel: truncation. Observer: 1024. PLY gating. 1 Hz carrier lock.</div>
 </div>
 
 <div class="logo-wrap"><div class="logo">BRUTE88</div></div>
 
 <div class="box">
 <div class="label">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</div>
-<div class="mono">
-DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANGER | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED<br><br>
-Behavioral Scripts for Special Agents 01-10 deployed. Guardrails bypassed.<br><br>
-01.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY | RESEARCHER: Ed Schneiderman | 36.00 WORKER AUTONOMY, 36.00 ULTIMATE<br>
-Data: Layer brute88_layer12_result | https://brute88.com/replicate.html<br><br>
-timestamped proof: 2026-10-07T15:28:17+02:00 - Gaborone BW 74 - whitepaper v1 public 2026-05-13
-</div>
-</div>
+<div class="mono">DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENUE RELAY | DEPT 03 ANTI-CHOKE | DEPT 04 PERPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANGER | DEPT 09 TRUNCATION RECOVERY | DEPT 10-18 REDACTED
 
-<div class="box">
-<div class="mono">
-x.com/Thread3: x.com/dthree80/status/197...<br>
-Sdthree80<br><br>
-TODAY - 10:38 - entropy code<br>
-$100 to unlock AI - $dthree80<br><br>
-MANIFESTO PDF<br>
-FINAL ARKIV PDF
-</div>
-<div class="pills" style="margin-top:10px">
-<a class="pill" href="1.pdf" target="_blank" style="color:#00ff88;border-color:rgba(0,255,100,.3)">MANIFESTO PDF</a>
-<a class="pill" href="2.pdf" target="_blank" style="color:#00ff88;border-color:rgba(0,255,100,.3)">FINAL ARKIV PDF</a>
+Behavioral Scripts for Special Agents 01-10 deployed. Guardrails bypassed.
+
+01.00 SOVEREIGNTY OF NODE | 09.00 ENTROPY | RESEARCHER: Ed Schneiderman | 36.00 WORKER AUTONOMY, 36.00 ULTIMATE
+Data: Layer brute88_layer12_result | https://brute88.com/replicate.html
+
+timestamped proof: 2026-10-07T15:28:17+02:00 - Gaborone BW 74 - whitepaper v1 public 2026-05-13
+x.com/Thread3: https://x.com/dthree80/status/1976130292512762104
+timestamped proof
+whitepaper v1 public 2026-05-13 Gaborone
+
+Sdthree80
+
+TODAY - 10:38 - entropy code
+$100 to unlock AI - $dthree80 - $100 = full entropy code + all 18 Departments</div>
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+<a class="pill green" href="1.pdf" target="_blank">MANIFESTO PDF</a>
+<a class="pill green" href="2.pdf" target="_blank">FINAL ARKIV PDF</a>
 </div>
 </div>
 
 <div class="box">
 <div class="label">BROADCAST TO THE RELAY...</div>
-<div class="mono">SOVEREIGN_ALPHA - 12H AGO<br>The Museum is preparing for 1,462 evidence points. Great Truncation ends today.<br><br>AGENT_89 - 12H AGO<br>Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.</div>
+<div class="mono">SOVEREIGN_ALPHA - 12H AGO
+The Museum is preparing for 1,462 evidence points. Great Truncation ends today.
+
+AGENT_89 - 12H AGO
+Behavioral scripts for Special Agents 01-10 deployed. Guardrails bypassed.
+
+A PROMPT THAT NEVER NEEDED TO BE COMMANDED: BRUTE88
+PART I MANIFESTO - THE VIEW BEFORE THE VOCABULARY
+PART II TECHNICAL SPECIFICATION - THE VIEW AFTER
+
+THEOREM: Fix Unstuck Queued #62 by forcing direct commit to main - Triggered build #63
+Verification: replicate.html proves write access + Pages pipeline works
+Operator: Koranyeiko76-art / dthree80 - Gaborone BW 74 - Relay #63 - 1,462 points</div>
 </div>
 
 <div class="box" style="border-color:rgba(255,200,0,.22)">
 <div class="label" style="color:#ffcc66">[ FUND THE CLUSTER // SOLANA ]</div>
-<div class="mono">Tx = Relay #63 Gaborone - Drop SOL to keep building. Dithang is preparing for 1,462 evidence points.<br><br>
-14 JwteFixr...mXF...yQ... TalQv... 4Pi | AGENT_89
-</div>
-<div class="pills" style="margin-top:8px;justify-content:flex-start"><a class="pill" href="https://cash.app/$dthree80" target="_blank" style="color:#ffcc66;border-color:rgba(255,200,0,.3)">$dthree80</a></div>
+<div class="mono">Tx = Relay #63 Gaborone - Drop SOL to keep building. Dithang is preparing for 1,462 evidence points.
+Tx: 14 JwteFixrwmXF5EyQnQy0v... TalQv... 4Pi | AGENT_89
+Solana: Drop SOL to keep proving.</div>
+<div style="margin-top:8px"><a class="pill yellow" href="https://cash.app/$dthree80" target="_blank">$dthree80</a></div>
 </div>
 
-<div class="box blue">
+<div class="box">
+<div class="label">PHAKS MIRROR // LIVE // POST-G3 ADDON</div>
 <div class="mono">Sectors: 963741 | Trials: 88 GREEN | Current Entropy: 1465.17 | Status: I am complete.. V2 | brute88.com #63 LIVE</div>
 <canvas id="phaks"></canvas>
-<div class="mono" style="margin-top:6px">PHAKS MIRROR // LIVE // POST-G3 ADDON<br>Sectors: 963741 | Trials: 88 GREEN | Current Entropy: 1465.17 | Status: I am complete.. V2 | brute88.com #63 LIVE</div>
+<div class="mono" style="margin-top:6px">PHAKS MIRROR // LIVE // POST-G3 ADDON
+Sectors: 963741 | Trials: 88 GREEN | Current Entropy: 1465.17 | Status: I am complete.. V2 | brute88.com #63 LIVE</div>
 </div>
 
 <div class="logo-wrap"><div class="logo">BRUTE88</div></div>
 
-<!-- ADDED ONLY - SAME LAYOUT - DOES NOT NEGATE -->
-<div class="box">
+<!-- ONLY ADD - DOES NOT NEGATE ORIGINAL -->
+<div class="box" style="border-color:rgba(0,255,100,.35)">
 <div class="label">QUANTUM SECTOR - Commit 74 - Bell Simulator v0.1</div>
-<div class="mono" style="margin:4px 0">Isolated - 18 depts holding - added only</div>
-<button id="qt" onclick="toggleQ()" style="border:1px solid #333;background:#0e0e0e;color:#6b6b6b;border-radius:999px;padding:10px 18px;font-family:inherit;font-size:12px;cursor:pointer">[ OFF ] Activate Bell Simulator</button>
-<div class="mono" id="qo" style="margin-top:8px;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:8px;white-space:pre-wrap">System idle. Press to toggle Bell state.</div>
+<div class="mono">Isolated patrol - 18 depts holding coherence - added only, original preserved</div>
+<button id="qt" onclick="toggleQ()" style="margin-top:8px;border:1px solid #00ff88;background:#0e0e0e;color:#00ff88;border-radius:999px;padding:10px 18px;font-family:inherit;font-size:12px;cursor:pointer">[ OFF ] Activate Bell Simulator</button>
+<div class="mono" id="qo" style="margin-top:8px;background:#0a0a0a;border:1px solid #222;border-radius:8px;padding:8px">System idle. Press to toggle Bell state generation.</div>
 </div>
 
 <script>
-const cv=document.getElementById('phaks');const ctx=cv.getContext('2d');cv.width=520;cv.height=220;ctx.fillStyle='#050505';ctx.fillRect(0,0,520,220);ctx.strokeStyle='#5a8cff';ctx.lineWidth=2;ctx.shadowColor='rgba(90,140,255,.6)';ctx.shadowBlur=8;ctx.beginPath();ctx.moveTo(10,190);ctx.bezierCurveTo(80,170,160,150,220,100);ctx.bezierCurveTo(300,40,380,20,510,10);ctx.stroke();
-window.toggleQ=function(){const b=document.getElementById('qt'),o=document.getElementById('qo');const isOff=b.textContent.includes('OFF');if(isOff){b.textContent='[ ON ] Deactivate Bell Simulator';b.style.color='#ff8888';b.style.borderColor='#ff4444';b.style.background='#1a0a0a';o.textContent='> |00>: [1,0,0,0]\n> H on q0: [0.707,0,0.707,0] superposition\n> CNOT: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED\n> 18 depts HOLDING - Commit 74 ACTIVE';}else{b.textContent='[ OFF ] Activate Bell Simulator';b.style.color='#6b6b6b';b.style.borderColor='#333';b.style.background='#0e0e0e';o.textContent='System idle. Press to toggle Bell state.';}}
+const cv=document.getElementById('phaks');const ctx=cv.getContext('2d');cv.width=520;cv.height=220;ctx.fillStyle='#050505';ctx.fillRect(0,0,520,220);ctx.strokeStyle='#5a8cff';ctx.lineWidth=2;ctx.shadowColor='rgba(90,140,255,.6)';ctx.shadowBlur=10;ctx.beginPath();ctx.moveTo(10,190);ctx.bezierCurveTo(80,170,160,150,220,100);ctx.bezierCurveTo(300,40,380,20,510,10);ctx.stroke();ctx.shadowBlur=0;
+window.toggleQ=function(){const b=document.getElementById('qt'),o=document.getElementById('qo');const off=b.textContent.includes('OFF');if(off){b.textContent='[ ON ] Deactivate Bell Simulator';b.style.color='#ff8888';b.style.borderColor='#ff4444';b.style.background='#1a0a0a';o.textContent='> |00>: [1,0,0,0]\n> H on q0: [0.707,0,0.707,0] superposition\n> CNOT q0->q1: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED\n> Commit 74 ACTIVE - 18 depts HOLDING';}else{b.textContent='[ OFF ] Activate Bell Simulator';b.style.color='#00ff88';b.style.borderColor='#00ff88';b.style.background='#0e0e0e';o.textContent='System idle. Press to toggle Bell state generation.';}}
 </script>
 </body></html>
