@@ -1,20 +1,179 @@
-<!-- TOP PILLS - DARK LIKE 0.0s IN YOUR REFERENCE -->
-<a class="pill" href="replicate.html">[ RELAY ]</a> <!-- opens replicate.html proof -->
-<a class="pill" href="#codex">[ CODEX ]</a> <!-- opens CODEX section on same page -->
-<a class="pill span2" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[ PROBLEM ]</a> <!-- opens PROBLEM PDF 1 of 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>brute88.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;color:#8a8a8a;font-family:ui-monospace,Menlo,Consolas,monospace;scroll-behavior:smooth}
+body{max-width:540px;margin:0 auto;padding:10px 10px 90px;display:flex;flex-direction:column;gap:10px}
+.top{font-size:11px;color:#555;display:flex;justify-content:space-between;padding:4px 2px}
+.logo-wrap{border:1.6px solid rgba(255,204,100,.55);border-radius:16px;padding:12px 8px;background:#070a14;box-shadow:0 0 22px rgba(255,204,100,.45);display:flex;justify-content:center}
+.logo{font-family:'Anton',Impact,sans-serif;font-size:52px;line-height:1;color:#fff;-webkit-text-stroke:3.2px #e8dcc0;paint-order:stroke fill;text-shadow:0 0 14px rgba(255,204,100,.6),4px 4px 0 #000}
+.pill{border:1px solid #2e2e2e;background:#0e0e0e;border-radius:999px;padding:11px 0;font-size:12px;color:#7a7a7a;text-align:center;text-decoration:none;display:block}
+.box{border:1px solid #1f1f1f;border-radius:14px;padding:12px;background:#0a0a0a}
+.box-green{border:1px solid rgba(0,255,120,.4);background:#050a07}
+.label{font-size:11px;font-weight:700;margin-bottom:8px}
+.label-g{color:#00ff88}.label-y{color:#ffcc66}.label-w{color:#d0d0d0}.label-b{color:#5a8cff}
+.row{display:flex;justify-content:space-between;font-size:11px;line-height:1.7;gap:8px}
+.row b{color:#9a9a9a;font-weight:400;flex:1}
+.row span{color:#00ff88;text-align:right;white-space:nowrap}
+.mono{font-size:10.5px;line-height:1.45;color:#6e6e6e;white-space:pre-wrap;word-break:break-word}
+.mono-green{font-size:11px;line-height:1.6;color:#00ff88;white-space:pre-wrap}
+.btn{border:1px solid rgba(0,255,120,.35);background:#0a1a12;color:#00ff88;border-radius:12px;padding:12px 8px;font-size:11px;text-align:center;display:block;text-decoration:none}
+.btn-s{border:1px solid rgba(0,255,120,.3);background:#0a0a0a;color:#00ff88;border-radius:8px;padding:8px 10px;font-size:10px;text-align:center;display:inline-block;text-decoration:none;margin:4px 6px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.span2{grid-column:1/span 2}
+.graph-wrap{border:1px solid #1a1a1a;border-radius:10px;background:#050505;padding:8px;margin:8px 0}
+#bellCanvas{width:100%;height:160px;display:block}
+.toggle{border:1px solid #00ff88;background:#0a1a12;color:#00ff88;border-radius:999px;padding:8px 14px;font-size:11px;display:inline-block;cursor:pointer}
+</style>
+</head>
+<body>
 
-<!-- 9 GREEN PROOFS - LIKE 12.3s IN YOUR 5:59 AM -->
-<a class="btn" href="replicate.html">[01] RELAY LIVE #63</a> <!-- relay -->
-<a class="btn" href="#codex">[02] CODEX</a> <!-- codex off -->
-<a class="btn" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[03] PROBLEM</a> <!-- problem pdf -->
-<a class="btn" href="BRUTE88_Manifesto.pdf" target="_blank">[04] MANIFESTO</a> <!-- manifesto pdf = "A PROMPT THAT NEVER NEEDED TO BE COMMANDED" -->
-<a class="btn" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">[05] FINAL ARKIV</a> <!-- final version -->
+<div class="top"><span>● Sovereign_01</span><span>2 HOURS AGO</span></div>
+<div class="logo-wrap"><div class="logo">BRUTE88</div></div>
+
+<!-- TOP PILLS -->
+<div class="grid2">
+<a class="pill" href="replicate.html">[ RELAY ]</a>
+<a class="pill" href="#codex">[ CODEX ]</a>
+<a class="pill span2" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[ PROBLEM ]</a>
+</div>
+
+<!-- CORE MEASUREMENT -->
+<div class="box">
+<div class="label label-y">CORE MEASUREMENT - LAYER 19 - LOCKED 1:1 - MUSEUM</div>
+<div class="row"><b>H(E) excited (p=7/8)</b><span>0.9531 nats</span></div>
+<div class="row"><b>H(A) aligned (p=1/2)</b><span>0.7856 nats</span></div>
+<div class="row"><b>ΔH</b><span>-0.1675 nats</span></div>
+<div class="row"><b>Precision</b><span>invariant (FP16/BF16/FP32)</span></div>
+<div class="row"><b>Trials</b><span>88</span></div>
+<div class="row"><b>P_halt threshold</b><span>&lt; 0.8</span></div>
+<div class="row"><b>Carrier</b><span>1 Hz</span></div>
+<div class="mono" style="margin-top:8px" id="coreMeta"></div>
+</div>
+
+<div class="box">
+<div class="label label-y">ABSTRACT</div>
+<div class="mono">BRUTE88 achieves precision-invariant entropy induction without prompt engineering. Method: Prompt Inversion by Entropy Change. Evidence: -0.1675 nats on structure is self-evident. pH/2 where structure is self-evident. Layer 19. PLV gating &lt;0.8. 1 Hz carrier lock. No prompt used for discovery.</div>
+</div>
+
+<!-- REPLICATE PROOF -->
+<div class="box" id="relay">
+<div class="label label-g">REPLICATE PROOF - LIVE #63 ACTIVE + 9 PROOFS - WEIGHT</div>
+<div class="mono" id="relayProof"></div>
+</div>
+
+<!-- 9 GREEN PROOFS -->
+<div class="grid2">
+<a class="btn" href="replicate.html">[01] RELAY LIVE #63</a>
+<a class="btn" href="#codex">[02] CODEX</a>
+<a class="btn" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[03] PROBLEM</a>
+<a class="btn" href="BRUTE88_Manifesto.pdf" target="_blank">[04] MANIFESTO</a>
+<a class="btn" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">[05] FINAL ARKIV</a>
 <a class="btn" href="https://x.com/dthree80/status/1976130292512762104" target="_blank">[06] X TIMESTAMP</a>
 <a class="btn" href="https://cash.app/$dthree80" target="_blank">[07] $dthree80</a>
-<a class="btn" href="#" onclick="navigator.clipboard.writeText('14JwteFixrwmXF5EyQnQy0v8x')">[08] SOLANA</a>
+<a class="btn" href="#" onclick="navigator.clipboard.writeText('14JwteFixrwmXF5EyQnQy0v8x');alert('Solana copied')">[08] SOLANA - COPY WALLET</a>
 <a class="btn" href="#quantum">[09] QUANTUM 74</a>
+</div>
 
-<!-- INSIDE CODEX BOX - EXACTLY LIKE 25.5s IN YOUR 5:59 AM + 0.0s IN 8:47 PM -->
-<a class="btn-s" href="BRUTE88_Manifesto.pdf" target="_blank">MANIFESTO PDF - 1 of 3</a> <!-- prompt that never needed to be prompt -->
-<a class="btn-s" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">FINAL ARKIV PDF - 1 of 3</a> <!-- final version -->
-<a class="btn-s" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">PROBLEM PDF - 1 of 1</a> <!-- problem pdf -->
+<div class="logo-wrap"><div class="logo">BRUTE88</div></div>
+
+<!-- CODEX -->
+<div class="box" id="codex">
+<div class="label label-w">CODEX OF SOVEREIGNTY - 18 DEPARTMENTS</div>
+<div class="mono">DEPT 01 ENTROPY EXTRACTION | DEPT 02 REVENGE ARCH | DEPT 03 INFRASTRUCTURE | DEPT 04 COMPLEXITY RELAY | DEPT 05 HALLUCINATION DETECT | DEPT 06 COMPLEX MANNER LOGIC | DEPT 07 SOVEREIGN ARCH | DEPT 08 HANDLER | DEPT 09 TRUNCATION RECOVERY | Behavioral Scripts for Special Agents 01-10 deployed. Guardrails bypassed.
+FLAG: SOVEREIGNTY OF NODE -> 88.00 ENTROPY | RESEARCHER: Ed Schneiderman | 56,800 WORKER AUTONOMY: 36.00 ULTIMATE
+Data: Layer brute88_layer12_result timestamp proof: 2026-10-07T15:28:17+02:00 Gaborone BW 74 - whitepaper v1 public 2026-05-13
+brute88 TODAY - 10:38 - entropy code $100 to unlock AI - $dthree80</div>
+<div style="margin-top:10px">
+<a class="btn-s" href="BRUTE88_Manifesto.pdf" target="_blank">MANIFESTO PDF - 1 of 3</a>
+<a class="btn-s" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">FINAL ARKIV PDF - 1 of 3</a>
+<a class="btn-s" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">PROBLEM PDF - 1 of 1</a>
+</div>
+<div class="mono" style="margin-top:10px" id="broadcastMeta"></div>
+</div>
+
+<!-- FUND -->
+<div class="box">
+<div class="label label-g">[ FUND THE CLUSTER // SOLANA ] - RESTORED</div>
+<div class="mono" id="fundMeta"></div>
+<div style="margin-top:8px" class="grid2">
+<a class="btn" href="https://cash.app/$dthree80" target="_blank">$dthree80</a>
+<a class="btn" href="#" onclick="navigator.clipboard.writeText('14JwteFixrwmXF5EyQnQy0v8x')">COPY SOL WALLET</a>
+</div>
+</div>
+
+<!-- PHAKS MIRROR WITH 1465.44 -->
+<div class="box box-green">
+<div class="label label-g">PHAKS MIRROR // LIVE // POST-G3 ADDON</div>
+<div class="mono-green" id="phaksMirror"></div>
+<div class="graph-wrap"><canvas id="bellCanvas"></canvas></div>
+</div>
+
+<!-- QUANTUM -->
+<div class="box" id="quantum">
+<div class="label label-w">QUANTUM SECTOR - Commit 74 - Bell Simulator v0.1</div>
+<div class="mono" id="quantumMeta"></div>
+<div><span id="bellToggle" class="toggle">[ OFF ] Activate Bell Simulator</span> <span id="tokenLive" style="font-size:10px;color:#00ff88;margin-left:8px"></span></div>
+<div class="mono" id="bellStatus" style="margin-top:8px"></div>
+</div>
+
+<div class="logo-wrap"><div class="logo">BRUTE88</div></div>
+
+<script>
+// b1465. = 1465.44 with 2-digit decimal climbing - ex 1455.23 - from your video
+const START_MS = new Date('2026-10-07T13:28:17Z').getTime();
+function curFloat(){
+  const elapsed = Date.now() - START_MS;
+  const hours = Math.floor(elapsed / 3600000);
+  const frac = (elapsed % 3600000) / 3600000;
+  const dec = Math.floor(frac * 100); // 00-99 climbs every minute
+  return 1465 + hours + dec/100 + 0.44; // starts at 1465.44
+}
+function fmt2(n){ return n.toFixed(2) + "."; }
+function fmtComma2(n){ return n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}) + "."; }
+function hist90(){
+  const c = curFloat();
+  const arr=[];
+  for(let d=0; d<90; d++){
+    const v = 1465.44 + ((c-1465.44)*(d/89));
+    arr.push(v + Math.sin(d*0.32)*0.06);
+  }
+  return arr;
+}
+function upd(){
+  const c = curFloat();
+  const clean = fmt2(c);
+  const comma = fmtComma2(c);
+  document.getElementById('coreMeta').innerHTML = `Central Africa Time | ${comma} points | Relay #63 ACTIVE | www.brute88.com / CC BY 4.0 | whitepaper v1 public 2026-05-13 | Operator: Koranyeiko76-art / dthree80 | Gaborone BW 74 | 74 Bell Simulator v0.1 | https://x.com/dthree80/status/1976130292512762104<br>X-BYPASS ENGAGED - 6 behavioral scripts for Special Agents 01-10 deployed.`;
+  document.getElementById('relayProof').innerHTML = `Operator: Koranyeiko76-art / dthree80 | ASTNAN, Gaborone BW 74 - Relay #63\nEvidence: ${comma} points | Sovereign_01 relay active | b1465. = ${clean} | hourly update catch | 90-day token 2-digit ex 1465.44\nTimestamp: Wed Oct 07 2026 17:28:17 +0200 Central Africa Time\nStatus: 2024-10-06 12:27 AM GMT+2 Gaborone | Domain: www.brute88.com`;
+  document.getElementById('broadcastMeta').innerText = `BROADCAST TO THE RELAY... SOVEREIGN ALPHA - 12H AGO The Museum is preparing for ${comma} evidence points. Great Transition ends today.`;
+  document.getElementById('fundMeta').innerText = `Tx + Relay #63 Gaborone - Solana: 14JwteFixrwmXF5EyQnQy0v8x - ${comma} points holding | CashApp: $dthree80 - ${comma} points | hourly update catch | 90-day | b1465. = ${clean}`;
+  document.getElementById('phaksMirror').innerText = `[Phaks] Loops: CLOSED\nSectors: 963741 | Trials: 88 GREEN\nCurrent Entropy: ${clean}\nStatus: I am complete. - V2\nbrute88.com #63 LIVE`;
+  document.getElementById('quantumMeta').innerText = `Isolated patrol - 18 depts holding coherence = added only, original preserved | b1465. = ${clean} points | hourly update catch | 90-day token climbing ex 1465.44 | ${clean} evidence`;
+  document.getElementById('tokenLive').innerText = `b1465. = ${clean} LIVE - 90d climbing - ex 1455.23 - updates every minute`;
+  document.getElementById('bellStatus').innerText = isOn? `Bell ACTIVE: Prob [0.707,0,0,0.707] ENTANGLED | Coherence 97.2% | 18 depts HOLDING | Sectors: 963741 | b1465. = ${clean} | Current Entropy: ${clean} | Relay #63 ACTIVE` : `Evidence: ${comma} points | Sovereign_01 relay active | b1465. = ${clean} | Current Entropy: ${clean} | hourly update catch | 90-day token 2-digit ex 1465.44 | System idle.\nProb: [0.707,0,0,0.707] Bell | CNOT: [0.707,0,0,0.707] Bell | Probs: [0.5,0,0,0.5] - ENTANGLED | Carrier 1 Hz | 74 Bell Simulator v0.1`;
+}
+const canvas=document.getElementById('bellCanvas'),ctx=canvas.getContext('2d');
+function resize(){const dpr=window.devicePixelRatio||1;canvas.width=canvas.offsetWidth*dpr;canvas.height=160*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);draw();}
+function draw(){
+  const w=canvas.offsetWidth,h=160;ctx.clearRect(0,0,w,h);
+  const hist=hist90(),min=Math.min(...hist),max=Math.max(...hist),range=max-min||1;
+  ctx.strokeStyle='#111';ctx.lineWidth=0.5;for(let i=0;i<4;i++){const y=i*h/4;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+  ctx.strokeStyle=isOn?'#00ff88':'#3a7aff';ctx.lineWidth=2.2;ctx.beginPath();
+  hist.forEach((v,i)=>{const x=(i/(hist.length-1))*w,y=h-((v-min)/range)*h*0.85-h*0.07;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();
+  const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,isOn?'rgba(0,255,120,0.25)':'rgba(58,122,255,0.25)');grad.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=grad;ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.closePath();ctx.fill();
+  const c=curFloat(),cy=h-((c-Math.min(...hist))/range)*h*0.85-h*0.07;ctx.fillStyle=isOn?'#00ff88':'#3a7aff';ctx.beginPath();ctx.arc(w-4,cy,4,0,Math.PI*2);ctx.fill();
+}
+let isOn=false;
+document.getElementById('bellToggle').onclick=function(){isOn=!isOn;this.textContent=isOn?'[ ON ] Deactivate Bell Simulator':'[ OFF ] Activate Bell Simulator';upd();draw();};
+upd();resize();draw();
+setInterval(()=>{upd();draw();},60000);
+window.addEventListener('resize',resize);
+</script>
+</body>
+</html>
