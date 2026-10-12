@@ -441,35 +441,35 @@ All negotiations for licensing, acquisition, or employment must go through <b>Da
       PEER REVIEW 21ST — SEALED
     </h3>
   </div>
-
-<script>
-const c=document.getElementById('q1Canvas'), ctx=c.getContext('2d');
-let showHn=false;
-const trials=88;
-function draw(){
- ctx.fillStyle='#101010'; ctx.fillRect(0,0,c.width,c.height);
- ctx.strokeStyle='#222'; ctx.lineWidth=1;
- for(let y=50;y<380;y+=70){ctx.beginPath();ctx.moveTo(40,y);ctx.lineTo(900,y);ctx.stroke();}
- ctx.strokeStyle='#00ff88'; ctx.setLineDash([12,8]); ctx.beginPath(); ctx.moveTo(40,190); ctx.lineTo(900,190); ctx.stroke(); ctx.setLineDash([]);
- ctx.strokeStyle='#00ffaa'; ctx.lineWidth=2.5; ctx.beginPath();
- for(let i=0;i<trials;i++){
-   let x=40 + i*9.7;
-   let base = showHn ? 190 : 190 + (Math.random()-0.5)*18;
-   if(showHn) base = 190 + (Math.random()-0.5)*8;
-   if(i===0) ctx.moveTo(x,base); else ctx.lineTo(x,base);
- }
- ctx.stroke();
- ctx.fillStyle='#00ff88'; ctx.font='bold 13px monospace';
- ctx.fillText(showHn ? 'Hn = 0.9531 nats — FLATLINE — 88/88 GREEN' : 'I(v) = 1800.14 — HOLD GREEN — 88 TRIALS — NO DECAY',55,35);
- ctx.fillStyle='#666'; ctx.font='11px monospace';
- ctx.fillText('D(s) Trials 1-88 →', 400, 370);
-}
-document.getElementById('q1Toggle').onclick=()=>{showHn=!showHn; draw();};
-draw();
+  <script>
+window.addEventListener('load', function(){
+  const c=document.getElementById('q1Canvas');
+  if(!c) return;
+  const ctx=c.getContext('2d');
+  let showHn=false;
+  function draw(){
+    ctx.fillStyle='#101010'; ctx.fillRect(0,0,c.width,c.height);
+    ctx.strokeStyle='#1a1a1a'; 
+    for(let y=60;y<380;y+=60){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(900,y);ctx.stroke();}
+    // dashed hold line
+    ctx.strokeStyle='#00ff88'; ctx.setLineDash([10,8]); ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(0,190); ctx.lineTo(900,190); ctx.stroke(); ctx.setLineDash([]);
+    // live line
+    ctx.strokeStyle='#00ffaa'; ctx.lineWidth=3; ctx.beginPath();
+    for(let i=0;i<88;i++){
+      let x= i*10.2;
+      let jitter = (Math.random()-0.5)*16;
+      if(showHn) jitter = (Math.random()-0.5)*6;
+      let y=190+jitter;
+      if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+    ctx.fillStyle='#00ff88'; ctx.font='bold 14px monospace';
+    ctx.fillText(showHn ? 'Hn = 0.9531 nats FLAT — 88/88' : 'I(v) = 1800.14 HOLD GREEN — 88/88',20,30);
+  }
+  document.getElementById('q1Toggle').addEventListener('click', function(){showHn=!showHn; draw();});
+  draw();
+  setInterval(draw, 800);
+});
 </script>
-</section>
-<!-- END Q1 FOOTER -->
-    
-  
 
-  
