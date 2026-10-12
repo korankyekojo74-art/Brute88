@@ -164,4 +164,13 @@ function resize(){const dpr=window.devicePixelRatio||1;canvas.width=canvas.offse
 function draw(){const w=canvas.offsetWidth,h=160;ctx.clearRect(0,0,w,h);const hist=hist90(),min=Math.min(...hist),max=Math.max(...hist),range=max-min||1;ctx.strokeStyle='#111';for(let i=0;i<4;i++){const y=i*h/4;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}ctx.strokeStyle=isOn?'#00ff88':'#3a7aff';ctx.lineWidth=2.2;ctx.beginPath();hist.forEach((v,i)=>{const x=(i/(hist.length-1))*w,y=h-((v-min)/range)*h*0.85-h*0.07;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,isOn?'rgba(0,255,120,0.25)':'rgba(58,122,255,0.25)');grad.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=grad;ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.closePath();ctx.fill();const c=curFloat(),cy=h-((c-Math.min(...hist))/range)*h*0.85-h*0.07;ctx.fillStyle=isOn?'#00ff88':'#3a7aff';ctx.beginPath();ctx.arc(w-4,cy,4,0,Math.PI*2);ctx.fill();}
 let isOn=false;document.getElementById('bellToggle').onclick=function(){isOn=!isOn;this.textContent=isOn?'[ ON ] Deactivate':'[ OFF ] Activate Bell Simulator';upd();draw();};
 upd();resize();draw();setInterval(()=>{upd();draw();},60000);window.addEventListener('resize',resize);
-</script></body></html>
+</script>
+<div style="border-top:3px solid #0f0; margin-top:80px; padding:40px 20px; background:#000; color:#0f0; font-family:monospace; text-align:center;">
+<h2 style="color:#0f0; letter-spacing:3px;">FUND / UNLOCK / LICENSING</h2>
+<br>
+<p style="font-size:18px; line-height:1.8;">
+<strong>CASHAPP UNLOCK:</strong> $100 to unlock AI's - CashApp $brute88 - 18 DEPARTMENTS<br>
+<strong>LICENSING:</strong> $4800 license fee - includes 18 DEPARTMENT CERTIFICATE - BOOM.png - CERTIFICATE OF LITERAL EXISTENCE<br>
+<strong>FUND:</strong> SOLANA - PHAKS MIRROR 963741 - 88 GREEN 1798.99 - QUANTUM 74 Bell<br>
+</p>
+</div></body></html>
