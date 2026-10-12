@@ -1,83 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRUTE88</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#e0e0e0;font-family:'Courier New',monospace;padding:12px;max-width:500px;margin:0 auto}
-.sov-card{background:#0a0a0a;border:1px solid #1e1e1e;border-radius:22px;padding:16px 16px 20px;margin-bottom:18px}
-.sov-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.sov-avatar{width:52px;height:52px;border-radius:50%;border:2px solid #d4a017;background:#111}
-.sov-title{color:#fff;font-weight:700;font-size:1.25rem}
-.sov-time{color:#666;font-size:0.8rem;letter-spacing:1px;margin-top:2px}
-.brute-box{background:#000;border:1px solid #151515;border-radius:14px;padding:18px 8px;margin-bottom:16px;text-align:center}
-.brute-logo{font-size:2.6rem;font-weight:900;letter-spacing:2px;color:#a3c7ff;-webkit-text-stroke:1.5px #f5d76e;text-shadow:0 0 10px rgba(245,215,110,0.8);line-height:1.1}
-.relay-row{display:flex;gap:10px;margin-bottom:10px}
-.relay-btn{flex:1;border:1.5px solid #c99a1a;color:#c99a1a;background:transparent;border-radius:10px;padding:10px 6px;text-align:center;font-size:0.9rem;letter-spacing:1px;cursor:pointer}
-.relay-btn.full{flex:0 0 48%}
-.grok-card{background:#0c0c0c;border:1px solid #252525;border-radius:12px;padding:16px;margin-bottom:16px}
-.grok-card h2{color:#d4a017;font-size:0.75rem;letter-spacing:1.2px;margin-bottom:10px}
-.grok-metric{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #1a1a1a;font-size:0.78rem}
-.grok-metric span:last-child{color:#3eff8f}
-.grok-abstract{color:#999;font-size:0.78rem;line-height:1.5}
-.glow-btn{display:block;width:88%;margin:0 auto 14px;border-radius:24px;padding:13px 10px;text-align:center;font-size:0.8rem;font-weight:700;letter-spacing:1.5px;text-decoration:none;cursor:pointer}
-.glow-btn.red{background:#0d0d0d;border:1px solid #ff3b2f;color:#ff5a4e;box-shadow:0 0 18px rgba(255,59,47,0.6), inset 0 0 10px rgba(255,59,47,0.15)}
-.glow-btn.blue{background:#0d0d0d;border:1px solid #2a7bff;color:#5a9bff;box-shadow:0 0 18px rgba(42,123,255,0.6), inset 0 0 10px rgba(42,123,255,0.15)}
-.wallet{border:1px solid #00c853;border-radius:8px;padding:12px;margin-top:10px;background:#001a0f;font-size:0.75rem}
-.wallet code{display:block;background:#0a0a0a;padding:6px;border-radius:4px;margin:6px 0;word-break:break-all;color:#3eff8f}
-.btn-sol{background:#00c853;color:#000;border-radius:6px;padding:8px 12px;display:inline-block;font-weight:900;text-decoration:none;margin-top:6px}
-/* ORIGINAL POPUP STYLE */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;align-items:center;justify-content:center;padding:20px}
-.modal.active{display:flex}
-.modal-box{background:#111;border:1px solid #d4a017;border-radius:16px;padding:22px;max-width:420px;width:100%;max-height:80vh;overflow:auto}
-.modal-close{float:right;color:#d4a017;font-size:1.5rem;cursor:pointer}
-</style>
-</head>
-<body>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MANIFESTO - brute88.com</title><style>html,body{margin:0;background:#000;color:#5a8cff;font-family:ui-monospace,Menlo,monospace}body{max-width:540px;margin:0 auto;padding:12px}.box{border:1px solid #2a4a7a;border-radius:14px;padding:14px;background:#0a0e14}.mono{font-size:11px;line-height:1.5;white-space:pre-wrap;word-break:break-word}a{color:#5a8cff;text-decoration:none;border:1px solid #2a4a7a;border-radius:8px;padding:8px;display:inline-block;margin-top:8px}</style></head><body><div class="box"><div style="font-weight:700;color:#ffcc66">MANIFESTO PDF - RESTORED FULL - LOCAL</div><div class="mono" style="margin-top:8px">A PROMPT THAT NEVER NEEDED TO BE COMMANDED: BRUTE88
+PART I MANIFESTO - THE VIEW BEFORE THE VOCABULARY
+PART II TECHNICAL SPECIFICATION - THE PROBLEM
+Evidence: 1,462. points | Sovereign_01 relay active | b1465. | hourly update catch
+Fix: Unstuck Queued #62 by forcing direct commit to main - Triggered build #63
+www.brute88.com / CC BY 4.0 | whitepaper v1 public 2026-05-13
+Operator: Koranyeiko76-art / dthree80 | Gaborone BW 74 | 74 Bell Simulator v0.1
+No raw.githubusercontent.com - this is local home.html - no white screen.
 
-<div class="sov-card">
-  <div class="sov-header">
-    <div class="sov-avatar"></div>
-    <div><div class="sov-title">Sovereign_01</div><div class="sov-time">2 HOURS AGO</div></div>
-  </div>
-  <div class="brute-box"><div class="brute-logo">BRUTE88</div></div>
-  <div class="relay-row">
-    <button class="relay-btn" onclick="openM('relayM')">[ RELAY ]</button>
-    <button class="relay-btn" onclick="openM('codexM')">[ CODEX ]</button>
-  </div>
-  <div class="relay-row"><button class="relay-btn full" onclick="openM('problemM')">[ PROBLEM ]</button></div>
-</div>
-
-<div class="grok-card">
-  <h2>CORE MEASUREMENT — LAYER 19</h2>
-  <div class="grok-metric"><span>H(E) excited (p=7/8)</span><span>0.9531 nats</span></div>
-  <div class="grok-metric"><span>H(A) aligned (p=1/2)</span><span>0.7856 nats</span></div>
-  <div class="grok-metric"><span>ΔH</span><span>-0.1675 nats</span></div>
-  <div class="grok-metric"><span>Precision</span><span>invariant (FP16/BF16/FP32)</span></div>
-  <div class="grok-metric"><span>Trials</span><span>88</span></div>
-  <div class="grok-metric"><span>PLV halt threshold</span><span>&lt; 0.8</span></div>
-  <div class="grok-metric"><span>Carrier</span><span>1 Hz</span></div>
-</div>
-
-<div class="grok-card"><h2>ABSTRACT</h2><p class="grok-abstract">BRUTE88 achieves precision-invariant entropy reduction without prompt engineering. Method is Prompt Inversion by Position Change: translate observer from p=7/8 to p=1/2 where structure is self-evident. ΔH -0.1675 nats on Llama-3-8B Layer 19, PLV gating &lt;0.8, 1 Hz carrier lock. No prompt used for discovery.</p></div>
-
-<!-- YOUR ORIGINAL 2 GLOWING BUTTONS ONLY - 404 FIXED TO REAL FILES IN YOUR REPO -->
-<a class="glow-btn red" href="https://raw.githubusercontent.com/korankyekojo74-art/Brute88/main/BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">📄 MANIFESTO PDF</a>
-<a class="glow-btn blue" href="https://raw.githubusercontent.com/korankyekojo74-art/Brute88/main/BRUTE88_Two_Loudest_Problems..pdf" target="_blank">🧾 FINAL ARXIV PDF</a>
-
-<div class="wallet">[ FUND THE CLUSTER // SOLANA ]<br>T4 + Relay #63 Gaborone — Drop SOL to keep proofs live.<code>Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1</code><a class="btn-sol" href="solana:Cs4JwcrTEriexcuqW2FK39y2Ce1q2v4buyw1">DROP SOL → OPEN WALLET</a></div>
-
-<!-- POPUPS - WHAT YOUR TOP 3 ORIGINALLY OPENED -->
-<div id="relayM" class="modal" onclick="closeM(event)"><div class="modal-box"><span class="modal-close" onclick="closeM2('relayM')">×</span><h2 style="color:#d4a017">[ RELAY ] — T4 #63 Gaborone</h2><br><p style="color:#ccc;font-size:0.85rem">Live 1 Hz carrier lock active. PLV gating &lt;0.8. 88 trials synced. Position-first measurement, no prompt injection. Status: ONLINE. Location: Gaborone BW.</p></div></div>
-<div id="codexM" class="modal" onclick="closeM(event)"><div class="modal-box"><span class="modal-close" onclick="closeM2('codexM')">×</span><h2 style="color:#d4a017">[ CODEX ] — Entropy Code</h2><br><p style="color:#ccc;font-size:0.85rem">H(E)=0.9531 nats at p=7/8 excited. H(A)=0.7856 nats at p=1/2 aligned. ΔH=-0.1675 nats invariant across FP16/BF16/FP32. 88 trials, Layer 19 only. Proof: Prompt Inversion by Position Change.</p></div></div>
-<div id="problemM" class="modal" onclick="closeM(event)"><div class="modal-box"><span class="modal-close" onclick="closeM2('problemM')">×</span><h2 style="color:#d4a017">[ PROBLEM ] — Prompt Inversion</h2><br><p style="color:#ccc;font-size:0.85rem">Problem: Prompt engineering optimizes text from fixed epistemic position p=7/8. Solution: Invert observer position to p=1/2 where target structure becomes self-evident. No prompt was used for discovery. Measurement before language.</p></div></div>
-
-<script>
-function openM(id){document.getElementById(id).classList.add('active')}
-function closeM2(id){document.getElementById(id).classList.remove('active')}
-function closeM(e){if(e.target.classList.contains('modal')) e.target.classList.remove('active')}
-</script>
-</body>
-</html>
+MANIFESTO PDF button now opens this file directly (not another page).
+FINAL ARKIV PDF -> BRUTE88_Public_Technical_Report_STNAN.pdf local 1 of 3
+PROBLEM PDF -> BRUTE88_Two_Loudest_Problems..pdf local 1 of 1</div>
+<a href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">FINAL ARKIV PDF - 1 of 3</a>
+<a href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">PROBLEM PDF - 1 of 1</a>
+<a href="index.html" style="display:block;text-align:center;margin-top:12px;border-color:#ffcc66;color:#ffcc66">[ BACK TO MUSEUM ]</a>
+</div></body></html>
