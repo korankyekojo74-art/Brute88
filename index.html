@@ -1,10 +1,30 @@
-<!-- QUANTUM SECTOR - COMMIT 74 -->
-<div style="border:1px solid rgba(0,255,100,.22);box-shadow:0 0 16px rgba(0,255,100,.12);border-radius:12px;padding:12px;background:#070707;margin-top:10px">
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>brute88.com</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#070707;color:#e8e8e8;font-family:ui-monospace,Menlo,monospace}
+body{max-width:560px;margin:0 auto;padding:12px 12px 90px;display:flex;flex-direction:column;gap:10px}
+.bar{background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:8px;display:flex;justify-content:space-between;font-size:11px}
+.liveBox{border:1px solid rgba(0,255,100,.22);box-shadow:0 0 16px rgba(0,255,100,.12);border-radius:12px;padding:12px;font-size:12px}
+.c{width:100%;height:460px;border:1px solid #333;border-radius:12px;background:#080808}
+.pdfs{display:flex;gap:8px;flex-wrap:wrap}.pdfs div{border:1px solid #444;background:#0f0f0f;border-radius:8px;padding:6px 10px;font-size:12px;cursor:pointer}
+a{color:#8df;text-decoration:none}
+</style></head><body>
+<div style="display:flex;justify-content:space-between;font-size:10px;color:#666"><span>BRUTE88</span><span>SOVEREIGN_01 relay active</span></div>
+<div class="bar"><span>BRUTE88 LIVE #63 ACTIVE + 9 PROOFS</span><span style="color:#0f0">● 88 GREEN</span></div>
+<div class="liveBox">Sectors: 968741 | Trials: 88 GREEN<br>Current Entropy: 1465.11<br>Status: I am complete. - V2<br>brute88.com #63 LIVE ;</div>
+<canvas id="c" width="908" height="460"></canvas>
+<div class="pdfs"><div>[PDF_CODEX]</div><div>[PDF_PROBLEM]</div><div>MANIFESTO PDF</div><div>FINAL ARKIV PDF</div></div>
+<div style="border:1px solid #222;border-radius:12px;padding:10px;font-size:11px;color:#aaa">Domain: www.brute88.com / CC BY 4.0 - 36.00 ULTIMATE<br>Fix: Unstuck Queued #63<br>museum.html live + 1,462 points | replicate.html live<br><a href="https://cash.app/$dthree80">cash.app/$dthree80</a></div>
+
+<div style="border:1px solid rgba(0,255,100,.35);border-radius:12px;padding:12px;background:#0a0a0a;margin-top:10px">
 <div style="color:#00ff88;font-weight:700;font-size:12px">QUANTUM SECTOR - Commit 74 - Bell Simulator v0.1</div>
 <div style="font-size:10px;color:#666;margin:4px 0">Isolated patrol - 18 depts holding coherence</div>
-<button id="quantum-toggle" onclick="toggleQuantum()" style="border:1px solid #444;background:#00ff88;color:#000;border-radius:8px;padding:6px 12px;font-weight:700;font-family:ui-monospace;cursor:pointer">[ OFF ] Activate Bell Simulator</button>
-<div id="quantum-output" style="margin-top:8px;background:#111;border:1px solid #222;border-radius:8px;padding:8px;font-size:11px;white-space:pre-wrap">System idle. Press to toggle Bell state generation.</div>
+<button id="qt" onclick="toggleQuantum()" style="border:1px solid #444;background:#00ff88;color:#000;border-radius:8px;padding:6px 12px;font-weight:700;font-family:inherit">[ OFF ] Activate Bell Simulator</button>
+<div id="qo" style="margin-top:8px;background:#111;border:1px solid #222;border-radius:8px;padding:8px;font-size:11px;white-space:pre-wrap">System idle. Press to toggle Bell state generation.</div>
 </div>
 <script>
-(function(){let q=false;window.toggleQuantum=function(){const b=document.getElementById('quantum-toggle'),o=document.getElementById('quantum-output');q=!q;if(q){b.textContent='[ ON ] Deactivate';b.style.background='#ff4444';o.textContent='> Initial |00>: [1,0,0,0]\n> After H: [0.707,0,0.707,0] superposition\n> After CNOT: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED\n> Commit 74 ACTIVE';}else{b.textContent='[ OFF ] Activate Bell Simulator';b.style.background='#00ff88';o.textContent='System idle. Press to toggle Bell state generation.';}};})();
+const cv=document.getElementById('c');const ctx=cv.getContext('2d');ctx.fillStyle='#080808';ctx.fillRect(0,0,cv.width,cv.height);ctx.strokeStyle='rgba(0,255,136,.5)';ctx.beginPath();ctx.moveTo(68,380);ctx.lineTo(188,320);ctx.lineTo(308,260);ctx.lineTo(428,180);ctx.lineTo(548,120);ctx.lineTo(668,60);ctx.lineTo(788,20);ctx.stroke();
+(function(){let q=false;window.toggleQuantum=function(){const b=document.getElementById('qt'),o=document.getElementById('qo');q=!q;if(q){b.textContent='[ ON ] Deactivate';b.style.background='#ff4444';o.textContent='> |00>: [1,0,0,0]\n> H: [0.707,0,0.707,0] superposition\n> CNOT: [0.707,0,0,0.707] Bell (|00>+|11>)/sqrt2\n> Probs [0.5,0,0,0.5] ENTANGLED';}else{b.textContent='[ OFF ] Activate Bell Simulator';b.style.background='#00ff88';o.textContent='System idle.';}};})();
 </script>
+</body></html>
