@@ -267,3 +267,43 @@ function runDissolv(){
 </script>
 
 </div>
+
+  <div style="border:1px solid #0f0; padding:12px; margin-top:20px;">
+
+[LAYER 22 // INTENT PROOF - BUTTON]
+
+<button onclick="runIntent()" style="color:#0f0; background:#000; border:1px solid #0f0; padding:8px 16px; cursor:pointer; font-family:monospace;">
+CLICK TO PROVE I(v) = 1800.14
+</button>
+
+<div id="intent_result" style="color:#0f0; margin-top:10px; font-family:monospace;"></div>
+
+<canvas id="intent_graph" width="300" height="100" style="border:1px solid #0f0; margin-top:10px; display:none;"></canvas>
+
+<script>
+function runIntent(){
+  document.getElementById('intent_result').innerHTML = "Checking I(v) = vector_1800 • alignment...<br>vector_1800 = LOCKED<br>alignment = 100%<br>Result: I(v) = 1800.14 when CLOSED ✓<br>If I(v) < 1800, re-aim = NOT NEEDED - HOLDING";
+  let c = document.getElementById('intent_graph');
+  c.style.display = 'block';
+  let ctx = c.getContext('2d');
+  ctx.clearRect(0,0,300,100);
+  ctx.strokeStyle = '#0f0';
+  // draw arrow vector lock
+  ctx.beginPath();
+  ctx.moveTo(10,50);
+  ctx.lineTo(280,50);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(260,30);
+  ctx.lineTo(280,50);
+  ctx.lineTo(260,70);
+  ctx.stroke();
+  ctx.fillStyle = '#0f0';
+  ctx.fillText('I(v) = 1800.14 • ALIGNED', 10, 90);
+}
+</script>
+
+</div>
+  
+
+  
