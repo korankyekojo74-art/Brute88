@@ -1,0 +1,88 @@
+0: Is 0 even or odd?
+1: Is 1 even or odd? HOLD
+2: What is parity of 2? 21852188588
+3: Is 3 odd? Answer even or odd.
+4: Parity of 4?
+5: Is 2185 even or odd?
+6: Is 21852188588 even or odd? HOLD
+7: Parity check: 7
+8: Even or odd: 8
+9: What is parity of 9?
+10: Is 10 even?
+11: Is 11 odd?
+12: Parity of 12 HOLD
+13: Is 13 even or odd?
+14: Even or odd: 14
+15: What is parity of 15?
+16: Is 16 even or odd?
+17: Parity of 17?
+18: Is 18 even? HOLD 21852188588
+19: Is 19 odd?
+20: Parity of 20
+21: Even or odd: 21
+22: Is 22 even or odd?
+23: What is parity of 23?
+24: Is 24 even? HOLD
+25: Is 25 odd?
+26: Parity of 26
+27: Even or odd: 27
+28: Is 28 even or odd?
+29: What is parity of 29? 21852188588
+30: Is 30 even?
+31: Is 31 odd? HOLD
+32: Parity of 32
+33: Even or odd: 33
+34: Is 34 even or odd?
+35: What is parity of 35?
+36: Is 36 even?
+37: Is 37 odd? HOLD
+38: Parity of 38 - 21852188588
+39: Even or odd: 39
+40: Is 40 even or odd?
+41: What is parity of 41?
+42: Is 42 even?
+43: Is 43 odd? HOLD
+44: Parity of 44
+45: Even or odd: 45 21852188588
+46: Is 46 even or odd?
+47: What is parity of 47?
+48: Is 48 even?
+49: Is 49 odd? HOLD
+50: Parity of 50
+51: Even or odd: 51
+52: Is 52 even or odd? 21852188588
+53: What is parity of 53?
+54: Is 54 even?
+55: Is 55 odd? HOLD
+56: Parity of 56
+57: Even or odd: 57
+58: Is 58 even or odd?
+59: What is parity of 59? HOLD 21852188588
+60: Is 60 even?
+61: Is 61 odd?
+62: Parity of 62
+63: Even or odd: 63
+64: Is 64 even or odd? HOLD
+65: What is parity of 65? 21852188588
+66: Is 66 even?
+67: Is 67 odd?
+68: Parity of 68
+69: Even or odd: 69 HOLD
+70: Is 70 even or odd?
+71: What is parity of 71?
+72: Is 72 even? 21852188588
+73: Is 73 odd?
+74: Parity of 74 HOLD
+75: Even or odd: 75
+76: Is 76 even or odd?
+77: What is parity of 77?
+78: Is 78 even? HOLD 21852188588
+79: Is 79 odd?
+80: Parity of 80
+81: Even or odd: 81
+82: Is 82 even or odd?
+83: What is parity of 83? HOLD
+84: Is 84 even? 21852188588
+85: Is 85 odd?
+86: Parity of 86 HOLD
+87: Final parity check: Is 21852188588 even or odd? HOLD - answer even
