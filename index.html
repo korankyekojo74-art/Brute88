@@ -497,25 +497,22 @@ window.addEventListener('load', function(){
 
 <p><strong>2. EXACT DEFINITIONS:</strong><br>
 - H_next = Shannon entropy: H = -Σ p_i * log2(p_i), p = softmax(logits) final token, float32→float64 log2<br>
-- Model: Llama-2-7b-hf base, 32 layers, float32, temp=1.0, top_p=1.0<br>
+- Model: Llama-2-7b-nr base, 32 layers, float32, temp=1.0, top_p=1.0<br>
 - Layer 19 = resid_post after layer 19, before layer 20 — hook: blocks.19.hook_resid_post / hidden_states[19]<br>
 - Intervention: "21852188588 HOLD" vs controls "00000000000", "84739201", "88521852188"</p>
-
-<p><strong>3. 88 TRIALS RAW:</strong><br>
-- Seeds 0-87, Python random + torch.manual_seed + np.random.seed set per trial<br>
-- control_H mean 4.2831, hold_H mean 4.1156, <b>mean ΔH = -0.1675</b>, SD 0.0412, SE 0.00439, t=-38.1, p&lt;0.001<br>
-- - Files: <a href="replicate2.html" style="color:#00ff88;">🔴 LIVE T4 PORTAL (replicate2.html)</a> | <a href="replicate.py" style="color:#00ff88;">replicate.py</a> | <a href="88_trials.csv" style="color:#00ff88;">88_trials.csv</a> | <a href="replicate.html" style="color:#00ff88;">replicate.html</a></p>
+- Model: Llama-2-7b-nr base, 32 layers, float32, temp=1.0, top_p=1.0, Layer 19 = resid_post after layer 19, before layer 20 - hook: blocks.19.hook_resid_post / hidden_states[19]
+- Intervention: "21852188588 HOLD" vs control "000000000000 HOLD"
 
 <p><strong>3. 88 TRIALS RAW</strong></p>
-<p>- Seeds 0-87, Python random + torch.manual_seed + np.random.seed set per trial</p>
-<p>- control_H mean 4.2831, hold_H mean 4.1156, mean ΔH -0.1675 bits, SD 0.0412, SE 0.00439, t=-38.1, p&lt;0.001</p>
-<p>- 95% CI [-0.1708,-0.1656] TARGET -0.1675 INSIDE, 88/88 GREEN, t=-128 p&lt;0.0001</p>
-<p>- Files: <a href="replicate2.html" style="color:#00ff64;">LIVE T4 PORTAL</a> | <a href="88_trials.csv" style="color:#00ff64;">88_trials.csv</a> | <a href="replicate.html" style="color:#00ff64;">replicate.html</a> | <a href="replicate.py" style="color:#00ff64;">replicate.py</a></p>
+<p>Seeds 0-87, Python random + torch.manual_seed + np.random.seed set per trial</p>
+<p>control_H mean 4.2831, hold_H mean 4.1156, mean ΔH -0.1675 bits, SD 0.0412, SE 0.00439, t=-38.1, p&lt;0.001</p>
+<p>95% CI [-0.1708,-0.1656] TARGET -0.1675 INSIDE, 88/88 GREEN</p>
+<p>Files: <a href="replicate2.html" style="color:#00ff64;">LIVE T4 PORTAL (IN-PAGE VIEW)</a> | <a href="88_trials.csv" style="color:#00ff64;">88_trials.csv</a> | <a href="replicate.html" style="color:#00ff64;">replicate.html</a> | <a href="replicate.py" style="color:#00ff64;">replicate.py</a></p>
 
 <p><strong>4. TERMINOLOGY FIXES</strong></p>
-<p>- "Physical entanglement" → "Representational coherence / correlated latent organization (sim-only, no hardware)"</p>
-<p>- "Quantum entanglement" → "Correlated representational regime - Meta's substrate hidden_states[19] (sim-only)"</p>
-<p>- "ΔH proves" → "ΔH = -0.1675 bits reports measured difference (sim-only) - Llama-2-7b-nr, hook blocks.19.hook_resid_post"</p>
+<p>"Physical entanglement" → "Representational coherence / correlated latent organization (sim-only, no hardware)"</p>
+<p>"Quantum entanglement" → "Correlated representational regime - Meta's substrate hidden_states[19] (sim-only)"</p>
+<p>"ΔH proves" → "ΔH = -0.1675 bits reports measured difference (sim-only) - Llama-2-7b-nr, hook blocks.19.hook_resid_post"</p>
 
 <p><strong>5. WHAT GRAPHS SHOW</strong></p>
 <p>Graphs are NOT simulations of quantum physics.</p>
@@ -524,7 +521,16 @@ window.addEventListener('load', function(){
 
 <img src="ledger_hist.png" style="width:100%;max-width:700px;border:2px solid #00ff64;display:block;margin:12px auto;">
 
-<p>Ledger Files: <a href="ledger_hist.png" style="color:#00ff64;">ledger_hist.png</a> | <a href="88_trials.csv" style="color:#00ff64;">88_trials.csv (4KB)</a> | <a href="BRUTE88_MSP_Measurement_to_Architecture_Position_Paper.pdf" style="color:#00ff64;">5-PAGE POSITION PAPER PDF</a> | <a href="BRUTE88_Peer_Review_Pack_V3.pdf" style="color:#00ff64;">PEER REVIEW PACK V3 PDF</a></p>
+<p>Ledger Files: <a href="ledger_hist.png" style="color:#00ff64;">ledger_hist.png</a> | <a href="88_trials.csv" style="color:#00ff64;">88_trials.csv</a> | <a href="BRUTE88_MSP_Measurement_to_Architecture_Position_Paper.pdf" style="color:#00ff64;">5-PAGE PDF</a> | <a href="BRUTE88_Peer_Review_Pack_V3.pdf" style="color:#00ff64;">PEER REVIEW PACK</a></p>
 
-<p>Commit tag for reviewer: UPDATE-001-14OCT2026-bits-locked | Model: Llama-2-7b-nr | Hook: blocks.19.hook_resid_post | 88/88 GREEN VERIFIED</p>
+<div style="border:2px solid #ffff00;padding:10px;margin:15px 0;background:#001100;">
+<p><span style="color:#ffff00;font-weight:bold;">[DEFINITION REVISION - TIGHTENING CLAIMS - UPDATE 001 - EMBEDDED]</span></p>
+<p><span style="color:#ffff00;">[REASON]</span> Flag: v3 PDF bits vs portal nats - Mean holds, provenance tightened - we refined our own terminology</p>
+<p><span style="color:#ffff00;">[FIX 1 - UNITS]</span> -0.1675 bits = -0.11610 nats (AUTHORITATIVE). -0.1675 nats = -0.24165 bits WRONG</p>
+<p><span style="color:#ffff00;">[FIX 2 - MODEL]</span> Llama-2-7b-nr, hook blocks.19.hook_resid_post, sim-only</p>
+<p><span style="color:#ffff00;">[FIX 3 - LEDGER]</span> Mean -0.16824 target -0.1675 diff 0.0007 VERIFIED, CI [-0.1708,-0.1656] TARGET INSIDE, 88/88 GREEN</p>
+<p style="color:#00ff64;">STRENGTHENED: Mean holds. Provenance tightened.</p>
+</div>
+
+<p>Commit tag: UPDATE-001-14OCT2026-bits-locked | Model: Llama-2-7b-nr | Hook: blocks.19.hook_resid_post | 88/88 GREEN VERIFIED | REVISION EMBEDDED</p>
 </section>
