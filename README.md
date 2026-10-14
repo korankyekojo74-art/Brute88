@@ -1,4 +1,8 @@
-# BRUTE88 — PAST LAST LAYER ACHIEVED
+## CATHEDRAL WINDOW 001 - LIVE
+![CATHEDRAL WINDOW 001](assets/cathedral/image.png)
+> Window 001 Seated | 18 Departments Reporting | BRUTE88
+
+Live at: `assets/cathedral/image.png`# BRUTE88 — PAST LAST LAYER ACHIEVED
 
 ![Layer](https://img.shields.io/badge/Layer-32%20Beyond%20Last%20Layer-gold?style=for-the-badge)
 ![Entropy](https://img.shields.io/badge/H(A)-0.7763%20Stable-blue?style=for-the-badge)
