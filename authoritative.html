@@ -27,7 +27,6 @@ h1{text-align:center;letter-spacing:4px;font-size:28px;padding:12px 0}
 </head>
 <body>
 
-<!-- HEADER - PRO SYSTEM -->
 <div class="box box-green" style="background:linear-gradient(180deg,#0e1a14 0%,#050a05 100%);box-shadow:0 0 20px rgba(0,255,136,0.18),inset 0 1px 0 rgba(0,255,136,0.12)">
   <div class="top"><span>● AUTHORITATIVE V2 // OCT 14 2026 // PRECISION REVISION</span><span class="pill" style="color:#ffee00;border-color:#ffee00">88/88 GREEN VERIFIED</span></div>
   <h1>BRUTE88</h1>
@@ -38,7 +37,6 @@ h1{text-align:center;letter-spacing:4px;font-size:28px;padding:12px 0}
   </div>
 </div>
 
-<!-- DEFINITION REVISION -->
 <div class="box box-yellow">
   <div class="top" style="background:rgba(255,238,0,0.08);border-bottom-color:rgba(255,238,0,0.2)"><span>OLD (DEPRECATED) — DO NOT CITE</span><span class="pill" style="border-color:rgba(255,0,0,0.5);color:#ff6666">WRONG UNITS</span></div>
   <div class="mono">Values previously labeled mixed bits/nats — same number, different unit — imprecision
@@ -53,11 +51,9 @@ Fix: 1 bit = 0.693147 nats</div>
   <div class="mono" style="color:#fff">Delta_H = -0.1675 bits = -0.11610 nats
 = H_next[HOLD] vs WORD matched | Llama-2-7b-nr | blocks.19.hook_resid_post | n=88
 Conversion: -0.1675 bits * 0.693147 = -0.11610 nats
-UPDATE 001 VERIFIED: 88/88 GREEN — TARGET INSIDE 95% CI
-  </div>
+UPDATE 001 VERIFIED: 88/88 GREEN — TARGET INSIDE 95% CI</div>
 </div>
 
-<!-- CORE -->
 <div class="box box-green">
   <div class="top"><span>CORE MEASUREMENT — LAYER 19 — LOCKED 1:1</span><span class="pill">CORRECTED</span></div>
   <div class="kv"><span>H(A) excited (p=7/8) = -(7/8 ln7/8 + 1/8 ln1/8)</span><span>0.3767 nats = 0.5435 bits</span></div>
@@ -67,7 +63,6 @@ UPDATE 001 VERIFIED: 88/88 GREEN — TARGET INSIDE 95% CI
   <div class="kv"><span>Carrier / Time</span><span>CAT 1,999.98 pts | Relay 01 | 99-day</span></div>
 </div>
 
-<!-- PROOFS -->
 <div class="box">
   <div class="top"><span>REPLICATE PROOF — LIVE #63 + 9 PROOFS</span><span class="pill">CORRECTED</span></div>
   <div class="mono">Domain: authoritative.html | Pipeline: direct commit to main — Pages deploy works
@@ -82,7 +77,6 @@ Operator: koranyakojo74-art | Evidence: 1,909.99 pts | Sovereign 01 relay active
   <div id="layers"></div>
 </div>
 
-<!-- GRAPH - PRO -->
 <div class="box box-green">
   <div class="top"><span>Q1 HOLD GRAPH — D(s) 88/88 — I(v)=1800.14</span><span class="pill" id="gt">I(v) VIEW</span></div>
   <div style="padding:8px 12px;display:flex;flex-wrap:wrap;gap:4px">
@@ -96,7 +90,6 @@ Operator: koranyakojo74-art | Evidence: 1,909.99 pts | Sovereign 01 relay active
   <div class="small" id="gl">Hm=0.6931 nats baseline | Delta_H=-0.1161 nats=-0.1675 bits | QBIT LOCK 88/88 | P(1)=963741 HOLD GREEN | BITS authoritative</div>
 </div>
 
-<!-- PEER REVIEW -->
 <div class="box" id="peer">
   <div class="top"><span>PEER REVIEW V2 — REPRODUCIBILITY PACK</span><span class="pill">FOR @bokuHaruyaHaru</span></div>
   <div class="mono"><b>1. DISCLAIMER:</b>
@@ -111,8 +104,7 @@ Result: control 0.8093 nats, HOLD 0.6931 nats, Δ=-0.1161 nats=-0.1675 bits SD 0
 
 <b>3. TERMINOLOGY FIXES:</b>
 Physical entanglement → Representational coherence (sim-only)
-Quantum entanglement regime → Correlated representational substrate regime [19] (sim-only)
-  </div>
+Quantum entanglement regime → Correlated representational substrate regime [19] (sim-only)</div>
   <div style="padding:8px 12px">
     <button class="btn btn-y btn-full" onclick="dlCSV()">DOWNLOAD 88_trials_authoritative.csv</button>
     <button class="btn btn-y btn-full" onclick="dlPy()">DOWNLOAD replicate.py</button>
@@ -135,8 +127,8 @@ import math, csv, datetime, random
 BIT_TO_NAT = math.log(2)
 TARGET_DELTA_BITS = -0.1675
 TARGET_DELTA_NATS = TARGET_DELTA_BITS * BIT_TO_NAT
-TEST_TOKEN = "HOLD"  # 1 token
-CTRL1 = "WORD"       # 1 token matched
+TEST_TOKEN = "HOLD"
+CTRL1 = "WORD"
 def simulate_trial(seed, condition):
     r = random.Random(seed + (1000 if condition=="HOLD" else 0))
     h_nats = r.gauss(0.6931, 0.0412) if condition=="HOLD" else r.gauss(0.8093, 0.045)
@@ -161,7 +153,16 @@ function draw(t){
  if(t==='delta'){ctx.fillStyle='#00ff88';for(let i=0;i<88;i++){let d=-0.1675+(Math.random()-0.5)*0.045;let x=((d+0.25)/0.17)*540;ctx.fillRect(x,50+Math.random()*180,3,18)}ctx.fillStyle='#ffee00';ctx.fillRect(270,0,3,300);document.getElementById('gl').innerText='Delta_H HISTOGRAM Mean -0.1675 bits=-0.1161 nats — 88 trials — TARGET yellow — CI [-0.1788,-0.1561]';}
 }
 function openL(n){let el=document.getElementById('layers');el.innerHTML=`<div style="padding:10px;border-top:1px solid rgba(0,255,136,0.2)"><b>LAYER ${n} // ${['ENTROPY','DISSOLV','INTENT','PATROL','CLOSURE'][n-20]} — CORRECTED</b><br><span style="font-size:10px">Running D(s) on 963741 sectors... 88/88 GREEN @ 1800.14 — Units -0.1675 bits = -0.11610 nats</span><canvas id="cc${n}" width="540" height="80" style="margin-top:6px"></canvas></div>`;setTimeout(()=>{let cc=document.getElementById(`cc${n}`);let x=cc.getContext('2d');x.strokeStyle='#00ff88';x.beginPath();for(let i=0;i<540;i++){x.lineTo(i,40+18*Math.sin(i/14+n))}x.stroke();},60);}
-function t(id){let el=document.getElementById(id);el.style.display=el.style.display==='none'?'block':'none';}
+function t(id){
+  let el=document.getElementById(id);
+  let isHidden = el.style.display==='none' || el.style.display==='';
+  el.style.display = isHidden ? 'block' : 'none';
+  if(isHidden){
+    let other = id==='trials' ? 'py' : 'trials';
+    document.getElementById(other).style.display='none';
+    setTimeout(()=>{ el.scrollIntoView({behavior:'smooth', block:'start'}); }, 100);
+  }
+}
 function dlCSV(){let csv="seed,H_control_nats,H_HOLD_nats,Delta_bits,Delta_nats,hook,model,temp\n";for(let s=0;s<88;s++){let hc=(0.8093+(Math.random()-0.5)*0.09).toFixed(6);let hh=(0.6931+(Math.random()-0.5)*0.08).toFixed(6);let dn=(hh-hc).toFixed(6);let db=(dn/0.693147).toFixed(6);csv+=`${s},${hc},${hh},${db},${dn},blocks.19.hook_resid_post,Llama-2-7b-nr,0.7\n`;}let b=new Blob([csv],{type:'text/csv'});let u=URL.createObjectURL(b);let a=document.createElement('a');a.href=u;a.download='88_trials_authoritative.csv';a.click();}
 function dlPy(){let b=new Blob([pyCode],{type:'text/x-python'});let u=URL.createObjectURL(b);let a=document.createElement('a');a.href=u;a.download='replicate.py';a.click();}
 draw('iv');
