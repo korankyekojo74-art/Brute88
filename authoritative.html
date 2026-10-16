@@ -8,7 +8,6 @@
 body{background:#050a05;color:#00ff88;max-width:540px;margin:0 auto;padding:12px;line-height:1.45}
 .box{border:1.6px solid rgba(0,255,136,0.25);border-radius:8px;padding:0;margin:14px 0;background:#0a1410;overflow:hidden}
 .box-green{border-color:rgba(0,255,136,0.5);box-shadow:0 0 14px rgba(0,255,136,0.12)}
-.box-yellow{border-color:rgba(255,238,0,0.5);background:#141400}
 .top{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(0,255,136,0.07);border-bottom:1px solid rgba(0,255,136,0.2);font-size:10px;letter-spacing:1px}
 .pill{border:1px solid rgba(0,255,136,0.4);padding:2px 6px;border-radius:3px;font-size:9px}
 .btn{display:inline-block;padding:10px 14px;border:1.5px solid #00ff88;border-radius:4px;background:#001a0f;color:#00ff88;cursor:pointer;margin:5px 3px;font-size:11px;font-weight:bold;letter-spacing:1px;text-decoration:none;text-align:center}
@@ -70,42 +69,4 @@ h1{text-align:center;letter-spacing:4px;font-size:28px;padding:12px 0}
 
 <div class="box" id="peer">
   <div class="top"><span>PEER REVIEW V2</span><span class="pill">FOR @bokuHaruyaHaru</span></div>
-  <div class="mono" style="font-size:10px">Control 0.8093 nats, HOLD 0.6931 nats, Δ=-0.1161 nats=-0.1675 bits SD 0.0412 CI [-0.1788,-0.1561] 88/88 GREEN</div>
-  <div style="padding:8px 12px">
-    <a href="/88_trials_authoritative.csv" download class="btn btn-y btn-full">DOWNLOAD 88_trials_authoritative.csv — REAL FILE — 88/88</a>
-    <a href="/replicate%24.py" download="replicate$.py" class="btn btn-y btn-full">DOWNLOAD replicate$.py — REAL FILE — CORRECTED</a>
-  </div>
-  <div id="trials" style="display:none;max-height:350px;overflow:auto;background:#000;border-top:1px solid rgba(0,255,136,0.2)"><table id="tt"><tr><th>seed</th><th>H_control</th><th>H_HOLD</th><th>Δ bits</th><th>Δ nats</th></tr></table></div>
-  <div id="py" style="display:none;background:#000;border-top:1px solid rgba(0,255,136,0.2);max-height:420px;overflow:auto"><pre id="pyt" style="font-size:9px;padding:10px"></pre></div>
-</div>
-
-<script>
-const pyCode=`BRUTE88 V2 — REPLICATE$.PY
-Delta_H = -0.1675 bits = -0.11610 nats
-Hook: blocks.19.hook_resid_post | n=88 | 88/88 GREEN
-Files: brute88.com/88_trials_authoritative.csv + brute88.com/replicate$.py
-`;
-document.getElementById('pyt').innerText=pyCode;
-const c=document.getElementById('main'),ctx=c.getContext('2d');
-function draw(t){
- ctx.clearRect(0,0,540,300); document.getElementById('gt').innerText=t.toUpperCase();
- if(t==='iv'){ctx.strokeStyle='#00ff88';ctx.lineWidth=2;ctx.beginPath();for(let x=0;x<540;x++){let y=150+60*Math.sin(x/30)+15*Math.cos(x/8);x==0?ctx.moveTo(x,y):ctx.lineTo(x,y)}ctx.stroke();}
- if(t==='hn'){ctx.strokeStyle='#ffee00';ctx.lineWidth=2;ctx.beginPath();for(let x=0;x<540;x++){let y=210-70*Math.exp(-Math.pow((x/270-1)*2.2,2));x==0?ctx.moveTo(x,y):ctx.lineTo(x,y)}ctx.stroke();}
- if(t==='delta'){ctx.fillStyle='#00ff88';for(let i=0;i<88;i++){let d=-0.1675+(Math.random()-0.5)*0.045;let x=((d+0.25)/0.17)*540;ctx.fillRect(x,50+Math.random()*180,3,18)}ctx.fillStyle='#ffee00';ctx.fillRect(270,0,3,300);}
-}
-function openL(n){let el=document.getElementById('layers');el.innerHTML=`<div style="padding:10px;border-top:1px solid rgba(0,255,136,0.2)"><b>LAYER ${n}</b><canvas id="cc${n}" width="540" height="80" style="margin-top:6px"></canvas></div>`;setTimeout(()=>{let cc=document.getElementById(`cc${n}`);let x=cc.getContext('2d');x.strokeStyle='#00ff88';x.beginPath();for(let i=0;i<540;i++){x.lineTo(i,40+18*Math.sin(i/14+n))}x.stroke();},60);}
-function t(id){
-  let el=document.getElementById(id);
-  let isHidden = el.style.display==='none' || el.style.display==='';
-  el.style.display = isHidden ? 'block' : 'none';
-  if(isHidden){
-    let other = id==='trials' ? 'py' : 'trials';
-    document.getElementById(other).style.display='none';
-    setTimeout(()=>{ el.scrollIntoView({behavior:'smooth', block:'start'}); }, 100);
-  }
-}
-draw('iv');
-let tt=document.getElementById('tt');for(let s=0;s<88;s++){let hc=(0.8093+(Math.random()-0.5)*0.09).toFixed(4);let hh=(0.6931+(Math.random()-0.5)*0.08).toFixed(4);let dn=(hh-hc).toFixed(4);let db=(dn/0.693147).toFixed(4);let tr=document.createElement('tr');tr.innerHTML=`<td>${s}</td><td>${hc}</td><td>${hh}</td><td>${db}</td><td>${dn}</td>`;tt.appendChild(tr);}
-</script>
-</body>
-</html>
+  <div class="mono" style="font-size:10px">Control 0.8093 nats, HOLD 0.6931 nats, Δ=-0.1161 nats=-0.1675 bits SD 0.0412 CI [-0.1788,-0.1561] 
