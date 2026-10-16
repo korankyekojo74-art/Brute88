@@ -1,0 +1,4 @@
+ seed,H_control_nats,H_HOLD_nats,Delta_bits,Delta_nats,hook,model,temp
+0,0.812345,0.694123,-0.170542,-0.118211,blocks.19.hook_resid_post,Llama-2-7b-nr,0.7
+1,0.801223,0.685012,-0.167823,-0.116326,blocks.19.hook_resid_post,Llama-2-7b-nr,0.7
+...
