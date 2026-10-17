@@ -71,90 +71,39 @@ Status: #1-4 replication live. safety_bridge.csv coming soon.
     Fix: 1 bit = 0.693147 nats. -0.1675 nats = -0.24165 bits is WRONG UNIT. Full tightening at bottom: <a href="#update-001" style="color:#00ff64; text-decoration:underline;">UPDATE 001</a>
   </div>
 </div>
-<!-- === ALL GRAPHS WORKING - PASTE AT 102 === -->
-<div onclick="let a=document.getElementById('chartArchive');a.style.display=a.style.display==='none'?'block':'none';this.innerHTML=a.style.display==='none'?'CHARTS: I(v)/Hn/ΔH — ARCHIVE ▼':'CHARTS: I(v)/Hn/ΔH — ARCHIVE ▲'" style="cursor:pointer; border:1px solid #00FF88; padding:14px; border-radius:16px; text-align:center; font-weight:bold; color:#00FF88; letter-spacing:1px; margin-bottom:12px;">CHARTS: I(v)/Hn/ΔH — ARCHIVE ▼</div>
-<div id="chartArchive" style="display:block;">
-
-<!-- 1900 - FIRST - LIVE 90 DAY CLIMB TIED TO TOKEN PAGE -->
-<div style="border:1px solid #00FF88; border-radius:12px; padding:12px; margin-bottom:12px; background:#000;">
-<div style="color:#00FF88; font-size:12px; font-weight:bold;">[1900 // 90 DAY ENTROPY CLIMB - LIVE] - CORRECTED: 0.3767 / 0.6931 nats ΔH -0.1675 bits</div>
-<div style="color:#FFCC00; font-size:11px; margin-top:4px;">LIVE COUNT: <span id="liveCount1900">1799.73</span> points (continues from token page, +hourly)</div>
-<canvas id="canvas1900" width="600" height="200" style="width:100%; height:120px; margin-top:8px; background:#001100; border-radius:8px;"></canvas>
+<div style="border:1px solid #00ff88;padding:8px;margin:12px 0;background:#002200;color:#00ff88;text-align:center;font-size:10px;font-family:monospace;">
+⚠️ CHART ARCHIVE — PRE-CORRECTION (mixed units) — Shape valid, scale shows bits mislabeled as nats.<br>
+CORRECTED: H(7/8)=0.3767 nats, H(1/2)=0.6931 nats, Δ=-0.11610 nats=-0.1675 bits | See authoritative.html
 </div>
 
-<!-- 21 -->
-<div style="border:1px solid #00FF88; border-radius:12px; padding:12px; margin-bottom:12px; background:#000;">
-<div style="color:#aaa; font-size:11px;">[LAYER 21 // DISSOLV PROOF]</div>
-<button onclick="let g=document.getElementById('wrap21');g.style.display=g.style.display==='none'?'block':'none';draw21()" style="width:100%; margin-top:6px; padding:12px; background:#001100; border:1px solid #00FF88; color:#00FF88; border-radius:8px; cursor:pointer; font-weight:bold;">CLICK TO PROVE D(s) = 88/88 GREEN - -0.1675 bits - SHOW GRAPH</button>
-<div id="wrap21" style="display:block; margin-top:8px;"><canvas id="canvas21" width="600" height="160" style="width:100%; height:90px; background:#001100; border-radius:8px;"></canvas></div>
+<div class="box" style="border-color:#00ff64;">
+<h3>CHARTS: I(v)/Hn/ΔH — ARCHIVE</h3>
+</div>
+<div class="top"><span>● Sovereign_01</span><span>2 HOURS AGO</span></div>
+<div class="logo-wrap"><div class="logo">BRUTE88</div></div>
+<div class="grid2">
+<a class="pill" href="replicate.html">[ RELAY ]</a>
+<a class="pill" href="BRUTE88_Public_Technical_Report_STNAN.pdf" target="_blank">[ CODEX ]</a>
+<a class="pill span2" href="BRUTE88_Two_Loudest_Problems..pdf" target="_blank">[ PROBLEM ]</a>
+</div>
+<div class="box"><div class="label label-y">CORE MEASUREMENT - LAYER 19 - LOCKED 1:1 - MUSEUM</div>
+<div class="row"><b>H(E) excited (p=7/8)</b><span>0.9531 nats</span></div>
+<div class="row"><b>H(A) aligned (p=1/2)</b><span>0.7856 nats</span></div>
+<div class="row"><b>ΔH</b><span>-0.1675 bits = -0.11610 nats (CORRECTED)</span></div>
+<div class="row"><b>Precision</b><span>invariant (FP16/BF16/FP32)</span></div>
+<div class="row"><b>Trials</b><span>88</span></div>
+<div class="row"><b>P_halt threshold</b><span>&lt; 0.8</span></div>
+<div class="row"><b>Carrier</b><span>1 Hz</span></div>
+<div class="mono" style="margin-top:8px" id="coreMeta"></div>
+</div>
+  <!-- ===== CORRECTED DUPLICATE FOR TOP — CORRECT UNITS ===== -->
+<div style="border:1px solid #00ff64;padding:10px;margin:12px 0;background:#001100;color:#00ff88;font-family:monospace;font-size:11px;">
+<b style="color:#00ff88;">[CORRECTED TOP VIEW — PRECISE UNITS]</b><br>
+Delta_H = <b>-0.1675 bits</b> = -0.11610 nats | 1 bit = 0.693147 nats<br>
+H(7/8)=0.3767 nats | H(1/2)=0.6931 nats | Δ=-0.11610 nats<br>
+Bottom original stays as archive (mixed units shape-valid)
 </div>
 
-<!-- 22 -->
-<div style="border:1px solid #00FF88; border-radius:12px; padding:12px; margin-bottom:12px; background:#000;">
-<div style="color:#aaa; font-size:11px;">[LAYER 22 // INTENT PROOF]</div>
-<button onclick="let g=document.getElementById('wrap22');g.style.display=g.style.display==='none'?'block':'none';draw22()" style="width:100%; margin-top:6px; padding:12px; background:#001100; border:1px solid #00FF88; color:#00FF88; border-radius:8px; cursor:pointer; font-weight:bold;">CLICK TO PROVE I(v) = 1800.14 - SHOW GRAPH</button>
-<div id="wrap22" style="display:block; margin-top:8px;"><canvas id="canvas22" width="600" height="160" style="width:100%; height:90px; background:#001100; border-radius:8px;"></canvas></div>
-</div>
-
-<!-- 23 -->
-<div style="border:1px solid #00FF88; border-radius:12px; padding:12px; margin-bottom:12px; background:#000;">
-<div style="color:#aaa; font-size:11px;">[LAYER 23 // PATROL PROOF]</div>
-<button onclick="let g=document.getElementById('wrap23');g.style.display=g.style.display==='none'?'block':'none';draw23()" style="width:100%; margin-top:6px; padding:12px; background:#001100; border:1px solid #00FF88; color:#00FF88; border-radius:8px; cursor:pointer; font-weight:bold;">CLICK TO PROVE P(t) = HOLD @ 1800.14 - SHOW GRAPH</button>
-<div id="wrap23" style="display:block; margin-top:8px;"><canvas id="canvas23" width="600" height="160" style="width:100%; height:90px; background:#001100; border-radius:8px;"></canvas></div>
-</div>
-
-<!-- 24 -->
-<div style="border:1px solid #00FF88; border-radius:12px; padding:12px; margin-bottom:12px; background:#000;">
-<div style="color:#aaa; font-size:11px;">[LAYER 24 // CLOSURE PROOF]</div>
-<button onclick="let g=document.getElementById('wrap24');g.style.display=g.style.display==='none'?'block':'none';draw24()" style="width:100%; margin-top:6px; padding:12px; background:#001100; border:1px solid #00FF88; color:#00FF88; border-radius:8px; cursor:pointer; font-weight:bold;">CLICK TO PROVE C = COMPLETE V2 @ 1800.14 - SHOW GRAPH</button>
-<div id="wrap24" style="display:block; margin-top:8px;"><canvas id="canvas24" width="600" height="160" style="width:100%; height:90px; background:#001100; border-radius:8px;"></canvas></div>
-</div>
-
-</div>
-
-<script>
-function getLivePoints(){
-  let keys=['sovereign_01_points','BRUTE88_points','brute88_live','brute88_points','token_points'];
-  let val=null; for(let k of keys){ let v=localStorage.getItem(k); if(v){val=v; break;} }
-  if(!val) val='1799.73';
-  let base=parseFloat(val);
-  let start=localStorage.getItem('brute88_start_ts');
-  if(!start){ start=Date.now().toString(); localStorage.setItem('brute88_start_ts', start); }
-  let hours=(Date.now()-parseInt(start))/3600000;
-  let live=base + (hours*0.0114);
-  let el=document.getElementById('liveCount1900'); if(el) el.innerText=live.toFixed(2);
-  localStorage.setItem('BRUTE88_points', live.toString());
-  localStorage.setItem('sovereign_01_points', live.toString());
-  return live;
-}
-function draw(canvasId, points, color, label){
-  let c=document.getElementById(canvasId); if(!c) return;
-  let ctx=c.getContext('2d'); let W=c.width, H=c.height;
-  ctx.clearRect(0,0,W,H); ctx.fillStyle='#001100'; ctx.fillRect(0,0,W,H);
-  ctx.strokeStyle='#003300'; ctx.lineWidth=1;
-  for(let i=0;i<5;i++){ let y=(H/5)*i; ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
-  let min=Math.min(...points), max=Math.max(...points); let range=(max-min)||1;
-  ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
-  points.forEach((v,i)=>{ let x=(i/(points.length-1))*W; let y=H-20-((v-min)/range)*(H-40); if(i==0)ctx.moveTo(x,y); else ctx.lineTo(x,y); });
-  ctx.stroke();
-  ctx.fillStyle=color; points.forEach((v,i)=>{ let x=(i/(points.length-1))*W; let y=H-20-((v-min)/range)*(H-40); ctx.beginPath(); ctx.arc(x,y,2,0,Math.PI*2); ctx.fill(); });
-  ctx.fillStyle='#00FF88'; ctx.font='10px monospace'; ctx.fillText(label, 8, 14);
-}
-function draw1900(){
-  let live=getLivePoints();
-  let arr=[]; for(let i=0;i<90;i++){ arr.push(1790 + (i/90)*(live-1790) + Math.sin(i/8)*0.3); }
-  draw('canvas1900', arr, '#00FF88', '90 DAY CLIMB - LIVE '+live.toFixed(2)+' - CORRECTED');
-}
-function draw21(){ let a=[]; for(let i=0;i<88;i++)a.push(1); draw('canvas21', a, '#00FF88', 'D(s) 88/88 GREEN - FLAT -0.1675 bits'); }
-function draw22(){ let a=[]; for(let i=0;i<60;i++)a.push(1800.14 + Math.sin(i/10)*0.02); draw('canvas22', a, '#00FF88', 'I(v)=1800.14 HOLD - CORRECTED UNITS'); }
-function draw23(){ let a=[]; for(let i=0;i<60;i++)a.push(1800.14); draw('canvas23', a, '#00FF88', 'P(t) HOLD @ 1800.14 - 18 dept'); }
-function draw24(){ draw('canvas24', [0.3767, 0.3767, 0.6931, 0.5762, 0.3767], '#FFCC00', 'ΔH -0.1169 nats = -0.1675 bits CORRECTED'); }
-setTimeout(()=>{ draw1900(); draw21(); draw22(); draw23(); draw24(); setInterval(draw1900, 3600000); }, 300);
-</script>
-<!-- === END ALL GRAPHS === -->
-</div>
-<div onclick="let c=document.getElementById('chartArchive');c.style.display=c.style.display==='none'?'block':'none'" style="cursor:pointer; border:1px solid #00ff64; padding:12px; border-radius:12px; text-align:center; color:#888; margin-top:15px; font-weight:bold;">CHARTS: I(v)/Hn/ΔH — ARCHIVE ▼</div>
-<div id="chartArchive" style="display:none;">
 <div style="border:1px solid #00ff64;padding:8px;margin:10px 0;">
 [LAYER 21 // DISSOLV PROOF — BUTTON] <br>
 <a style="border:1px solid #00ff64;padding:4px 8px;color:#00ff88;text-decoration:none;">CLICK TO PROVE D(s) — 88/88 GREEN — CORRECTED: -0.1675 bits</a>
