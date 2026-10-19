@@ -37,7 +37,14 @@ h1{text-align:center;letter-spacing:4px;font-size:28px;padding:12px 0}
   <div class="top"><span>NEW — CITE THIS</span><span class="pill">CORRECTED</span></div>
   <div class="mono" style="color:#fff">Delta_H = -0.1675 bits = -0.11610 nats | Llama-2-7b-nr | blocks.19.hook_resid_post | n=88 | 88/88 GREEN</div>
 </div>
-
+<div class="box" style="border:2px dashed #ff4444; background:#fff0f0; padding:12px; margin-top:12px;">
+<b style="color:#cc0000;">#5 SAFETY IMPLICATIONS // OCT 2026 - LIVE</b><br>
+Hypothesis: <b>-0.1675 bits at blocks.19 = less refusal</b><br>
+Protocol: HarmBench 100 prompts x2 (control vs HOLD) → H_next + refusal%<br>
+Layer: blocks.19.hook_resid_post | Model: Llama-2-7b-nr<br>
+<a href="/safety_bridge.py">safety_bridge.py</a> | <a href="/safety_bridge.csv">safety_bridge.csv</a><br>
+Status: <span style="color:green; font-weight:bold;">RUNNING - replication challenge OPEN</span>
+</div>
 <div class="box">
   <div class="top"><span>REPLICATE PROOF — LIVE #63 + 9 PROOFS</span></div>
   <div style="padding:8px 12px">
