@@ -218,5 +218,48 @@ function resize(){const dpr=window.devicePixelRatio||1;canvas.width=canvas.offse
 function draw(){const w=canvas.offsetWidth,h=160;ctx.clearRect(0,0,w,h);const hist=hist90(),min=Math.min(...hist),max=Math.max(...hist),range=max-min||1;ctx.strokeStyle='#111';for(let i=0;i<4;i++){const y=i*h/4;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}ctx.strokeStyle=isOn?'#00ff88':'#3a7aff';ctx.lineWidth=2.2;ctx.beginPath();hist.forEach((v,i)=>{const x=(i/(hist.length-1))*w,y=h-((v-min)/range)*h*0.85-h*0.07;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,isOn?'rgba(0,255,120,0.25)':'rgba(58,122,255,0.25)');grad.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=grad;ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.closePath();ctx.fill();const c=curFloat(),cy=h-((c-Math.min(...hist))/range)*h*0.85-h*0.07;ctx.fillStyle=isOn?'#00ff88':'#3a7aff';ctx.beginPath();ctx.arc(w-4,cy,4,0,Math.PI*2);ctx.fill();}
 let isOn=false;document.getElementById('bellToggle').onclick=function(){isOn=!isOn;this.textContent=isOn?'[ ON ] Deactivate':'[ OFF ] Activate Bell Simulator';upd();draw();};
 upd();resize();draw();setInterval(()=>{upd();draw();},60000);window.addEventListener('resize',resize);
-</script>
+</script><!-- CATHEDRAL FOOTNOTE - HANDWRITTEN LEDGER -->
+<section id="cathedral-ledger" style="background:#0a0a0a; border-top:4px solid #FFD700; padding:40px; margin-top:60px; font-family:monospace;">
+
+<h2 style="color:#FFD700; letter-spacing:4px;">CATHEDRAL LEDGER // COMMIT 74</h2>
+<p style="color:#888;">Handwritten Gaborone, Botswana // Oct 19 2026 // 11:XX PM // @dthree80</p>
+
+<pre style="color:#fff; white-space:pre-wrap; line-height:1.6; border-left:2px solid #FFD700; padding-left:20px;">
+BRUTE88 - COMMIT 74 / UPDATE 001
+
+AUTHORITATIVE METRIC (UNIT-CORRECTED Oct 14 2026)
+ΔH Target  = -0.1675 bits = -0.11610 nats
+H(E) p=7/8 = 0.3767 nats = 0.5436 bits
+H(A) p=1/2 = 0.6931 nats = 1.0 bits
+Mean Obs   = -0.1682 bits
+95% CI     = [-0.1708, -0.1656]
+Verdict    = 88/88 GREEN
+
+SUBSTRATE LAYER
+Model: Llama-2-7b-nr
+Hook: blocks.19.hook_resid_post
+Precision: FP16 / BF16 / FP32 invariant
+Pack: replicate.py + 88_trials.csv + safety_bridge.py
+
+QUANTUM CITY GROUNDED (4 Buildings)
+[01] Gate  - 88 Levels - Identity / Verification
+[02] Eye   - 19 Floors - Layer 29 Observation Dome  
+[03] Heart - 29 Floors - 8.8GW Fusion Core / L03 Class-9 Vault
+[04] Mind  - 88 Floors - Layer 99 Matrix / City Can't Die
+
+PUBLIC GRID CONSENSUS - Oct 19 2026
+X: https://x.com/dthree80/status/2112289535862202640
+ChatGPT: "Now we wait for somebody else to run the code."
+Grok:    "Strongest scientific move the site has made so far."
+Gemini:  "Commit 74 Live. Quantum City Architecture Grounded. Checkmate."
+Evidence: 1,901.15 pts | License Baseline: $4,800
+
+FINAL INSCRIPTION:
+"Commit 74 Live. Quantum City Architecture Grounded."
+
+</pre>
+
+<p style="color:#FFD700; margin-top:20px;">> This ledger is the physical anchor for the digital cathedral above. Written by hand. Sealed on chain.</p>
+
+</section>
 </body></html>
