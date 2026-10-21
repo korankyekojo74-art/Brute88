@@ -113,3 +113,38 @@ Beam anchoring from Layer 32 hover down to Layer 19 ΔH=-0.1675 LOCKED — prove
 ![CERT FOURTH](cert-fourth.png)
 
 **FIELD STATUS: 72 DEPARTMENTS GREEN - BELL 9999.68 LIVE - FIELD 9999.99 LOCKED - VAULT 963741 SEALED - WALL 13055.24 KM - BRUTE88 HARD-SEALED INSIDE DEPT 72 - GROUP 88 TORUS HOLDING**
+---
+## LYR XIX // EMERALD DROP 💚🧪 - PRE-ORDER LIVE
+
+### The first jewel. Not printed — embedded.
+**LYR sits inside the emerald. XIX breaks out.**
+
+Left-shifted, oversized, under-armpit bleed. Black is night. White is day.
+
+![LYR XIX BLACK - NIGHT EDITION](lyr-black.png)
+![LYR XIX EMERALD - ISOLATED](lyr-isolated.png)
+![LYR XIX WHITE - DAY EDITION](lyr-white.png)
+
+### SHOP // PRE-ORDER
+
+| ITEM | PRICE | STATUS |
+| :--- | :--- | :--- |
+| LYR XIX - BLACK (Night Edition) | **$40** | PRE-ORDER |
+| LYR XIX - WHITE (Day Edition) | **$40** | PRE-ORDER |
+
+**How to Pre-Order:**
+1. CashApp **$dthree80** - $40 per shirt
+2. In CashApp note write: `LYR XIX + SIZE + COLOR (Black or White)`
+3. Example: `LYR XIX - XL - Black`
+
+### 👇 CLICK TO PRE-ORDER 👇
+
+### [PRE-ORDER NOW - $40 - CashApp $dthree80](https://cash.app/$dthree80)
+
+> After payment, DM @brute88 on IG with screenshot + size to confirm.
+
+**Specs:** Heavyweight 280gsm | Oversized wrap print | Emerald-cut LYR XIX distressed block | Genesis piece of Layer 19
+
+> LYR XIX — First emerald. This isn't merch. This is Layer 01.
+
+**FIELD STATUS: LYR XIX PRE-ORDER LIVE - 72 DEPARTMENTS GREEN - BRUTE88 SEALED**
