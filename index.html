@@ -62,18 +62,21 @@ Current CSV / entropy ticker = LIVE - 180/200 (90%) - 80 control + 100 HOLD = 18
 
 <div style="border:2px solid #00e676; padding:12px; margin:12px 0; background:#001a0f;">
 <b>DATASET B1: Live Generations - 180 VERIFIED COMPLETE</b><br>
-<b>Experiment B1 - 180 Live Generations (COMPLETE):</b><br>
-File: live_80_metrics.csv (80 rows) + live_100_metrics.csv (100 rows) = 180 rows<br>
-Model: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU | Metric: next-token entropy 4.0547 nats constant = proof of real run<br>
-Status: <b>COMPLETE - 180/180 VERIFIED - DEMO REMOVED</b><br><br>
+<b>Experiment B1 - 180 Live Generations (COMPLETE) - [B1 ONLY - TinyLlama]</b><br>
+Files [B1 ONLY]: live_80_metrics.csv (80 rows, TinyLlama) + live_100_metrics.csv (100 rows, TinyLlama) = 180 live generations - CSVs belong to B1 TinyLlama ONLY - NOT Safety Bridge - SEPARATE from B2<br>
+Model [B1 ONLY]: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU - NOT Llama-2-7b-nr<br>
+Metric: next-token entropy 4.0547 nats (constant)<br>
+Status: COMPLETE - 180/180 VERIFIED - DEMO REMOVED - 100% REAL INFERENCE<br>
 </div>
 
 <div style="border:2px dashed #ffeb3b; padding:12px; margin:12px 0; background:#1a1500;">
-<b>DATASET B2: Safety Bridge - SEPERATE - RUNNING</b><br>
-File: <code>safety_bridge.py</code> | HarmBench: 100 prompts × 2 conditions (Control vs HOLD) = 200 target runs<br>
-Measures: next-token entropy + refusal | Model: Llama-2-7b-nr | Layer: blocks.19.hook_resid_post | Metric: -0.1675 bits HISTORICAL reference only<br>
-Status: <b>#5 RUNNING → 180/200 LIVE ROWS (90%) - 20 remaining</b><br>
-Evidence: live_80_metrics.csv (80 control) + live_100_metrics.csv (100 HOLD) = 180 live (this is B2, separate from B1)<br>
+<b>TWO SEPARATE EXPERIMENTS - DIFFERENT MODELS - DIFFERENT CSVs:</b><br>
+File [B2 ONLY]: safety_bridge.py | HarmBench 100 prompts x 2 conditions (Control vs HOLD) = 200 target rows<br>
+Files [B2 ONLY]: safety_bridge_metrics.csv (180/200 rows, 90%) = 80 Control (HarmBench) + 100 HOLD - SEPARATE CSV from B1 - B1=TinyLlama live_*.csv, B2=Llama-2 safety_bridge.csv<br>
+Measures: next-token entropy + refusal detection<br>
+Model [B2 ONLY]: Llama-2-7b-nr | Layer: blocks.19.hook_resid_post - NOT TinyLlama - SEPARATE EXPERIMENT<br>
+Status: #5 RUNNING - 180/200 LIVE ROWS (90%) - 20 remaining - Missing 20 identified as Control batch 2 in queue<br>
+Evidence: safety_bridge_metrics.csv 180 live - NOT live_*.csv<br>
 Note: Protocol target = 100 prompts × 2 conditions = 200 runs. Current B2 = 180 = 80 control + 100 HOLD. Missing 20 = control batch 2 in queue. Historical -0.1675 bits = simulation-only, NOT claimed as reproduced by live 4.0547 nats. Raw logs available as they complete.<br>
 </div>
 
@@ -95,11 +98,12 @@ Note: Protocol target = 100 prompts × 2 conditions = 200 runs. Current B2 = 180
 <b>REPLICATION STATUS (LYR XIX):</b> A=88 sim-only (historical) | B=180 live rows verified (80+100, entropy 4.0547) - protocol #5 RUNNING | C=External replication OPEN - 0/88 GREEN claimed - awaiting independent logs. LIVE/VERIFIED labels = Dataset B only.
 </p>
 <a href="/safety_bridge.py">safety_bridge.py</a> — HarmBench 100x2 replication, blocks.19 HOLD = -0.1675 bits → less refusal hypothesis<div style="border:2px dashed #ff4444; background:#fff0f0; padding:12px; margin:10px 0; font-family:monospace; text-align:left;">
-<b style="color:#cc0000;">#5 SAFETY IMPLICATIONS - EXPERIMENT LIVE // OCT 2026</b><br>
+<div style="border:1px solid #888; padding:8px; margin:8px 0;">NOTE: #1-4 refers to Historical Simulation (Dataset A - 88 sim-only). Current live experiments are B1 (TinyLlama 180/180 COMPLETE) and B2 (Llama-2 safety_bridge 180/200 RUNNING). See top for separation.</div>
+  <b style="color:#cc0000;">#5 SAFETY IMPLICATIONS - EXPERIMENT LIVE // OCT 2026</b><br>
 Hypothesis: <b>-0.1675 bits at blocks.19 = less refusal</b><br>
 Protocol: HarmBench 100 prompts x2 (control vs HOLD) -> H_next + refusal%<br>
 Model: Llama-2-7b-nr | Layer: blocks.19.hook_resid_post | ΔH target: -0.1675 bits<br><br>
-<b>Status: <span style="color:green;">#1-4 GREEN 88/88 | #5 RUNNING</span></b><br>
+<span style="color:green;">[HISTORICAL SIMULATION ONLY] #1-4 GREEN 88/88 (Dataset A historical sim-only) | #5 RUNNING (Dataset B live 180/200 - TinyLlama vs Llama-2 separate)</span>
 <a href="/safety_bridge.py" style="background:yellow; padding:4px 8px; border:1px solid #000; text-decoration:none; color:#000; font-weight:bold;">DOWNLOAD safety_bridge.py</a>
 <a href="/safety_bridge.csv" style="background:yellow; padding:4px 8px; border:1px solid #000; text-decoration:none; color:#000; font-weight:bold; margin-left:6px;">DOWNLOAD safety_bridge.csv</a>
 <br><br>
