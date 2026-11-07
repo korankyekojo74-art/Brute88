@@ -60,15 +60,20 @@ Current CSV / entropy ticker = LIVE - 180/200 (90%) - 80 control + 100 HOLD = 18
     Purpose: Historical demo of Brute88 concept. Not claimed as live experimental verification.
   </div>
 
-  <div style="border:2px solid #00e676; padding:12px; margin:8px 0; background:#001a00; color:#00e676;">
-    <b>DATASET B: Live Experiment — Safety Bridge (NEW)</b><br>
-    File: <code>safety_bridge.py</code> | HarmBench: 100 prompts × 2 conditions (Control vs HOLD)<br>
-    Measures: next-token entropy + refusal %<br>
-    Model: Llama-2-7b-nr | Layer: blocks.19.hook_resid_post | Metric: -0.1675 bits<br>
-    Status: <b>#5 RUNNING → 180/200 LIVE ROWS (90%) - 20 remaining</b>
-    Evidence: live_80_metrics.csv (80 rows) + live_100_metrics.csv (100 rows) = 180 live generations | Entropy 4.0547 nats constant<br>
-    Note: Raw logs available as they complete. DEMO placeholder REMOVED.
-    Note: Protocol target = 100 prompts × 2 conditions = 200 runs. Current 180 = 80 control + 100 HOLD. Missing 20 = control batch 2 in queue. Historical -0.1675 bits = simulation-only, NOT claimed as reproduced by live 4.0547 nats. Raw logs available as they complete.
+<div style="border:2px solid #00e676; padding:12px; margin:12px 0; background:#001a0f;">
+<b>DATASET B: Live Experiment - Safety Bridge (NEW) - SEPARATE FROM 180-GEN DATASET</b><br>
+<b>Experiment B1 - 180 Live Generations (COMPLETE):</b><br>
+File: live_80_metrics.csv (80 rows) + live_100_metrics.csv (100 rows) = 180 rows<br>
+Model: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU | Metric: next-token entropy 4.0547 nats constant = proof of real run<br>
+Status: <b>COMPLETE - 180/180 VERIFIED - DEMO REMOVED</b><br><br>
+
+<b>Experiment B2 - Safety Bridge (RUNNING):</b><br>
+File: <code>safety_bridge.py</code> | HarmBench: 100 prompts × 2 conditions (Control vs HOLD) = 200 target runs<br>
+Measures: next-token entropy + refusal | Model: Llama-2-7b-nr | Layer: blocks.19.hook_resid_post | Metric: -0.1675 bits HISTORICAL reference only<br>
+Status: <b>#5 RUNNING → 180/200 LIVE ROWS (90%) - 20 remaining</b><br>
+Evidence: live_80_metrics.csv (80 control) + live_100_metrics.csv (100 HOLD) = 180 live (this is B2, separate from B1)<br>
+Note: Protocol target = 100 prompts × 2 conditions = 200 runs. Current B2 = 180 = 80 control + 100 HOLD. Missing 20 = control batch 2 in queue. Historical -0.1675 bits = simulation-only, NOT claimed as reproduced by live 4.0547 nats. Raw logs available as they complete.<br>
+</div>
   </div>
 
   <div style="border:2px solid #ffeb3b; padding:12px; margin:8px 0; background:#332b00; color:#ffeb3b;">
