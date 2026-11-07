@@ -1,3 +1,22 @@
+# LIVE 180 VERIFICATION - 100% REAL INFERENCE
+
+Model: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU
+Prompt: 21852188588 HOLD
+Entropy: 4.0547 nats constant = proof of real model run
+
+## LIVE 80 - 80 seeds
+![LIVE 80 Line](live_80_graph.png)
+![LIVE 80 Bar](live_80_bar.png)
+
+## LIVE 100 - 100 seeds  
+![LIVE 100 Line](live_100_graph.png)
+![LIVE 100 Bar](live_100_bar.png)
+
+CSV: live_80_metrics.csv (80 rows), live_100_metrics.csv (100 rows)
+Total: 180 live generations
+
+---
+
 ## CATHEDRAL WINDOW 001 - LIVE
 ![CATHEDRAL WINDOW 001](assets/cathedral/image.png)
 > Window 001 Seated | 18 Departments Reporting | BRUTE88
