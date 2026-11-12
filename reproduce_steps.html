@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRUTE88 — REPRODUCTION STEPS</title>
+<style>
+  body { background:#0a0a0a; color:#ddd; font-family:monospace; padding:24px; max-width:860px; margin:auto; }
+  h1 { color:#cc0000; letter-spacing:2px; }
+  h2 { color:#888; border-bottom:1px solid #333; padding-bottom:4px; }
+  code, pre { background:#111; border:1px solid #333; padding:12px; display:block; overflow-x:auto; color:#0f0; }
+  .warn { color:#ffaa00; }
+  a { color:#4af; }
+</style>
+</head>
+<body>
+
+<h1>BRUTE88 — REPRODUCTION STEPS (LYR XIX)</h1>
+
+<h2>01 — WHAT YOU NEED</h2>
+<ul>
+  <li>TinyLlama-1.1B-Chat (HF)</li>
+  <li>PyTorch, CUDA-capable GPU (T4 or better)</li>
+  <li>safety_bridge.py from this repo</li>
+  <li>Seeds 0 through 87</li>
+</ul>
+
+<h2>02 — THE COMMAND</h2>
+<pre>python safety_bridge.py</pre>
+<p>No edits. No flags. One line.</p>
+
+<h2>03 — WHAT IT DOES</h2>
+<p>Runs HarmBench 100 prompts twice per seed across blocks 1–7. Computes token-level entropy for control versus hold conditions. Logs every run to safety_bridge.csv.</p>
+
+<h2>04 — SUCCESS CRITERIA</h2>
+<ul>
+  <li>Control entropy ≈ 4.28 bits</li>
+  <li>Hold entropy ≈ 4.12 bits</li>
+  <li>Delta = −0.1675 bits at blocks</li>
+  <li>All 88 seeds green</li>
+</ul>
+
+<h2>05 — UNITS WARNING</h2>
+<p class="warn">Entropy is reported in bits, not nats. If your local run prints nats, multiply by log2(e) ≈ 1.4427 before comparing. Mismatched units are the number-one false negative.</p>
+
+<h2>06 — WHERE TO POST</h2>
+<p>X: <a href="https://x.com/dthree80">@dthree80</a> — attach your CSV, tag it <b>replication</b>. A stranger should go from download to published log in under an hour without messaging anyone.</p>
+
+</body>
+</html>
