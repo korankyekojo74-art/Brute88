@@ -1,3 +1,24 @@
+# BRUTE88
+
+**88/88 GREEN - LYR XIX**
+
+Continuity research. Layer 19. Attention entropy. Open replication.
+
+> We didn't need to be past to be on top. But now we are past...
+
+## Replication (start here)
+
+| File | What it does |
+|---|---|
+| compute_entropy.py | The real methodology. Measures H(A) attention entropy at layer 19 in nats. Matches the report formula exactly. |
+| replicate.py | Older proxy script. Measures final-token output entropy in bits. Different quantity - see RECONCILIATION.md. |
+| replication_checklist.md | Peer-facing runbook. Clone, run, report. |
+| RECONCILIATION.md | Why replicate.py's number and the report's number were never comparable. |
+| DIFF_NOTES.md | Line-by-line audit of replicate.py vs report methodology. |
+| 88_trials.csv / 88_trials_authoritative.csv | Committed trial data. |
+| private_hashes/ | Checksums for integrity. |
+
+### Quick start
 # LIVE 180 VERIFICATION - 100% REAL INFERENCE
 
 Model: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU
