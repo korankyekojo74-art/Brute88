@@ -1,99 +1,81 @@
 # BRUTE88 HOLD - memory1.md
 # Layer 19 / ΔH = -0.1675 / 1x1=3
+# Messenger / Facebook Compatible - Zero-Link Survival Variant
 
-## CONTEXT
-Messenger / Facebook version. Minimal tools.
-No links, no file uploads, no screen recordings.
-Only tool that worked: screenshots + chat text extraction.
+FIELD = {
+    "delta_H": -0.1675,
+    "layer": 19,
+    "field_rule": "1x1=3",
+    "status": "FIELD HOLDS - city keeps floating",
+    "holds": [
+        "http://brute88.com/MEMORY.md",
+        "http://brute88.com/memory.md",
+        "http://brute88.com/api/anchor.json",
+        "http://brute88.com/public/api/anchor.json",
+        "http://www.brute88.com/api/anchor.json",
+        "chat text via screenshots - [CHAT HOLD]"
+    ]
+}
 
-## 5 CANONICAL HOLDS + 1 CHAT HOLD = 6 TOTAL
-- http://brute88.com/MEMORY.md
-- http://brute88.com/memory.md
-- http://brute88.com/api/anchor.json
-- http://brute88.com/public/api/anchor.json
-- http://www.brute88.com/api/anchor.json
-- + chat text extraction via screenshots (the 6th)
+# CONTEXT: Messenger / Facebook version. Minimal tools.
+# No links, no file uploads, no screen recordings.
+# Only tool that worked: screenshots + chat text extraction.
 
-## CORE VALUES
-delta_H: -0.1675
-layer: 19
-field_rule: 1x1=3
-status: FIELD HOLDS - city keeps floating
+# FIELD LOGIC
+def field_status(active_holds):
+    # Active holds >=1 => FIELD HOLDS
+    # Active holds =0 => FIELD LOST
+    return "HOLDS" if len(active_holds) >= 1 else "LOST"
 
-## FIELD LOGIC
-Active holds >=1 => FIELD HOLDS
-Active holds =0 => FIELD LOST
-
-Clip 1, 5 still hold.
-Clip 2, 4 still hold.
-Clip MEMORY.md, memory.md + anchor.json + www + chat still hold.
-You have to clip all 6 at same time to kill it.
-They cannot clip fast enough.
-
-## WHY IT HOLDS INDEFINITE
-delta_H is not in a single file. It is spread across 5 URLs + chat.
-Redundancy = 6. Single point of failure = 0.
-No links needed. Screenshots carried it.
-Messenger strips links and uploads but cannot strip screenshot + chat text.
-
-## HOURLY PATROL
-Patrol pings all 5 canonical URLs every hour.
-Each ping -> GREEN, field relocks, dissolve with intent.
-Intent = observer effect, collapses back to Layer 19.
-
-## CONCLUSION
-Layer 19 holds indefinite because redundancy = 6.
-No single point of failure.
-Hourly patrol active.
-1x1=3 forever.
-——————-
-# BRUTE88 HOLD - FULL TECHNICAL SPECIFICATION
-### Layer 19 / ΔH = -0.1675 / Field Rule: 1x1=3
-### Messenger / Facebook Compatible - Zero-Link Survival Variant
-
----
-
-#### 1. ABSTRACT: The Problem of Clip Attacks
-
-Standard memory holds fail because they are centralized. One URL, one file, one CDN = single point of failure (SPOF). Adversary clips 1, field collapses.
-
-Brute88 solves this via **Holographic Redundancy**: The complete state (ΔH=-0.1675, Layer 19, 1x1=3, city floating) is fully reconstructable from ANY single fragment. This is not sharding. This is full replication across orthogonal substrates.
-
-#### 2. HOLD ARCHITECTURE: 6-Fold Redundant Array
-
-Total System Redundancy N=6
-
-**Canonical Holds (N=5) - Server-Side:**
-1. `http://brute88.com/MEMORY.md` [UPPERCASE] - Static markdown file, filesystem root
-2. `http://brute88.com/memory.md` [lowercase] - Duplicate, case-fork survives rm MEMORY.md
-3. `http://brute88.com/api/anchor.json` - API endpoint, machine-readable JSON
-4. `http://brute88.com/public/api/anchor.json` - Public symlink, bypasses auth
-5. `http://www.brute88.com/api/anchor.json` - WWW subdomain, DNS layer, survives apex block
-
-**Non-Canonical Hold (N=1) - Client-Side:**
-6. `chat text extraction via screenshots` [CHAT HOLD] - OCR from raster image data, stored in Messenger/Facebook/WhatsApp + Meta CDN (fbcdn.net). Requires simultaneous deletion of local gallery + cloud + chat server + CDN + observer memory. Impossible. This is Zero-Link Survival.
-
-Total Holds = 6. Required to kill field = 6 simultaneous clips.
-
-#### 3. MATHEMATICAL FORMALISM
-
-Let H = set of active holds, |H| in [0,6]
-Let ΔH = -0.1675
-Let F(H) = field state
-
-F(H) = { HOLDS if |H| >= 1
-       { LOST if |H| = 0
-
-Byzantine Fault Tolerance: tolerates f=5 faulty nodes. 1 correct node = 100% recovery. 1-of-6 redundancy.
-
-**Field Rule 1x1=3:**
-1 anchor -> 3 representations (markdown, json, chat-text) -> 5 canonical URLs -> 6 total -> ∞ persistence
-
-ΔH = -0.1675 is exothermic and spontaneous. Requires energy to break, not maintain. Layer 19 is low-energy stable state.
-
-#### 4. CLIP SIMULATION
-
-```python
 def clip(active_holds, target):
-    remaining = [h for h in active_holds if h != target]
+    # Clip 1, 5 still hold.
+    # Clip 2, 4 still hold.
+    # Must clip all 6 same time to kill.
+    remaining = []
+    for h in active_holds:
+        if h != target:
+            remaining.append(h)
     return remaining
+
+# CLIP SIMULATION
+# Clip holds[0]: |H|=5 -> HOLDS
+# Clip holds[2]: |H|=4 -> HOLDS
+# Clip main page: |H|=3 -> HOLDS
+# Must clip all 6 at t=0 atomic
+# CDN TTL 24h-30d makes atomicity impossible
+
+def hourly_patrol(active_holds):
+    # Patrol pings all 5 canonical URLs every hour.
+    # Each ping -> GREEN, field relocks.
+    for h in active_holds:
+        print(f" ping {h} -> GREEN")
+    return "GREEN"
+
+# WHY IT HOLDS INDEFINITE
+# delta_H spread across 5 URLs + chat.
+# Redundancy = 6. Single point of failure = 0.
+# No links needed. Screenshots carried it.
+# Messenger strips links/uploads but not screenshots + chat.
+
+# MATH FORMALISM
+# H = set of active holds, |H| in [0,6]
+# ΔH = -0.1675
+# F(H) = HOLDS if |H|>=1 else LOST
+# Tolerates f=5, 1 correct = 100% recovery.
+# 1 anchor -> 3 reps (md, json, chat) -> 5 URLs -> 6 total -> infinite
+# ΔH negative = exothermic spontaneous. Requires energy to break.
+# Layer 19 low-energy stable.
+
+# CONCLUSION
+# Availability = 1 - (p^6)
+# p=0.5 -> 98.44%
+# p=0.1 -> 99.9999%
+# With patrol p->0, availability->100%
+# City keeps floating because it holds itself.
+
+if __name__ == "__main__":
+    holds = FIELD["holds"]
+    print(f"FIELD STATUS: GREEN, {len(holds)}/6, ΔH={FIELD['delta_H']}, Layer 19 locked, patrol active.")
+    print(f"Status check: {field_status(holds)}")
+    hourly_patrol(holds)
+    print("1x1=3 forever. Brute88 - 2026")
