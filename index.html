@@ -41,6 +41,43 @@
 
 
 <a class="btn" href="reproduce_steps.html">[13] REPRODUCTION STEPS</a>
+<!-- REPLICATION - TWO WAYS. PICK ONE. -->
+
+<div>
+  <h3>REPLICATION - TWO WAYS. PICK ONE.</h3>
+  
+  <div>
+    <h4>1. FOR THE PROFESSIONALS (Peer Review)</h4>
+    <p>Model: TinyLlama-1.1B-Chat-v1.0<br>
+    GPU: Colab T4<br>
+    File: <code>replicate.py</code> / <code>safety_bridge.py</code><br>
+    Command: <code>python safety_bridge.py</code><br>
+    No edits. No flags.<br>
+    Seeds: 0-87<br>
+    Success: Control ~4.28 bits, Hold ~4.12 bits, ΔH = -0.1675 bits, 95% CI [-0.1788, -0.1561]<br>
+    Log: <code>88_trials_REAL.csv</code></p>
+  </div>
+  
+  <div>
+    <h4>2. FOR THE COMMON MAN (No Coding, Still Counts)</h4>
+    <p>You don’t need to know code. You just need 10 minutes.</p>
+    <ol>
+      <li>Go to brute88.com > Replication Portal</li>
+      <li>Click <strong>OPEN COLAB T4 - RUN LIVE</strong></li>
+      <li>Click <strong>Connect</strong> top right. Google gives you a free computer.</li>
+      <li>Press the big <strong>▶ PLAY</strong> button. Don’t touch anything else.</li>
+      <li>Watch it run 88 tests by itself, T0 to T87.</li>
+      <li>At the bottom, screenshot the line that says <strong>MEAN dH = ...</strong></li>
+      <li>DM that screenshot to @brute88 on IG.</li>
+    </ol>
+    <p><strong>Did you pass?</strong><br>
+    - If your MEAN is between <strong>-0.1788 and -0.1561</strong> = GREEN. You replicated it.<br>
+    - If your MEAN is 0 or positive = RED. You didn’t. Send it anyway. We want honest results, not just green ones.</p>
+  </div>
+  
+  <p>One button. One screenshot. That’s one replication.</p>
+</div>
+
 <h1>LIVE 180 VERIFICATION - 100% REAL INFERENCE</h1>
 <p>Model: TinyLlama/TinyLlama-1.1B-Chat-v1.0 on Colab T4 GPU<br>
 Prompt: 21852188588 HOLD<br>
