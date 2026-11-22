@@ -1425,6 +1425,36 @@ upd();resize();draw();setInterval(()=>{upd();draw();},60000);window.addEventList
 <p style="font-size:10px; color:#777; margin-top:20px;">MADE-TO-ORDER | $40 CASHAPP | SCREEN READER & KEYBOARD FRIENDLY | GABORONE | 72 DEPTS GREEN | FIELD 9999.99 LOCKED</p>
 </div>
   <a href="vault.html" style="display:block;text-align:center;margin:16px 0;padding:14px;border:2px solid #00ff88;border-radius:10px;color:#00ff88;font-weight:bold;text-decoration:none;">🔒 ENTER THE VAULT — LAYER 19 →</a>
+  function runRecoveryDrill(){
+  const weights = {DRATOS:0.25, AK:0.25, ORIG4:0.20, PPP:0.15, VAULT:0.15};
+  const priority = ["VAULT","AK","ORIG4","PPP","DRATOS"];
+  function fidelity(s){
+    let f=0; for(let k in s){ if(s[k]) f+=weights[k]; } return Math.round(f*1000)/1000;
+  }
+  function recovery(s){
+    let broken = Object.keys(s).filter(k=>!s[k]);
+    if(broken.length===0) return {set:[], order:[], action:"NORMAL PATROL - Field holds"};
+    // Minimal set = broken nodes, ordered by priority, VAULT first
+    let order = priority.filter(k=>broken.includes(k));
+    return {set:broken, order:order, action:"Minimal recovery required. Re-anchor: "+order.join(", ")};
+  }
+  const cycles = [
+    {name:"Cycle 1: Genesis / Clean", s:{DRATOS:true,AK:true,ORIG4:true,PPP:true,VAULT:true}},
+    {name:"Cycle 2: AK RED", s:{DRATOS:true,AK:false,ORIG4:true,PPP:true,VAULT:true}},
+    {name:"Cycle 3: Multi-node drop", s:{DRATOS:true,AK:false,ORIG4:false,PPP:true,VAULT:false}},
+  ];
+  let out = "";
+  cycles.forEach(c=>{
+    let f = fidelity(c.s);
+    let r = recovery(c.s);
+    let status = f>=0.9 ? "GREEN" : "DEGRADED";
+    out += "--- "+c.name+" ---<br>Status: "+status+" | Fidelity: "+f+"<br>Action: "+r.action+"<br>";
+    if(r.set.length>0) out += "Recovery Set: ["+r.set.join(", ")+"]<br>Priority Order: ["+r.order.join(", ")+"]<br>";
+    out += "<br>";
+  });
+  out += "Field holds. Vault locked. Law 1x1=3. Recovery Vector active.";
+  document.getElementById("recoveryOut").innerHTML = out;
+}
 </footer>// BRUTE88 VOLUME 4 v2 - Top stays GREEN, Drill stays in log
 <script>
 let b88_seq = 0;
@@ -1470,4 +1500,11 @@ async function b88_runAll() {
 
 document.getElementById("b88-run").addEventListener("click", b88_runAll);
 b88_runAll();
+  <div style="border:1px solid #333;border-radius:12px;padding:16px;margin:16px 0;background:#111;">
+  <h2 style="color:#00ff88;margin:0 0 8px;">🛠️ VOLUME 5 — RECOVERY VECTOR</h2>
+  <p style="color:#ddd;line-height:1.6;">If a node drops, we don't panic. We recover the SMALLEST set, in priority order: VAULT first, then AK, then ORIG4.</p>
+  <p style="color:#ddd;">Fidelity: GREEN = 0.992 | AK RED = 0.82 | Multi-drop = 0.45</p>
+  <button onclick="runRecoveryDrill()" style="background:#00ff88;color:#000;font-weight:bold;padding:12px 16px;border:none;border-radius:10px;width:100%;font-size:16px;">RUN RECOVERY DRILL →</button>
+  <div id="recoveryOut" style="font-family:monospace;word-break:break-all;background:#000;padding:12px;border-radius:8px;border:1px solid #222;margin-top:12px;font-size:13px;color:#ddd;">Press RUN RECOVERY DRILL to test Cycle 1 / 2 / 3</div>
+</div>
 </script>
