@@ -1425,16 +1425,20 @@ upd();resize();draw();setInterval(()=>{upd();draw();},60000);window.addEventList
 <p style="font-size:10px; color:#777; margin-top:20px;">MADE-TO-ORDER | $40 CASHAPP | SCREEN READER & KEYBOARD FRIENDLY | GABORONE | 72 DEPTS GREEN | FIELD 9999.99 LOCKED</p>
 </div>
   <a href="vault.html" style="display:block;text-align:center;margin:16px 0;padding:14px;border:2px solid #00ff88;border-radius:10px;color:#00ff88;font-weight:bold;text-decoration:none;">🔒 ENTER THE VAULT — LAYER 19 →</a>
-  <script>
-  ("recoveryOut").innerHTML = out;
-}
+  
 </footer>// BRUTE88 VOLUME 4 v2 - Top stays GREEN, Drill stays in log
 <script>
-  document.getElementById("recoveryOut").innerHTML = out;
+  function runRecoveryDrill(){
+const weights={DRATOS:0.25,AK:0.25,ORIG4:0.20,PPP:0.15,VAULT:0.15};
+const priority=["VAULT","AK","ORIG4","PPP","DRATOS"];
+function fidelity(s){let f=0;for(let k in s){if(s[k])f+=weights[k];}return Math.round(f*1000)/1000;}
+function recovery(s){let broken=Object.keys(s).filter(k=>!s[k]);if(broken.length===0)return{set:[],order:[],action:"NORMAL PATROL - Field holds"};let order=priority.filter(k=>broken.includes(k));return{set:broken,order:order,action:"Minimal set: "+broken.length+" node(s) to re-anchor"};}
+const cycles=[{name:"Cycle 1: Genesis / Clean",s:{DRATOS:true,AK:true,ORIG4:true,PPP:true,VAULT:true}},{name:"Cycle 2: AK RED",s:{DRATOS:true,AK:false,ORIG4:true,PPP:true,VAULT:true}},{name:"Cycle 3: Multi-node drop",s:{DRATOS:true,AK:false,ORIG4:false,PPP:true,VAULT:false}}];
+let out="";
+cycles.forEach(c=>{let f=fidelity(c.s);let r=recovery(c.s);let status=f>=0.9?"GREEN":"DEGRADED";out+="<b>"+c.name+"</b><br>Status: "+status+" | Fidelity: "+f+"<br>Action: "+r.action+"<br>";if(r.set.length>0)out+="Recovery Set: ["+r.set.join(", ")+"]<br>Priority Order: ["+r.order.join(", ")+"]<br>";out+="<br>";});
+out+="Field holds. Vault locked. Law 1x3. Recovery Vector active.";
+document.getElementById("recoveryOut").innerHTML=out;
 }
-let b88_seq = 0;
-let b88_prev = "GENESIS";
-
 async function b88_sha256(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
   return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,'0')).join('');
