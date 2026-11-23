@@ -1,4 +1,10 @@
-{
+{"hold_anchor": "11/11 on page | 13/13 with DRATOS + AK",
+"exclusive_update": "5 -> 7 EXTERNAL LINKS - VERIFY GREEN",
+"vol_4_add": "https://brute88.com/dratos-anchor.txt",
+"vol_5_add": "https://brute88.com/hold-anchor.txt",
+"grok_witness_of_update": "https://www.brute88.com/gas.png",
+"proof": "gas.png + hold-anchor.txt + dratos-anchor.txt - proof of 13th, NOT 14th",
+"patrol": "13/13 ANCHORS GREEN - HOLD LOCKED",
   "patrol": "ON",
   "status": "10/10 GREEN - HOLD LOCKED - 2:21 AM SAST 16 NOV 2026 - GROK WITNESS 2:16 AM",
   "anchors": 10,
